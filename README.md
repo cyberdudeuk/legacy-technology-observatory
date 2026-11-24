@@ -1,5 +1,7 @@
 # Legacy Technology Observatory
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24500735.svg)](https://doi.org/10.5281/zenodo.24500735)
+
 *Formerly the Legacy Code Observatory (renamed in 3.0 when it widened beyond code).*
 
 The old technology behind UK public services, from programming languages and mainframes to phone lines, emergency radio, devices and encryption: where it runs, what it costs, who can maintain it, and how the public sector is moving off it.
@@ -71,3 +73,7 @@ Use the [contact form](https://github.com/cyberdudeuk/legacy-technology-observat
 Code is [MIT](LICENSE). Content and data are [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Quoted sources keep their own licences.
 
 An independent research aid. It is not an official statistic and does not represent the policy of any department.
+
+## How to cite
+
+Cite the archived release on Zenodo: Silva, E. *Legacy Technology Observatory*. Zenodo. [doi:10.5281/zenodo.24500735](https://doi.org/10.5281/zenodo.24500735). That DOI always points to the latest release; each release also has its own DOI. GitHub's **Cite this repository** button uses `CITATION.cff`.
