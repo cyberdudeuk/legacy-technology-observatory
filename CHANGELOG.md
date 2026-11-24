@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.2.0 — 24 November 2026
+- **From evidence to decisions** in Analytics: seven kinds of decision (investment and funding, workforce and resourcing, commercial and contracts, cyber security and resilience, roadmaps and sequencing, missions and strategy, inclusion and equality), each with the question, what the evidence signals, its strength, what to do, the governing framework (Green Book, GovS 005, Legacy IT Risk Assessment Framework and others) and the evidence.
+- **Set your priorities**: weight four risk factors and the ranking of legacy languages and platforms updates; copy a decision brief for a business case.
+- **Roadmap horizons**: what falls due now, next (2027 to 2029) and later (2030 to 2035) by layer, from sourced dates.
+- Check C21 with a negative test; three new glossary terms.
+
 ## 3.1.0 — 24 November 2026
 - New **Analytics** section: volumes at a glance and six heatmaps, each also an accessible table with a number in every cell.
 - **Who works in technology**: representation of women, ethnic minority groups, Black women, disabled people and people aged 50 and over in UK IT jobs (BCS) and the civil service Digital and Data profession (Civil Service Statistics 2025), with a representation ratio.

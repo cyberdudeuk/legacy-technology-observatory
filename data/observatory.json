@@ -1,5 +1,5 @@
 {
- "edition": "LTO-3.1-20261124",
+ "edition": "LTO-3.2-20261124",
  "evidence_date": "2026-11-24",
  "sources": {
   "S2": {
@@ -397,6 +397,14 @@
   "S101": {
    "title": "Civil Service Statistics 2025: profession by sex",
    "url": "https://civil-service-statistics.jdac.service.cabinetoffice.gov.uk/data_browser_2025/Profession_of_post/Sex/index.html"
+  },
+  "S102": {
+   "title": "HM Treasury: The Green Book, appraisal and evaluation in central government",
+   "url": "https://www.gov.uk/government/publications/the-green-book-appraisal-and-evaluation-in-central-government"
+  },
+  "S103": {
+   "title": "Government Functional Standard GovS 005: Digital",
+   "url": "https://www.gov.uk/government/publications/government-functional-standard-govs-005-digital"
   }
  },
  "tiles": [
@@ -2361,6 +2369,12 @@
    "Inclusion or workforce lead",
    "see who is under-represented in technology, how pay differs, and who is working on it",
    "I can act on the gaps"
+  ],
+  [
+   "N12",
+   "Senior responsible owner or investment lead",
+   "turn the evidence into priorities, a roadmap and a business case",
+   "I can decide what to fund, staff and replace first"
   ]
  ],
  "requirements": [
@@ -2599,7 +2613,8 @@
     "C17",
     "C18",
     "C19",
-    "C20"
+    "C20",
+    "C21"
    ],
    [],
    "Done"
@@ -2863,6 +2878,60 @@
    [],
    [],
    "Planned"
+  ],
+  [
+   "R32",
+   "Decision guide linking evidence to investment, workforce, commercial, security, roadmap, mission and inclusion decisions",
+   [
+    "N12",
+    "N2"
+   ],
+   "an-decide",
+   [
+    "C21",
+    "C7"
+   ],
+   [
+    "S102",
+    "S103",
+    "S6"
+   ],
+   "Done"
+  ],
+  [
+   "R33",
+   "Adjustable priority tool with a copyable decision brief",
+   [
+    "N12"
+   ],
+   "an-prioritise",
+   [
+    "C21",
+    "C8"
+   ],
+   [
+    "S6"
+   ],
+   "Done"
+  ],
+  [
+   "R34",
+   "Roadmap horizons by layer from sourced dates",
+   [
+    "N12",
+    "N9"
+   ],
+   "an-roadmap",
+   [
+    "C19",
+    "C17"
+   ],
+   [
+    "S35",
+    "S76",
+    "S88"
+   ],
+   "Done"
   ],
   [
    "R26",
@@ -3164,6 +3233,21 @@
    "term": "Opportunity cost",
    "definition": "The value of what could have been done instead, such as savings missed because old systems block better ways of working.",
    "alternatives": "savings forgone"
+  },
+  {
+   "term": "Five-case model",
+   "definition": "The Green Book's structure for a business case: strategic, economic, commercial, financial and management cases.",
+   "alternatives": "business case"
+  },
+  {
+   "term": "Signal strength",
+   "definition": "Our judgement of how firmly the evidence points to action: strong when several sources agree and dates are fixed.",
+   "alternatives": "evidence strength"
+  },
+  {
+   "term": "Dual running",
+   "definition": "Running the old and new systems side by side for a period, so the old one can be switched off safely.",
+   "alternatives": "parallel running"
   },
   {
    "term": "Heatmap",
@@ -3875,6 +3959,127 @@
    "b": "All groups",
    "d": "An employer-led charter on diversity in technology, with an annual Diversity in Tech report.",
    "u": "https://www.techtalentcharter.co.uk"
+  }
+ ],
+ "decisions": [
+  {
+   "k": "Investment and funding",
+   "q": "What should we fund first, and how do we make the case?",
+   "sig": "Legacy share is rising, red-rated systems are growing, and 21 of the 72 highest-risk systems had not received promised remediation funding. Running old technology can cost three to four times as much as keeping it current.",
+   "str": 3,
+   "act": "Rank systems with the priority tool below, then build each case with the Green Book's five-case model, counting the cost of keeping the system as well as replacing it.",
+   "fw": [
+    "S6",
+    "S102",
+    "S92"
+   ],
+   "s": [
+    "S4",
+    "S58",
+    "S92"
+   ],
+   "go": "an-prioritise"
+  },
+  {
+   "k": "Workforce and resourcing",
+   "q": "Where are we short of people, and who are we missing?",
+   "sig": "COBOL and mainframe skills have been flagged as scarce since 2013. Women, Black women, disabled people and people aged 50 and over are under-represented in IT, so the pool is smaller than it needs to be.",
+   "str": 3,
+   "act": "Plan knowledge transfer before specialists retire, and widen recruitment through the routes and organisations listed below. Map roles to the Digital and Data capability framework.",
+   "fw": [
+    "S41",
+    "S68"
+   ],
+   "s": [
+    "S2",
+    "S94",
+    "S96",
+    "S97"
+   ],
+   "go": "an-rep"
+  },
+  {
+   "k": "Commercial and contracts",
+   "q": "Are we locked in to a supplier, and how do we get out?",
+   "sig": "Contracts have been extended without competition to keep old systems alive, such as £168.8m for CHIEF. Supplier end-of-support dates are fixed: Fujitsu mainframe sales end in 2030 and support in 2035.",
+   "str": 3,
+   "act": "Put exit, knowledge transfer and data handover terms into every renewal, and start re-procurement before the supplier's dates, not after.",
+   "fw": [
+    "S102"
+   ],
+   "s": [
+    "S19",
+    "S35"
+   ],
+   "go": "mi-decom"
+  },
+  {
+   "k": "Cyber security and resilience",
+   "q": "Which old technology leaves us exposed?",
+   "sig": "WannaCry spread through unsupported Windows and cost the NHS £92m. Windows 10 lost routine support in October 2025. NCSC wants discovery for post-quantum migration done by 2028.",
+   "str": 3,
+   "act": "Keep a register of every device and system past end of support, isolate what cannot be patched, and start the encryption inventory now.",
+   "fw": [
+    "S88",
+    "S50"
+   ],
+   "s": [
+    "S82",
+    "S93",
+    "S83",
+    "S88"
+   ],
+   "go": "ly-register"
+  },
+  {
+   "k": "Roadmaps and sequencing",
+   "q": "What has to happen in what order?",
+   "sig": "Several dates are fixed and close: analogue landlines by January 2027, SAP ECC6 at HMRC in 2030, Fujitsu mainframes in 2030 and 2035, all encryption by 2035.",
+   "str": 2,
+   "act": "Use the roadmap horizons below to sequence work, and plan dual running before each cut-over.",
+   "fw": [
+    "S5",
+    "S103"
+   ],
+   "s": [
+    "S76",
+    "S16",
+    "S35",
+    "S88"
+   ],
+   "go": "an-roadmap"
+  },
+  {
+   "k": "Missions and strategy",
+   "q": "How does legacy hold back what government wants to achieve?",
+   "sig": "Government's roadmap for digital government commits to upgrading outdated legacy systems in key public services. MPs have warned that legacy IT could hold back government's AI plans.",
+   "str": 2,
+   "act": "Treat legacy removal as a dependency of each mission, not a separate IT project: name the systems each mission relies on and their exit dates.",
+   "fw": [
+    "S5",
+    "S103"
+   ],
+   "s": [
+    "S5",
+    "S58"
+   ],
+   "go": "ov-findings"
+  },
+  {
+   "k": "Inclusion and equality",
+   "q": "Who bears the risk if old systems fail, and who gets the new jobs?",
+   "sig": "People who rely on benefits, pensions and telecare depend most on the oldest systems. Pay gaps and representation gaps mean the people building replacements do not reflect the people who use them.",
+   "str": 2,
+   "act": "Run equality impact assessments on each migration, and set targets for diverse recruitment into modernisation teams.",
+   "fw": [
+    "S70"
+   ],
+   "s": [
+    "S76",
+    "S94",
+    "S95"
+   ],
+   "go": "in-impacts"
   }
  ]
 }

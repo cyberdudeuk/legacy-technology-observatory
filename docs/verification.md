@@ -2,7 +2,7 @@
 
 Every release passes three layers of checks. Each check is proved to fail on a known-bad sample, so a check that cannot fail is caught.
 
-## 1. In-page self-checks (20)
+## 1. In-page self-checks (21)
 
 Run in the reader's browser every time the page loads, and shown on the About page with their negative tests.
 
@@ -28,6 +28,7 @@ Run in the reader's browser every time the page loads, and shown on the About pa
 | C18 | Every link to the GitHub Repos Asset Catalogue uses a key the catalogue publishes |
 | C19 | Every heatmap has a caption and a number in every cell, every demographic and pay figure cites a known source, and language-to-system matching uses whole words |
 | C20 | Every organisation listed has a secure link, a barrier and a description |
+| C21 | Every decision row cites known evidence and a framework, and the priority tool ranks correctly on a known case |
 
 ## 2. Repository checks (`tools/checks.py`, 11)
 

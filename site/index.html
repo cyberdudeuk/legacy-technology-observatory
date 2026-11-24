@@ -133,6 +133,13 @@ main{min-width:0;padding-block:1.5rem 3rem;padding-left:max(16px,env(safe-area-i
 .heat{min-width:640px}.heat td.hc{text-align:center;color:var(--ink);font-variant-numeric:tabular-nums;border:1px solid var(--surface)}
 .heat td.hc-gap{background:repeating-linear-gradient(45deg,var(--sunk) 0 6px,var(--surface) 6px 12px);color:var(--ink-2);font-size:.8rem}
 .heat tbody th{text-transform:none;letter-spacing:0;font-family:var(--f-body);font-size:.9rem;color:var(--ink);font-weight:600}
+.wts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.75rem 1.25rem}
+.wt{display:grid;grid-template-columns:1fr auto;gap:.2rem .6rem;align-items:center;font-size:.9rem}.wt input{grid-column:1/-1;width:100%;accent-color:var(--steel)}.wt output{font-family:var(--f-mono);font-size:.78rem;color:var(--ink-2)}
+.prio{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}.prio li{display:grid;grid-template-columns:2rem minmax(0,11rem) minmax(0,1fr) 3rem;gap:.6rem;align-items:center}
+.prio-n{font-family:var(--f-mono);color:var(--ink-3)}.prio-name{font-weight:600;min-width:0}.prio-bar{height:.7rem;background:var(--sunk);border-radius:4px;overflow:hidden}.prio-bar i{display:block;height:100%;background:var(--steel)}
+.prio-v{text-align:right;font-weight:700}.prio-why{grid-column:2/-1;font-size:.78rem;color:var(--ink-2);margin-top:-.2rem}
+@media (prefers-reduced-motion:no-preference){.prio-bar i{transition:width .3s ease}}
+.cell-list{margin:0;padding-left:1rem;text-align:left;font-size:.82rem}
 .heat-legend{font-size:.85rem;color:var(--ink-2);max-width:75ch;margin-top:.5rem}
 .tile{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1rem;display:flex;flex-direction:column;gap:.4rem;min-width:0}
 .tile .big{font-family:var(--f-display);font-size:2.5rem;font-weight:700;line-height:1;color:var(--ink)}
@@ -415,7 +422,7 @@ html.calm *,html.calm *::before,html.calm *::after{animation:none!important;tran
   <div class="view" data-view="overview">
     <section class="sec hero" id="ov-hero" data-label="The question" data-icon="i-home">
       <div class="sec-head" style="gap:1rem">
-        <p class="eyebrow">Evidence as at 24 November 2026 · version 3.1</p>
+        <p class="eyebrow">Evidence as at 24 November 2026 · version 3.2</p>
         <h1>Public services still run on <em>1959</em> code.</h1>
         <p class="lede">This observatory maps the old technology behind UK public services, from programming languages and mainframes to phone lines, radio networks, devices and encryption: where they still run, who can maintain them, how they drive technical debt, and how government is moving off them. Every figure links to its public source. Our own judgements are labelled as such.</p>
         <div class="toolbar"><button class="btn btn-primary" type="button" data-tour>Take the one-minute tour</button><a class="btn" href="#guide" data-jump="gu-planner">Check a system</a></div>
@@ -479,6 +486,24 @@ html.calm *,html.calm *::before,html.calm *::after{animation:none!important;tran
     <section class="sec" id="an-volumes" data-label="Volumes at a glance" data-icon="i-layers" data-new="1">
       <div class="sec-head"><p class="eyebrow">Analytics</p><h2>The numbers in one place</h2><p class="lede">Counts from across the site and its sources. Each heatmap below is also a table, and every shaded cell shows its number.</p></div>
       <div class="grid g4" id="anVolumes"></div>
+    </section>
+    <section class="sec" id="an-decide" data-label="From evidence to decisions" data-icon="i-route" data-new="1">
+      <div class="sec-head"><h3>From evidence to decisions</h3><p class="lede">How the evidence on this site can inform decisions on investment, people, contracts, security, roadmaps, missions and inclusion. Each row names the question, what the evidence signals, what to do, and the government framework that governs the decision.</p></div>
+      <div id="anDecide"></div>
+    </section>
+    <section class="sec" id="an-prioritise" data-label="Priority tool" data-icon="i-layers" data-new="1">
+      <div class="sec-head"><h3>Set your priorities</h3><p class="lede">Rank legacy languages and platforms by the factors that matter most to your decision. Move a slider to change how much a factor counts; the ranking updates as you go. The factor scores are our judgements from the risk matrix, so treat the result as a starting point for discussion, not an answer. <span class="evid ev-analysis">Analysis</span></p></div>
+      <div class="panel">
+        <div class="wts" id="prioWeights" role="group" aria-label="Weight for each factor"></div>
+        <p id="prioSummary" role="status" aria-live="polite"></p>
+        <div id="prioList"></div>
+        <div class="toolbar"><button class="btn btn-primary" type="button" id="briefCopy">Copy decision brief</button><button class="btn" type="button" id="prioReset">Reset weights</button><span id="briefStatus" role="status" aria-live="polite"></span></div>
+        <label class="sr" for="briefText">Decision brief text</label><textarea id="briefText" rows="10" hidden readonly style="width:100%"></textarea>
+      </div>
+    </section>
+    <section class="sec" id="an-roadmap" data-label="Roadmap horizons" data-icon="i-clock" data-new="1">
+      <div class="sec-head"><h3>Roadmap horizons</h3><p class="lede">What falls due now, next and later, by layer, to help sequence a roadmap.</p></div>
+      <div id="anRoadmap"></div>
     </section>
     <section class="sec" id="an-rep" data-label="Who works in tech" data-icon="i-people" data-new="1">
       <div class="sec-head"><h3>Who works in technology</h3><p class="lede">Representation of women, ethnic minority groups, disabled people and people aged 50 and over in UK IT jobs and in the civil service Digital and Data profession, against their share of all workers.</p></div>
@@ -784,7 +809,7 @@ html.calm *,html.calm *::before,html.calm *::after{animation:none!important;tran
     <div><h3>Disclaimer</h3><p>An independent research aid built from public sources. It is not an official government statistic, and it does not represent the policy of any department. Assessments marked Analysis are judgements, not measurements.</p></div>
     <div><h3>Transparency</h3><ul><li>Researched and built with AI assistance (Claude), with human direction.</li><li>Evidence cut-off 24 November 2026; next review due February 2027.</li><li>No cookies or tracking. The Ask feature sends your question and this page's data to Claude on your own account, after you agree.</li></ul></div>
     <div><h3>Contact and source</h3><p>Use the <a href="#about" data-jump="ab-contact">contact form</a>. We do not publish email addresses.</p><p>Source, data, backlog and change history: <a href="https://github.com/cyberdudeuk/legacy-technology-observatory" target="_blank" rel="noopener">GitHub repository</a>.</p></div>
-    <div><h3>Colophon</h3><div class="colophon"><div class="qr" id="qr" role="img" aria-label="QR code holding the observatory's name, version and evidence date"></div><svg class="bc" id="bc" role="img" aria-label="Barcode for edition LTO-3.1-20261124"></svg></div><p class="mono" style="font-size:.75rem;margin-top:.4rem">Edition LTO-3.1-20261124 · IBM Plex type</p></div>
+    <div><h3>Colophon</h3><div class="colophon"><div class="qr" id="qr" role="img" aria-label="QR code holding the observatory's name, version and evidence date"></div><svg class="bc" id="bc" role="img" aria-label="Barcode for edition LTO-3.2-20261124"></svg></div><p class="mono" style="font-size:.75rem;margin-top:.4rem">Edition LTO-3.2-20261124 · IBM Plex type</p></div>
   </div>
 </footer>
 
@@ -910,7 +935,9 @@ S97:["BCS diversity report 2024: Disability, key findings","https://www.bcs.org/
 S98:["BCS and Coding Black Females: Thousands of Black women missing from the IT industry (2022)","https://www.bcs.org/articles-opinion-and-research/thousands-of-black-women-missing-from-the-it-industry-report-warns/"],
 S99:["Civil Service Statistics 2025: age by profession","https://civil-service-statistics.jdac.service.cabinetoffice.gov.uk/data_browser_2025/Age/Profession_of_post/index.html"],
 S100:["Civil Service Statistics 2025: ethnicity by profession","https://civil-service-statistics.jdac.service.cabinetoffice.gov.uk/data_browser_2025/Ethnicity/Profession_of_post/index.html"],
-S101:["Civil Service Statistics 2025: profession by sex","https://civil-service-statistics.jdac.service.cabinetoffice.gov.uk/data_browser_2025/Profession_of_post/Sex/index.html"]
+S101:["Civil Service Statistics 2025: profession by sex","https://civil-service-statistics.jdac.service.cabinetoffice.gov.uk/data_browser_2025/Profession_of_post/Sex/index.html"],
+S102:["HM Treasury: The Green Book, appraisal and evaluation in central government","https://www.gov.uk/government/publications/the-green-book-appraisal-and-evaluation-in-central-government"],
+S103:["Government Functional Standard GovS 005: Digital","https://www.gov.uk/government/publications/government-functional-standard-govs-005-digital"]
 };
 
 const TILES = [
@@ -1165,6 +1192,9 @@ const GLOSSARY = [
  ["End of support","The date after which a supplier stops fixing faults and security flaws in a product.","end of life; EOL"],
  ["Post-quantum cryptography","Encryption designed to stay secure against future quantum computers.","PQC; quantum-safe encryption"],
  ["Opportunity cost","The value of what could have been done instead, such as savings missed because old systems block better ways of working.","savings forgone"],
+ ["Five-case model","The Green Book's structure for a business case: strategic, economic, commercial, financial and management cases.","business case"],
+ ["Signal strength","Our judgement of how firmly the evidence points to action: strong when several sources agree and dates are fixed.","evidence strength"],
+ ["Dual running","Running the old and new systems side by side for a period, so the old one can be switched off safely.","parallel running"],
  ["Heatmap","A grid where colour shows size: here, darker or redder cells mean a larger number. Every cell also shows its number.","heat map"],
  ["Pay gap","The difference in pay between two groups, as a percentage of the higher-paid group's pay. It does not by itself show unequal pay for the same work.","earnings gap"],
  ["Representation ratio","A group's share of a profession divided by its share of all workers. Below 1 means under-represented.","representation gap"],
@@ -1305,7 +1335,7 @@ $("#pan-dict").innerHTML=`<div class="tablewrap"><table><thead><tr><th>Entity</t
 $("#pan-tax").innerHTML=`<div class="grid g3">${[["Language family",CATS.slice(1).map(c=>c[1])],["Migration route",RH],["System status",["Live legacy","Live","Migrating","Re-platformed","Replaced","Decommissioned"]],["Sector",["Central government","Policing","Health","Science agency","Justice","Local government (not yet covered)"]],["Evidence label",["Sourced","Estimate","Analysis","Unconfirmed"]],["Skill area",["Legacy reading","Analysis","Testing","Modern engineering","Architecture","Data","Platform","Security","Commercial"]]].map(([h,l])=>`<div class="panel"><h4>${esc(h)}</h4><ul style="margin:0;padding-left:1.1rem">${l.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`).join("")}</div>`;
 $("#pan-themes").innerHTML=`<p class="lede">Capabilities, domains and topics connected to legacy languages, for future sections.</p><div class="chips">${THEMES.map(t=>`<span class="chip" style="font-family:var(--f-body);font-size:.85rem">${esc(t)}</span>`).join("")}</div>`;
 $("#pan-data").innerHTML=`<p>All records on this site as JSON, for reuse under the same evidence labels. A JSON-LD Dataset description is embedded in the page head for harvesters.</p><div class="toolbar"><button class="btn" id="copyJson">Copy data as JSON</button><span id="copyStatus" class="sr" aria-live="polite"></span></div><pre class="code" id="jsonOut"></pre>`;
-const ALL={edition:"LTO-3.1-20261124",languages:LANGS,systems:SYS,suppliers:SUPPLIERS,decommissioning:DECOM,glossary:GLOSSARY.map(g=>({term:g[0],definition:g[1],alternatives:g[2]})),sources:Object.entries(SRC).map(([id,v])=>({id,title:v[0],url:v[1]}))};
+const ALL={edition:"LTO-3.2-20261124",languages:LANGS,systems:SYS,suppliers:SUPPLIERS,decommissioning:DECOM,glossary:GLOSSARY.map(g=>({term:g[0],definition:g[1],alternatives:g[2]})),sources:Object.entries(SRC).map(([id,v])=>({id,title:v[0],url:v[1]}))};
 $("#jsonOut").textContent=JSON.stringify(ALL,null,1).slice(0,4000)+"\n…";
 $("#copyJson").addEventListener("click",async()=>{const t=JSON.stringify(ALL,null,1);try{await navigator.clipboard.writeText(t);$("#copyJson").textContent="Copied";}catch(e){$("#jsonOut").textContent=t;const r=document.createRange();r.selectNodeContents($("#jsonOut"));const sel=getSelection();sel.removeAllRanges();sel.addRange(r);$("#copyJson").textContent="Selected: press Ctrl+C to copy"}});
 $("#knTabs").addEventListener("click",e=>{const b=e.target.closest("[role=tab]");if(b)selTab(b)});
@@ -1371,7 +1401,7 @@ document.documentElement.lang="en-GB";
 const SUMMARY={
  overview:"Some of the most important public services, such as pensions, benefits and tax, still run on code written in languages from the 1950s to the 1980s. Fewer people can maintain that code each year. Government is replacing some systems, but the share of old systems is still growing.",
  languages:"A programming language is how people write instructions for computers. This page explains each language found in public services: when it was made, what it is for, and how easy it is to find people who know it.",
- analytics:"The numbers in one place, shown as heatmaps: darker or redder cells mean more. It covers who works in technology, how pay differs between groups, what is known for each language, and the organisations working to remove barriers.",
+ analytics:"The numbers in one place, and how to use them for decisions on funding, people, contracts, security and roadmaps. Heatmaps show size by colour: darker or redder cells mean more. It covers who works in technology, how pay differs between groups, what is known for each language, and the organisations working to remove barriers.",
  layers:"Old technology is not only code. Phone lines, mobile and radio networks, computers, medical and industrial equipment, and encryption all age too, and several have fixed switch-off dates.",
  systems:"These are the computer systems behind public services that rely on old technology, who runs them, and what is planned for each, across the UK.",
  skills:"Old systems need people who understand them. This page shows the evidence on how many such people there are, how to plan fairly for retirement, and the skills needed to move to newer technology.",
@@ -1454,7 +1484,8 @@ const NEEDS=[
  ["N8","Maintainer working alone","update the site with little effort and rely on automatic checks","it stays accurate"],
  ["N9","Technology or estates lead","see which non-code technology my services rely on and when it is switched off","I can replace it in time"],
  ["N10","Engineer replacing a system","find code other public bodies have already published","I can reuse it instead of starting again"],
- ["N11","Inclusion or workforce lead","see who is under-represented in technology, how pay differs, and who is working on it","I can act on the gaps"]
+ ["N11","Inclusion or workforce lead","see who is under-represented in technology, how pay differs, and who is working on it","I can act on the gaps"],
+ ["N12","Senior responsible owner or investment lead","turn the evidence into priorities, a roadmap and a business case","I can decide what to fund, staff and replace first"]
 ];
 const REQS=[
  ["R1","Every figure links to a public source",["N6"],"ov-numbers",["C1","C2","C3"],["S4"],"Done"],
@@ -1470,7 +1501,7 @@ const REQS=[
  ["R11","A plain-English summary opens every page",["N7","N6"],"ov-hero",["C11"],["S75"],"Done"],
  ["R12","Open data and vocabulary for reuse by other portals",["N6"],"kn-layer",["C2"],[],"Done"],
  ["R13","Contact without publishing any email address",["N6","N8"],"ab-contact",["C5"],[],"Done"],
- ["R14","Self-checks with negative tests on every load",["N8"],"ab-checks",["C1","C2","C3","C4","C5","C6","C7","C8","C9","C10","C11","C12","C13","C14","C15","C16","C17","C18","C19","C20"],[],"Done"],
+ ["R14","Self-checks with negative tests on every load",["N8"],"ab-checks",["C1","C2","C3","C4","C5","C6","C7","C8","C9","C10","C11","C12","C13","C14","C15","C16","C17","C18","C19","C20","C21"],[],"Done"],
  ["R15","Equality and inclusion analysis, including age-inclusive workforce planning",["N3","N7"],"in-impacts",["C1"],["S70","S68"],"Done"],
  ["R16","GitHub repository with issue forms and a scheduled scan",["N8"],"ab-run",["C3"],[],"Done"],
  ["R17","Guided tour, tutorials and user guide",["N1","N7"],"gu-start",["C8","C11"],[],"Done"],
@@ -1487,6 +1518,9 @@ const REQS=[
  ["R29","Pay gaps by gender, ethnicity, disability and age, with their limits stated",["N11"],"an-pay",["C19"],["S94","S95","S97","S100"],"Done"],
  ["R30","Organisations working to remove barriers, filterable by barrier",["N11","N3"],"an-orgs",["C20"],["S98"],"Done"],
  ["R31","Workforce demographics for each programming language",["N3","N11"],"an-lang",[],[],"Planned"],
+ ["R32","Decision guide linking evidence to investment, workforce, commercial, security, roadmap, mission and inclusion decisions",["N12","N2"],"an-decide",["C21","C7"],["S102","S103","S6"],"Done"],
+ ["R33","Adjustable priority tool with a copyable decision brief",["N12"],"an-prioritise",["C21","C8"],["S6"],"Done"],
+ ["R34","Roadmap horizons by layer from sourced dates",["N12","N9"],"an-roadmap",["C19","C17"],["S35","S76","S88"],"Done"],
  ["R26","Links to the public sector tech hub and app store once it is published",["N10"],"re-reuse",[],[],"Planned"]
 ];
 const DEFECTS=[
@@ -1798,7 +1832,7 @@ function renderPlan(){const fd=new FormData($("#planForm"));const a={};let n=0;P
  const band=score>=11?["High","p-crit"]:score>=6?["Medium","p-warn"]:["Low","p-ok"];
  const acts=planActions(a);
  $("#planOut").innerHTML=`<h4>Your indicative result</h4><p class="band"><span class="pill ${band[1]}" style="font-size:1rem">${band[0]}</span> <span class="num" style="font-size:1rem;color:var(--ink-2)">${score} of ${max} points</span></p><p class="hint">High is 11 or more points, Medium 6 to 10, Low 5 or fewer. ${evid("analysis")}</p><h4>Starting plan</h4><ol style="margin:0;padding-left:1.2rem">${acts.map(([t,j])=>`<li>${esc(t)} <span class="hint">(${jumpLink(j,"read more")})</span></li>`).join("")}</ol><div class="toolbar"><button class="btn" type="button" id="planCopy">Copy plan</button></div>`;
- $("#planCopy").onclick=async()=>{const txt=`Indicative legacy readiness: ${band[0]} (${score}/${max})\n`+acts.map((x,i)=>`${i+1}. ${x[0]}`).join("\n")+"\nSource: Legacy Technology Observatory, edition LTO-3.1-20261124";try{await navigator.clipboard.writeText(txt);$("#planCopy").textContent="Copied";announce("Plan copied")}catch(e){$("#planCopy").textContent="Copy failed: select the plan text instead"}}}
+ $("#planCopy").onclick=async()=>{const txt=`Indicative legacy readiness: ${band[0]} (${score}/${max})\n`+acts.map((x,i)=>`${i+1}. ${x[0]}`).join("\n")+"\nSource: Legacy Technology Observatory, edition LTO-3.2-20261124";try{await navigator.clipboard.writeText(txt);$("#planCopy").textContent="Copied";announce("Plan copied")}catch(e){$("#planCopy").textContent="Copy failed: select the plan text instead"}}}
 counts["gu-planner"]=PQ.length;
 $("#planForm").addEventListener("change",renderPlan);$("#planForm").addEventListener("reset",()=>setTimeout(renderPlan,0));renderPlan();
 
@@ -1859,18 +1893,19 @@ function runChecksOn(d){const known=id=>!!d.SRC[id];const R={};
  R.C16=d.scrollW<=d.viewW+1;
  R.C19=(d.HEATS||[]).length>0&&(d.HEATS||[]).every(t=>t.querySelector("caption")&&[...t.querySelectorAll("td.hc")].every(c=>c.textContent.trim().length>0))&&[...(d.REP||[]),...(d.PAY||[])].every(x=>x.s.length&&x.s.every(known))&&d.LANGSYS===true;
  R.C20=(d.ORGSI||[]).length>0&&(d.ORGSI||[]).every(o=>/^https:\/\//.test(o.u)&&o.b&&o.d&&o.n);
+ R.C21=(d.DECIDE||[]).length>0&&(d.DECIDE||[]).every(x=>x.s.length&&x.s.every(known)&&x.fw.length&&x.fw.every(known)&&[1,2,3].includes(x.str))&&d.PRIO===true;
  R.C17=(d.LAYERS||[]).length>0&&(d.LAYERS||[]).every(x=>x.s.length&&x.s.every(known)&&x.layer&&x.date)&&(d.COSTS||[]).length>0&&(d.COSTS||[]).every(x=>x.s.length&&x.s.every(known)&&x.type&&x.v);
  R.C18=(d.XLINKS||[]).length>0&&(d.XLINKS||[]).every(u=>/^https:\/\/cyberdudeuk\.github\.io\/github-repos-asset-catalogue\/#(org-[a-z0-9-]+|legacy|reuse|practice|catalogue)$/.test(u));
  R.C2=R.C2&&[...(d.CASES||[]),...(d.SCEN||[]),...(d.THEMES||[])].every(x=>(x.s||[]).every(known));
  return R}
-const CHECK_TITLES={C1:"Every system and wider-sector record cites a known source",C2:"Every citation points to a listed source",C3:"Every source link is https or an in-page anchor",C4:"Every unsourced language record is labelled Unconfirmed or Analysis",C5:"No email addresses appear in the content",C6:"Retired organisation names do not appear",C7:"Every table row has as many cells as its header",C8:"Every button, link and form field has an accessible name",C9:"Text colours meet 4.5:1 contrast in light and dark themes",C10:"Every chart and diagram has a text title",C11:"Every page opens with a plain-English summary",C12:"Knowledge graph node types use distinct colours",C13:"Every requirement traces to a user need and to a check, unless planned",C14:"Headings do not skip levels",C15:"Every table keeps a minimum width so it scrolls instead of squeezing on phones",C16:"Nothing makes the page scroll sideways at the current width",C17:"Every record beyond code and every cost figure cites a known source and says what it measures",C18:"Every link to the GitHub Repos Asset Catalogue uses a key the catalogue publishes",C19:"Every heatmap has a caption and a number in every cell, every demographic and pay figure cites a known source, and language-to-system matching uses whole words",C20:"Every organisation listed has a secure link, a barrier and a description"};
+const CHECK_TITLES={C1:"Every system and wider-sector record cites a known source",C2:"Every citation points to a listed source",C3:"Every source link is https or an in-page anchor",C4:"Every unsourced language record is labelled Unconfirmed or Analysis",C5:"No email addresses appear in the content",C6:"Retired organisation names do not appear",C7:"Every table row has as many cells as its header",C8:"Every button, link and form field has an accessible name",C9:"Text colours meet 4.5:1 contrast in light and dark themes",C10:"Every chart and diagram has a text title",C11:"Every page opens with a plain-English summary",C12:"Knowledge graph node types use distinct colours",C13:"Every requirement traces to a user need and to a check, unless planned",C14:"Headings do not skip levels",C15:"Every table keeps a minimum width so it scrolls instead of squeezing on phones",C16:"Nothing makes the page scroll sideways at the current width",C17:"Every record beyond code and every cost figure cites a known source and says what it measures",C18:"Every link to the GitHub Repos Asset Catalogue uses a key the catalogue publishes",C19:"Every heatmap has a caption and a number in every cell, every demographic and pay figure cites a known source, and language-to-system matching uses whole words",C20:"Every organisation listed has a secure link, a barrier and a description",C21:"Every decision row cites known evidence and a framework, and the priority tool ranks correctly on a known case"};
 function runAllChecks(){
  normaliseHeadings();
  const graphColours=["var(--accent)","var(--crit)","var(--steel)","var(--ok)","var(--ink-3)","var(--violet)"];
- const live={SRC,SYS,LOCAL,FINDINGS,TILES,LANGS,REQS,NEEDS,text:$("#main").textContent+document.querySelector("footer").textContent,tables:$$("#main table"),controls:$$("button,a[href],input,select,textarea").filter(e=>!e.closest("[aria-hidden=true]")),pairs:tokenPairs(),svgs:$$("main svg:not(.icon), footer svg:not(.icon)"),views:$$(".view"),graphColours,scrollW:document.documentElement.scrollWidth,viewW:document.documentElement.clientWidth,CASES,SCEN:SCENARIOS,THEMES:THEMES2,LAYERS,COSTS,XLINKS:catLinks(),HEATS:$$("table.heat"),REP,PAY,ORGSI:ORGS_INC,LANGSYS:LANGSYS_OK()};
+ const live={SRC,SYS,LOCAL,FINDINGS,TILES,LANGS,REQS,NEEDS,text:$("#main").textContent+document.querySelector("footer").textContent,tables:$$("#main table"),controls:$$("button,a[href],input,select,textarea").filter(e=>!e.closest("[aria-hidden=true]")),pairs:tokenPairs(),svgs:$$("main svg:not(.icon), footer svg:not(.icon)"),views:$$(".view"),graphColours,scrollW:document.documentElement.scrollWidth,viewW:document.documentElement.clientWidth,CASES,SCEN:SCENARIOS,THEMES:THEMES2,LAYERS,COSTS,XLINKS:catLinks(),HEATS:$$("table.heat"),REP,PAY,ORGSI:ORGS_INC,LANGSYS:LANGSYS_OK(),DECIDE,PRIO:PRIO_OK()};
  const badTable=document.createElement("table");badTable.innerHTML="<thead><tr><th>a</th><th>b</th></tr></thead><tbody><tr><td>only one</td></tr></tbody>";
  const badBtn=document.createElement("button");const badSvg=document.createElementNS("http://www.w3.org/2000/svg","svg");const badView=document.createElement("div");badView.innerHTML="<h2>x</h2><h4>skip</h4>";
- const bad={SRC:{S1:["x","http://insecure"]},SYS:[{s:["S999"]}],LOCAL:[{s:[]}],FINDINGS:[{s:["S998"]}],TILES:[],LANGS:[{s:[],ev:"sourced"}],REQS:[["R0","x",[],"x",[],[],"Done"]],NEEDS:[],text:"write to someone@example.gov.uk at the Office of the Chief Data Officer",tables:[badTable],controls:[badBtn],pairs:[["bad","#777777","#888888"]],svgs:[badSvg],views:[badView],graphColours:["var(--accent)","var(--accent)"],scrollW:2000,viewW:400,CASES:[{s:["S997"]}],SCEN:[],THEMES:[],LAYERS:[{s:["S996"],layer:"",date:""}],COSTS:[{s:[],type:"",v:""}],HEATS:[(()=>{const t=document.createElement("table");t.innerHTML="<tbody><tr><td class=hc></td></tr></tbody>";return t})()],REP:[{s:["S995"]}],PAY:[],LANGSYS:false,ORGSI:[{u:"http://x",b:"",d:"",n:"x"}],XLINKS:["http://example.com/#org-x"]};
+ const bad={SRC:{S1:["x","http://insecure"]},SYS:[{s:["S999"]}],LOCAL:[{s:[]}],FINDINGS:[{s:["S998"]}],TILES:[],LANGS:[{s:[],ev:"sourced"}],REQS:[["R0","x",[],"x",[],[],"Done"]],NEEDS:[],text:"write to someone@example.gov.uk at the Office of the Chief Data Officer",tables:[badTable],controls:[badBtn],pairs:[["bad","#777777","#888888"]],svgs:[badSvg],views:[badView],graphColours:["var(--accent)","var(--accent)"],scrollW:2000,viewW:400,CASES:[{s:["S997"]}],SCEN:[],THEMES:[],LAYERS:[{s:["S996"],layer:"",date:""}],COSTS:[{s:[],type:"",v:""}],HEATS:[(()=>{const t=document.createElement("table");t.innerHTML="<tbody><tr><td class=hc></td></tr></tbody>";return t})()],REP:[{s:["S995"]}],PAY:[],LANGSYS:false,DECIDE:[{s:[],fw:["S1x"],str:5}],PRIO:false,ORGSI:[{u:"http://x",b:"",d:"",n:"x"}],XLINKS:["http://example.com/#org-x"]};
  document.body.appendChild(badTable);badTable.style.cssText="position:absolute;left:-9999px;min-width:0";
  const res=runChecksOn(live),neg=runChecksOn(bad);badTable.remove();CHECK_RES=res;
  $("#checks").innerHTML=Object.keys(CHECK_TITLES).map(k=>`<li>${res[k]?`<span class="pill p-ok">Pass</span>`:`<span class="pill p-crit">Fail</span>`}<span><span class="mono">${k}</span> ${esc(CHECK_TITLES[k])} <span class="sub" style="color:var(--ink-3);font-size:.8rem">· negative test ${neg[k]?"did not fail, so this check needs fixing":"failed as expected"}</span></span></li>`).join("");
@@ -2064,9 +2099,54 @@ ORGS_INC.forEach(o=>INDEX.push({type:"Organisation",title:o.n,text:o.b+" "+o.d,v
 ALL.representation=REP;ALL.payGaps=PAY;ALL.organisations=ORGS_INC;ALL.civilServiceDigitalData={age:CSS_AGE,ethnicity:CSS_ETH,sex:CSS_SEX};
 {const cur=(location.hash||"#overview").slice(1);if(VIEWS.find(v=>v[0]===cur))drawer(cur)}
 
+/* ============ V6 (3.2): FROM EVIDENCE TO DECISIONS ============ */
+/* Decision guide: each kind of decision, the signal the evidence sends, our judgement of its strength, and the frameworks that govern it */
+const DECIDE=[
+ {k:"Investment and funding",q:"What should we fund first, and how do we make the case?",sig:"Legacy share is rising, red-rated systems are growing, and 21 of the 72 highest-risk systems had not received promised remediation funding. Running old technology can cost three to four times as much as keeping it current.",str:3,act:"Rank systems with the priority tool below, then build each case with the Green Book's five-case model, counting the cost of keeping the system as well as replacing it.",fw:["S6","S102","S92"],s:["S4","S58","S92"],go:"an-prioritise"},
+ {k:"Workforce and resourcing",q:"Where are we short of people, and who are we missing?",sig:"COBOL and mainframe skills have been flagged as scarce since 2013. Women, Black women, disabled people and people aged 50 and over are under-represented in IT, so the pool is smaller than it needs to be.",str:3,act:"Plan knowledge transfer before specialists retire, and widen recruitment through the routes and organisations listed below. Map roles to the Digital and Data capability framework.",fw:["S41","S68"],s:["S2","S94","S96","S97"],go:"an-rep"},
+ {k:"Commercial and contracts",q:"Are we locked in to a supplier, and how do we get out?",sig:"Contracts have been extended without competition to keep old systems alive, such as £168.8m for CHIEF. Supplier end-of-support dates are fixed: Fujitsu mainframe sales end in 2030 and support in 2035.",str:3,act:"Put exit, knowledge transfer and data handover terms into every renewal, and start re-procurement before the supplier's dates, not after.",fw:["S102"],s:["S19","S35"],go:"mi-decom"},
+ {k:"Cyber security and resilience",q:"Which old technology leaves us exposed?",sig:"WannaCry spread through unsupported Windows and cost the NHS £92m. Windows 10 lost routine support in October 2025. NCSC wants discovery for post-quantum migration done by 2028.",str:3,act:"Keep a register of every device and system past end of support, isolate what cannot be patched, and start the encryption inventory now.",fw:["S88","S50"],s:["S82","S93","S83","S88"],go:"ly-register"},
+ {k:"Roadmaps and sequencing",q:"What has to happen in what order?",sig:"Several dates are fixed and close: analogue landlines by January 2027, SAP ECC6 at HMRC in 2030, Fujitsu mainframes in 2030 and 2035, all encryption by 2035.",str:2,act:"Use the roadmap horizons below to sequence work, and plan dual running before each cut-over.",fw:["S5","S103"],s:["S76","S16","S35","S88"],go:"an-roadmap"},
+ {k:"Missions and strategy",q:"How does legacy hold back what government wants to achieve?",sig:"Government's roadmap for digital government commits to upgrading outdated legacy systems in key public services. MPs have warned that legacy IT could hold back government's AI plans.",str:2,act:"Treat legacy removal as a dependency of each mission, not a separate IT project: name the systems each mission relies on and their exit dates.",fw:["S5","S103"],s:["S5","S58"],go:"ov-findings"},
+ {k:"Inclusion and equality",q:"Who bears the risk if old systems fail, and who gets the new jobs?",sig:"People who rely on benefits, pensions and telecare depend most on the oldest systems. Pay gaps and representation gaps mean the people building replacements do not reflect the people who use them.",str:2,act:"Run equality impact assessments on each migration, and set targets for diverse recruitment into modernisation teams.",fw:["S70"],s:["S76","S94","S95"],go:"in-impacts"}
+];
+const PRIO_OK=()=>{const t=priorities({crit:3,scarce:0,vis:0,plan:0});return t[0].v.crit===3&&t.every((x,i)=>!i||t[i-1].pct>=x.pct)&&t.every(x=>x.pct===Math.round(x.v.crit/3*100))};
+const FACTORS=[["crit","Service criticality"],["scarce","Skills scarcity"],["vis","Visibility gap"],["plan","Plan uncertainty"]];
+let W=(()=>{try{const w=JSON.parse(store.get("lto-weights")||"null");if(w&&FACTORS.every(([k])=>Number.isInteger(w[k])&&w[k]>=0&&w[k]<=3))return w}catch(_){}return {crit:2,scarce:2,vis:1,plan:1}})();
+function priorities(w=W){return RISK.map(r=>{const v={crit:r[1],scarce:r[2],vis:r[3],plan:r[4]};const max=FACTORS.reduce((s,[k])=>s+3*w[k],0)||1;const score=FACTORS.reduce((s,[k])=>s+v[k]*w[k],0);return {n:r[0],v,score,pct:Math.round(score/max*100)}}).sort((a,b)=>b.pct-a.pct||a.n.localeCompare(b.n))}
+function renderDecide(){
+ heat("anDecide","For each kind of decision: the question, what the evidence signals, how strong the signal is, and what to do",["Decision","Question it answers","What the evidence signals","Signal strength","What to do","Frameworks","Evidence"],
+  DECIDE.map(d=>`<tr><th scope="row"><a href="#analytics" data-jump="${esc(d.go)}">${esc(d.k)}</a></th><td>${esc(d.q)}</td><td>${esc(d.sig)}</td>${heatCell(d.str,{kind:"risk",txt:["","Weak","Moderate","Strong"][d.str]})}<td>${esc(d.act)}</td><td>${cites(d.fw)}</td><td>${cites(d.s)}</td></tr>`),
+  `Signal strength is our judgement of how firmly the evidence points to action: strong means several independent sources agree and dates are fixed. ${evid("analysis")}`);
+ $("#prioWeights").innerHTML=FACTORS.map(([k,l])=>`<label class="wt"><span>${esc(l)}</span><input type="range" min="0" max="3" step="1" value="${W[k]}" data-w="${k}" aria-describedby="wt-${k}"><output id="wt-${k}">${["Ignore","Low","Medium","High"][W[k]]}</output></label>`).join("");
+ renderPrio();
+ /* Roadmap horizons */
+ const yr=t=>{const m=String(t).match(/(19|20)\d\d/);return m?+m[0]:null};
+ const H=[["Due now (to 2026)",y=>y!=null&&y<=2026],["Next (2027 to 2029)",y=>y>=2027&&y<=2029],["Later (2030 to 2035)",y=>y>=2030&&y<=2035],["No date set",y=>y==null]];
+ const rowsR=[["Code and platforms",DECOM.map(d=>({n:d.w+": "+d.e.replace(/ \(planned\)$/,""),y:yr(d.d)})).concat(LAYERS.filter(l=>l.layer==="Platforms"&&l.id!=="mainframe").map(l=>({n:l.n,y:l.dk>="2098"?null:yr(l.dk)})))],...STACK.slice(2).map(([n])=>[n,LAYERS.filter(l=>l.layer===n).map(l=>({n:l.n,y:l.dk>="2098"?null:yr(l.dk)}))])];
+ heat("anRoadmap","Indicative roadmap: what falls due in each horizon, by layer",["Layer",...H.map(h=>h[0])],
+  rowsR.map(([n,items])=>`<tr><th scope="row">${esc(n)}</th>${H.map(([,f])=>{const m=items.filter(i=>f(i.y));return heatCell(m.length,{max:4,txt:m.length?`<ul class="cell-list">${m.map(i=>`<li>${esc(i.n)}${i.y?` (${i.y})`:""}</li>`).join("")}</ul>`:"None"})}).join("")}</tr>`),
+  `Darker means more falls due in that horizon. Dates come from the decommissioning tracker and the Beyond code register, where each is sourced; planned dates can move. ${evid("analysis")}`)}
+function renderPrio(){const P=priorities();
+ $("#prioList").innerHTML=`<ol class="prio">${P.map((p,i)=>`<li><span class="prio-n">${i+1}</span><span class="prio-name">${esc(p.n)}</span><span class="prio-bar" aria-hidden="true"><i style="width:${p.pct}%"></i></span><span class="num prio-v">${p.pct}</span><span class="prio-why">${FACTORS.filter(([k])=>W[k]>0).map(([k,l])=>`${esc(l.split(" ")[0])} ${p.v[k]}`).join(" · ")}</span></li>`).join("")}</ol>`;
+ $("#prioSummary").textContent=`With these weights, ${P[0].n} ranks first (${P[0].pct} out of 100), followed by ${P[1].n} and ${P[2].n}.`}
+$("#prioWeights").addEventListener("input",e=>{const t=e.target.closest("[data-w]");if(!t)return;W[t.dataset.w]=+t.value;t.nextElementSibling.textContent=["Ignore","Low","Medium","High"][+t.value];store.set("lto-weights",JSON.stringify(W));renderPrio()});
+$("#prioReset").addEventListener("click",()=>{W={crit:2,scarce:2,vis:1,plan:1};store.set("lto-weights",JSON.stringify(W));renderDecide();announce("Weights reset")});
+$("#briefCopy").addEventListener("click",async()=>{const P=priorities();
+ const txt=["Legacy technology decision brief","Source: Legacy Technology Observatory, edition "+ALL.edition,"",
+  "Priority ranking (weights: "+FACTORS.map(([k,l])=>l+" "+["ignore","low","medium","high"][W[k]]).join(", ")+")",...P.map((p,i)=>`${i+1}. ${p.n}: ${p.pct}/100`),"",
+  "Decisions and what the evidence signals:",...DECIDE.map(d=>`- ${d.k} (${["","weak","moderate","strong"][d.str]} signal): ${d.act} Evidence: ${d.s.map(x=>SRC[x][0]).join("; ")}`),"",
+  "The ranking and signal strengths are judgements from cited evidence, not measurements. Check each source before relying on it."].join("\n");
+ const st=$("#briefStatus");try{await navigator.clipboard.writeText(txt);st.textContent="Copied. Paste it into your brief or business case."}catch(_){const ta=$("#briefText");ta.hidden=false;ta.value=txt;ta.select();st.textContent="Your browser blocked copying, so the brief is shown below for you to copy."}});
+renderDecide();
+Object.assign(counts,{"an-decide":DECIDE.length,"an-prioritise":RISK.length});
+DECIDE.forEach(d=>INDEX.push({type:"Decision guide",title:d.k,text:d.q+" "+d.sig+" "+d.act,view:"analytics",jump:"an-decide",s:d.s}));
+ALL.decisions=DECIDE;
+{const cur=(location.hash||"#overview").slice(1);if(VIEWS.find(v=>v[0]===cur))drawer(cur)}
+
 /* ============ COLOPHON ============ */
-try{if(window.QRCode){new QRCode($("#qr"),{text:"Legacy Technology Observatory | edition LTO-3.1-20261124 | evidence to 24 Nov 2026",width:84,height:84,colorDark:"#000000",colorLight:"#ffffff"})}else{$("#qr").textContent="QR unavailable"}}catch(e){}
-try{if(window.JsBarcode){JsBarcode("#bc","LTO-3.1-20261124",{format:"CODE128",height:40,fontSize:11,margin:6,background:"#ffffff",lineColor:"#000000"})}}catch(e){}
+try{if(window.QRCode){new QRCode($("#qr"),{text:"Legacy Technology Observatory | edition LTO-3.2-20261124 | evidence to 24 Nov 2026",width:84,height:84,colorDark:"#000000",colorLight:"#ffffff"})}else{$("#qr").textContent="QR unavailable"}}catch(e){}
+try{if(window.JsBarcode){JsBarcode("#bc","LTO-3.2-20261124",{format:"CODE128",height:40,fontSize:11,margin:6,background:"#ffffff",lineColor:"#000000"})}}catch(e){}
 
 try{autoTips()}catch(e){}
 try{runAllChecks()}catch(e){$("#checksSummary").textContent="Self-checks could not run: "+e.message}

@@ -15,7 +15,7 @@ NAMES = {"sources": "SRC", "tiles": "TILES", "findings": "FINDINGS", "languages"
          "devolved_and_local": "LOCAL", "suppliers": "SUPPLIERS", "wider": "WIDER", "routes": "ROUTES", "steps": "STEPS",
          "decommissioning": "DECOM", "user_needs": "NEEDS", "requirements": "REQS", "defects": "DEFECTS",
          "glossary": "GLOSSARY", "beyond_code": "LAYERS", "costs": "COSTS",
-         "representation": "REP", "pay_gaps": "PAY", "organisations_removing_barriers": "ORGS_INC",
+         "representation": "REP", "pay_gaps": "PAY", "decisions": "DECIDE", "organisations_removing_barriers": "ORGS_INC",
          "case_studies": "CASES", "scenarios": "SCENARIOS", "themes": "THEMES2", "personas": "PERSONAS"}
 
 
