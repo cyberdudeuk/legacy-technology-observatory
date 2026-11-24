@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.2.2 — 24 November 2026
+- Requirement R26 done: the Find and reuse code section now links to the [Public Sector Tech Hub](https://cyberdudeuk.github.io/pubsec-tech-hub/) and its app store, the third of the three linked sites.
+- Check C22 with a negative test: every link to the hub uses its published address.
+
 ## 3.2.1 — 24 November 2026
 - Added `.zenodo.json` so Zenodo can archive each release and issue a DOI (Zenodo could not read the two-licence citation file). Clearer wording in the citation abstract. No change to the site.
 

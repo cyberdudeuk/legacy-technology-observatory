@@ -2,7 +2,7 @@
 
 Every release passes three layers of checks. Each check is proved to fail on a known-bad sample, so a check that cannot fail is caught.
 
-## 1. In-page self-checks (21)
+## 1. In-page self-checks (22)
 
 Run in the reader's browser every time the page loads, and shown on the About page with their negative tests.
 
@@ -29,6 +29,7 @@ Run in the reader's browser every time the page loads, and shown on the About pa
 | C19 | Every heatmap has a caption and a number in every cell, every demographic and pay figure cites a known source, and language-to-system matching uses whole words |
 | C20 | Every organisation listed has a secure link, a barrier and a description |
 | C21 | Every decision row cites known evidence and a framework, and the priority tool ranks correctly on a known case |
+| C22 | Every link to the Public Sector Tech Hub uses its published address (R26) |
 
 ## 2. Repository checks (`tools/checks.py`, 11)
 

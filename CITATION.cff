@@ -10,7 +10,7 @@ authors:
 repository-code: "https://github.com/cyberdudeuk/legacy-technology-observatory"
 url: "https://cyberdudeuk.github.io/legacy-technology-observatory/"
 license: [MIT, CC-BY-4.0]
-version: "3.2.1"
+version: "3.2.2"
 date-released: "2026-11-24"
 keywords: [legacy IT, legacy technology, COBOL, mainframe, PSTN switch-off, Airwave, operational technology, post-quantum cryptography, cost of legacy, technical debt, public sector, modernisation, digital skills, accessibility]
 identifiers:

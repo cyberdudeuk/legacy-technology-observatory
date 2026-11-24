@@ -6,7 +6,7 @@
 
 The old technology behind UK public services, from programming languages and mainframes to phone lines, emergency radio, devices and encryption: where it runs, what it costs, who can maintain it, and how the public sector is moving off it.
 
-One of three linked sites, each with one job: the [GitHub Repos Asset Catalogue](https://cyberdudeuk.github.io/github-repos-asset-catalogue/) shows code that exists (what you could reuse); this observatory shows what is old and risky (what you need to replace); a public sector tech hub with an app store, in development, will show what public bodies make and run (what you can adopt).
+One of three linked sites, each with one job: the [GitHub Repos Asset Catalogue](https://cyberdudeuk.github.io/github-repos-asset-catalogue/) shows code that exists (what you could reuse); this observatory shows what is old and risky (what you need to replace); the [Public Sector Tech Hub](https://cyberdudeuk.github.io/pubsec-tech-hub/), with its app store, shows what public bodies make and run (what you can adopt).
 
 **Read it:** https://cyberdudeuk.github.io/legacy-technology-observatory/
 
