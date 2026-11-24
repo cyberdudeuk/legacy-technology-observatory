@@ -1,0 +1,2866 @@
+{
+ "edition": "LCO-2.2-20261124",
+ "evidence_date": "2026-11-24",
+ "sources": {
+  "S2": {
+   "title": "NAO: The HMRC VAT service, the impact of legacy ICT (2013)",
+   "url": "https://www.nao.org.uk/wp-content/uploads/2013/08/10185_HMRC-VAT-service-the-impact-of-legacy-ICT-case-study.pdf"
+  },
+  "S3": {
+   "title": "NAO: The pension service, the impact of legacy ICT (2013)",
+   "url": "https://www.nao.org.uk/wp-content/uploads/2013/08/10183_DWP_The-Pension-Service-the-impact-of-legacy-ICT-case-study_final.pdf"
+  },
+  "S4": {
+   "title": "DSIT: State of digital government review (January 2025)",
+   "url": "https://www.gov.uk/government/publications/state-of-digital-government-review/state-of-digital-government-review"
+  },
+  "S5": {
+   "title": "GOV.UK roadmap: Upgrading outdated legacy systems",
+   "url": "https://roadmap-for-modern-digital-government.campaign.gov.uk/digital-and-data-infrastructure/upgrading-outdated-legacy-systems/"
+  },
+  "S6": {
+   "title": "GOV.UK: Guidance on the Legacy IT Risk Assessment Framework",
+   "url": "https://www.gov.uk/government/publications/guidance-on-the-legacy-it-risk-assessment-framework/guidance-on-the-legacy-it-risk-assessment-framework"
+  },
+  "S7": {
+   "title": "City AM: Re:State report on red-rated systems (2026)",
+   "url": "https://www.cityam.com/?p=2426524"
+  },
+  "S8": {
+   "title": "The Register: Why the UK public sector still creaks along on COBOL (Aug 2025)",
+   "url": "https://www.theregister.com/2025/08/15/cobol_in_the_public_sector_feature/"
+  },
+  "S9": {
+   "title": "The Register: Re:State 'From legacy to leadership' (May 2026)",
+   "url": "https://www.theregister.com/public-sector/2026/05/21/think-tank-to-uk-government-you-cant-build-the-future-on-systems-from-the-past/5243580"
+  },
+  "S10": {
+   "title": "DWP Digital blog: Completing our VME-R programme (2021)",
+   "url": "https://dwpdigital.blog.gov.uk/2021/04/28/completing-our-vme-r-programme-replacing-ageing-infrastructure/"
+  },
+  "S11": {
+   "title": "techUK: DWP completes VME replacement programme (2021)",
+   "url": "https://www.techuk.org/resource/dwp-complete-their-virtual-machine-environment-replacement-programme.html"
+  },
+  "S12": {
+   "title": "Micro Focus case study: DWP, 25 million lines converted (archived)",
+   "url": "https://webcf.waybackmachine.org/web/20211028205038/https://www.microfocus.com/en-gb/media/case-study/department-for-work-and-pensions-cs-a4.pdf"
+  },
+  "S13": {
+   "title": "DWP Find a job: COBOL Software Engineer advert (March 2026)",
+   "url": "https://findajob.dwp.gov.uk/details/18029711"
+  },
+  "S14": {
+   "title": "GDS Technology blog: Remediating legacy technology at DWP (2014)",
+   "url": "https://governmenttechnology.blog.gov.uk/2014/04/23/remediating-legacy-technology-a-success-story-from-the-department-for-work-pensions-2/"
+  },
+  "S15": {
+   "title": "HMRC: ETMP Regeneration Programme accounting officer's assessment",
+   "url": "https://www.gov.uk/government/publications/enterprise-tax-management-platform-regeneration-programme-accounting-officers-assessment-summary/enterprise-tax-management-platform-regeneration-programme-accounting-officers-assessment-summary"
+  },
+  "S16": {
+   "title": "HMRC: ETMP accounting officer assessment (deposited paper, 2025)",
+   "url": "https://data.parliament.uk/DepositedPapers/Files/DEP2025-0099/Accounting_Officer_Assessment_Summary.pdf"
+  },
+  "S17": {
+   "title": "The Register: SAP's £275M ETMP award (Jan 2026)",
+   "url": "https://www.theregister.com/2026/01/22/sap_275_million_award_from/"
+  },
+  "S18": {
+   "title": "HMRC: Single Customs Platform programme accounting officer's assessment",
+   "url": "https://www.gov.uk/government/publications/single-customs-platform-programme-accounting-officers-assessment-summary/single-customs-platform-programme-accounting-officers-assessment-summary"
+  },
+  "S19": {
+   "title": "The Register: CHIEF retirement and Fujitsu contracts (March 2024)",
+   "url": "https://www.theregister.com/2024/03/25/hmrc_chief_system_retirement"
+  },
+  "S20": {
+   "title": "Capgemini: HMRC legacy money management services to the cloud",
+   "url": "https://www.capgemini.com/news/client-stories/helping-hmrc-transform-legacy-money-management-services-to-the-cloud/"
+  },
+  "S21": {
+   "title": "Capgemini: Reimagining the UK's trade statistics service",
+   "url": "https://www.capgemini.com/ca-en/news/client-stories/reimagining-the-uks-trade-statistics-service/"
+  },
+  "S22": {
+   "title": "Home Office: LEDS data protection impact assessment (June 2026)",
+   "url": "https://www.gov.uk/government/publications/law-enforcement-data-service-data-protection-impact-assessment-2026/law-enforcement-data-service-leds-data-protection-impact-assessment-accessible"
+  },
+  "S23": {
+   "title": "Public Accounts Committee: oral evidence on NLEDP (2021)",
+   "url": "https://committees.parliament.uk/oralevidence/2747/default/"
+  },
+  "S24": {
+   "title": "NAO: The National Law Enforcement Data Programme (2021)",
+   "url": "https://www.nao.org.uk/wp-content/uploads/2021/09/The-National-Law-Enforcement-Data-Programme.pdf"
+  },
+  "S25": {
+   "title": "College of Policing: Code of practice for PNC and LEDS",
+   "url": "https://www.college.police.uk/print/pdf/node/3753"
+  },
+  "S26": {
+   "title": "DVLA business plan 2025 to 2026",
+   "url": "https://assets.publishing.service.gov.uk/media/69738027f909df76c5e71e8f/DVLA_business_plan_2025_to_2026.pdf"
+  },
+  "S27": {
+   "title": "DatacenterDynamics: DVLA to use Kyndryl's zCloud",
+   "url": "https://datacenterdynamics.com/en/news/uks-dvla-to-use-kyndryls-zcloud"
+  },
+  "S28": {
+   "title": "GDS blog: DVLA delivers real transformation (2015)",
+   "url": "https://gds.blog.gov.uk/2015/10/02/its-all-about-people-dvla-delivers-real-transformation"
+  },
+  "S29": {
+   "title": "DVLA Digital blog: Migrating to digital platforms (2014, with reader comments)",
+   "url": "https://dvladigital.blog.gov.uk/2014/01/07/migrating-to-digital-platforms-the-dvla/"
+  },
+  "S30": {
+   "title": "NAO: Modernising ageing digital services, Defra (Dec 2022)",
+   "url": "https://www.nao.org.uk/wp-content/uploads/2022/12/Modernising-ageing-digital-services-Summary.pdf"
+  },
+  "S31": {
+   "title": "edie: PAC on Defra's outdated digital systems (2023)",
+   "url": "https://www.edie.net/defras-outdated-digital-systems-leaving-nature-at-risk-mps-warn/?amp=true"
+  },
+  "S32": {
+   "title": "Met Office: LFRic, a modelling system fit for future computers",
+   "url": "https://www.metoffice.gov.uk/research/approach/modelling-systems/lfric"
+  },
+  "S33": {
+   "title": "Met Office blog: Next generation modelling systems (2025)",
+   "url": "https://www.metoffice.gov.uk/blog/2025/next-generation-modelling-systems-at-the-met-office"
+  },
+  "S34": {
+   "title": "arXiv: LFRic, scalability and performance portability (2018)",
+   "url": "https://arxiv.org/pdf/1809.07267"
+  },
+  "S35": {
+   "title": "The Register: Fujitsu confirms end date for mainframe and Unix (2022)",
+   "url": "https://www.theregister.com/2022/02/25/fujitsu_signposts_the_end_for/"
+  },
+  "S36": {
+   "title": "Fujitsu: Royal London VME case study (2021)",
+   "url": "https://www.fujitsu.com/global/imagesgig5/CS_2021Apr_Royal_London_Group_eng_v.1.pdf"
+  },
+  "S37": {
+   "title": "Digital Marketplace: Fujitsu mainframe modernisation (G-Cloud)",
+   "url": "https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/745886595069528"
+  },
+  "S38": {
+   "title": "InfoWorld/Computerworld: COBOL brain drain survey (2012)",
+   "url": "https://www.infoworld.com/article/2157354/brain-drain-where-cobol-systems-go-from-here-3.html"
+  },
+  "S39": {
+   "title": "eWeek: Micro Focus 'Future of COBOL applications' survey",
+   "url": "https://eweek.com/?p=132003"
+  },
+  "S40": {
+   "title": "TechRepublic: Old languages still critical, nobody wants to learn them",
+   "url": "https://www.techrepublic.com/de/article/these-old-programming-languages-are-still-critical-to-big-companies-but-nobody-wants-to-learn-them/"
+  },
+  "S41": {
+   "title": "Government Digital and Data Profession Capability Framework",
+   "url": "https://ddat-capability-framework.service.gov.uk/"
+  },
+  "S42": {
+   "title": "GOV.UK roadmap: Digital, data and AI skills",
+   "url": "https://roadmap-for-modern-digital-government.campaign.gov.uk/leadership-talent/digital-data-and-ai-skills"
+  },
+  "S43": {
+   "title": "Modern Civil Service blog: Government as a large employer of digital and data professionals (2024)",
+   "url": "https://moderncivilservice.blog.gov.uk/2024/02/20/government-is-one-of-the-largest-employers-of-digital-and-data-professionals-in-the-uk/"
+  },
+  "S44": {
+   "title": "IBM Newsroom: Lost in translation, the AI code debate (Feb 2026)",
+   "url": "https://newsroom.ibm.com/blog-lost-in-translation-what-the-ai-code-debate-keeps-getting-wrong"
+  },
+  "S45": {
+   "title": "Microsoft: How we use AI agents for COBOL migration (2025)",
+   "url": "https://devblogs.microsoft.com/all-things-azure/how-we-use-ai-agents-for-cobol-migration-and-mainframe-modernization/"
+  },
+  "S46": {
+   "title": "HCLTech: From COBOL to modern Java, two-step conversion (2026)",
+   "url": "https://www.hcltech.com/blogs/cobol-to-java-modernization"
+  },
+  "S47": {
+   "title": "Infosys: Comparative analysis of COBOL modernisation approaches",
+   "url": "https://www.infosys.com/services/application-modernization/documents/comparative-analysis.pdf"
+  },
+  "S48": {
+   "title": "Wikipedia: COBOL",
+   "url": "https://en.wikipedia.org/wiki/COBOL"
+  },
+  "S49": {
+   "title": "Wikipedia: History of programming languages",
+   "url": "https://en.wikipedia.org/wiki/History_of_programming_languages"
+  },
+  "S50": {
+   "title": "NHS DSPT: Data Security Standard 8, unsupported systems",
+   "url": "https://dsptoolkit.nhs.uk/News/Attachment/765"
+  },
+  "S51": {
+   "title": "TwinFM: Outdated technology is costing the public sector £45bn a year",
+   "url": "https://www.twinfm.com/article/outdated-technology-is-costing-the-public-sector-45-billion-a-year"
+  },
+  "S52": {
+   "title": "Computer Weekly: Weak supplier management hinders digital government",
+   "url": "https://www.computerweekly.com/news/366618088/Weak-supplier-management-hinders-digital-government"
+  },
+  "S53": {
+   "title": "Observatory GitHub scan, 24 November 2026 (method on the Repo scan page)",
+   "url": "#repos"
+  },
+  "S55": {
+   "title": "DWP Digital blog: Heritage reliability engineering (2019)",
+   "url": "https://dwpdigital.blog.gov.uk/2019/09/24/heritage-reliability-engineering"
+  },
+  "S56": {
+   "title": "The Register: UK justice system leaves ancient data centres (Feb 2026)",
+   "url": "https://www.theregister.com/2026/02/05/uk_courts_cloud/"
+  },
+  "S57": {
+   "title": "US GAO-25-107795: Modernising critical decades-old legacy systems",
+   "url": "https://www.gao.gov/products/gao-25-107795"
+  },
+  "S58": {
+   "title": "The Register: PAC says legacy IT blocks government AI plans (2025)",
+   "url": "https://www.theregister.com/2025/03/26/legacy_systems_uk_ai/"
+  },
+  "S59": {
+   "title": "Wikipedia: Customs Handling of Import and Export Freight",
+   "url": "https://en.wikipedia.org/wiki/Customs_Handling_of_Import_%26_Export_Freight"
+  },
+  "S60": {
+   "title": "Fujitsu press release: VME platform extension (2019)",
+   "url": "https://www.fujitsu.com/uk/news/pr/2019/fs-20190305.html"
+  },
+  "S61": {
+   "title": "Rocket Software: AI application modernisation brochure",
+   "url": "https://www.rocketsoftware.com/sites/default/files/media/documents/ai-app-modernization-brochure.pdf"
+  },
+  "S62": {
+   "title": "The Register: HMRC, SAP ECC6 support and the intelligent client (July 2024)",
+   "url": "https://www.theregister.com/2024/07/23/sap_ecc_hmrc/"
+  },
+  "S63": {
+   "title": "LGA: State of Digital Local Government",
+   "url": "https://www.local.gov.uk/node/8277299"
+  },
+  "S64": {
+   "title": "NI Audit Office: Major IT projects in Northern Ireland (July 2025)",
+   "url": "https://www.niauditoffice.gov.uk/publications/html-document/major-it-projects-northern-ireland"
+  },
+  "S65": {
+   "title": "Scottish Government: Major IT projects progress report to the Public Audit Committee (Nov 2026)",
+   "url": "https://www.parliament.scot/-/media/files/committees/session-7/public-audit-committee/correspondence/2026/autumn-pac-major-it-projects-report.pdf"
+  },
+  "S66": {
+   "title": "Audit Wales: Digital Health and Care Wales, digital transformation (Aug 2026)",
+   "url": "https://audit.wales/publication/digital-health-and-care-wales-digital-transformation"
+  },
+  "S67": {
+   "title": "UKAuthority: NHS Spine team outlines ambitions for rebuild",
+   "url": "https://ukauthority.com/articles/nhs-spine-team-outlines-ambitions-for-rebuild"
+  },
+  "S68": {
+   "title": "Civil Service World: DWP signs the Age-friendly Employer Pledge (Feb 2023)",
+   "url": "https://civilserviceworld.com/professions/article/dwp-age-friendly-employer-pledge-supporting-older-staff-over-50s-charter"
+  },
+  "S69": {
+   "title": "Institute for Government: Age of the civil service",
+   "url": "https://instituteforgovernment.org.uk/explainer/age-civil-service"
+  },
+  "S70": {
+   "title": "Equality Act 2010, section 149: Public sector equality duty",
+   "url": "https://www.legislation.gov.uk/ukpga/2010/15/section/149"
+  },
+  "S71": {
+   "title": "W3C: Web Content Accessibility Guidelines (WCAG) 2.2",
+   "url": "https://www.w3.org/TR/WCAG22/"
+  },
+  "S72": {
+   "title": "Public Sector Bodies (Websites and Mobile Applications) Accessibility Regulations 2018",
+   "url": "https://www.legislation.gov.uk/uksi/2018/952/contents/made"
+  },
+  "S73": {
+   "title": "Government Science and Engineering blog: GSE returners pack (2021)",
+   "url": "https://governmentscienceandengineering.blog.gov.uk/2021/09/15/gse-returners-pack/"
+  },
+  "S74": {
+   "title": "Service Standard point 1: Understand users and their needs",
+   "url": "https://www.gov.uk/service-manual/service-standard/point-1-understand-user-needs"
+  },
+  "S75": {
+   "title": "Service Standard point 5: Make sure everyone can use the service",
+   "url": "https://www.gov.uk/service-manual/service-standard/point-5-make-sure-everyone-can-use-the-service"
+  }
+ },
+ "tiles": [
+  {
+   "v": "28%",
+   "l": "of central government systems were legacy in 2024, up from 26% in 2023.",
+   "s": [
+    "S4"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "v": "22%",
+   "l": "of those legacy systems were red-rated, the highest risk category, up 16%.",
+   "s": [
+    "S4"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "v": "319",
+   "l": "systems assessed with the Legacy IT Risk Assessment Framework by January 2025.",
+   "s": [
+    "S7"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "v": "£800bn",
+   "l": "of tax revenue and payments a year pass through HMRC's ETMP, which leaves its SAP ECC6 base in 2030.",
+   "s": [
+    "S16"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "v": "25m",
+   "u": "lines",
+   "l": "of COBOL converted when DWP moved 11 benefit systems off ICL VME mainframes.",
+   "s": [
+    "S12"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "v": "1974",
+   "l": "the year the Police National Computer went live on the mainframe architecture it still runs on.",
+   "s": [
+    "S23",
+    "S22"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "v": "2035",
+   "l": "end of Fujitsu mainframe support; sales stop by 2030.",
+   "s": [
+    "S35"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "v": "0",
+   "l": "public repositories with COBOL as their main language across 14 government GitHub organisations.",
+   "s": [
+    "S53"
+   ],
+   "ev": "sourced"
+  }
+ ],
+ "findings": [
+  {
+   "t": "Legacy is growing, not shrinking",
+   "b": "Legacy rose from 26% to 28% of central government systems in a year, and the red-rated share rose too. Departments range widely, and some sit near 60%.",
+   "s": [
+    "S4",
+    "S9"
+   ],
+   "sev": "crit"
+  },
+  {
+   "t": "COBOL still pays benefits and collects tax",
+   "b": "DWP's benefit systems were re-platformed in 2021 but remain COBOL. DWP was still hiring COBOL engineers in March 2026. HMRC still pays contractors to maintain COBOL.",
+   "s": [
+    "S10",
+    "S13",
+    "S8"
+   ],
+   "sev": "crit"
+  },
+  {
+   "t": "Skills risk was flagged in 2013 and is still live",
+   "b": "In 2013 the NAO warned that VME and COBOL skills would get harder to source at HMRC, and that DWP's COBOL knowledge was declining, among contractors too.",
+   "s": [
+    "S2",
+    "S3"
+   ],
+   "sev": "warn"
+  },
+  {
+   "t": "Re-platforming buys time, it does not end the language",
+   "b": "Several big moves kept the old language on new hardware: DWP's VME-R and DVLA's managed mainframe. That reduces hardware risk while the COBOL skills risk remains.",
+   "s": [
+    "S12",
+    "S27"
+   ],
+   "sev": "warn"
+  },
+  {
+   "t": "Fortran is old but not legacy in the same way",
+   "b": "The Met Office's next-generation model, LFRic, is still written in modern Fortran. Scientific Fortran is actively developed, so the risk there is HPC skills, not abandonment.",
+   "s": [
+    "S32",
+    "S34"
+   ],
+   "sev": "info"
+  },
+  {
+   "t": "Public code cannot see the legacy estate",
+   "b": "No COBOL repositories appear in 14 government GitHub organisations. Legacy code lives in private estates and supplier contracts, so audits and accounting officer assessments are the only window.",
+   "s": [
+    "S53"
+   ],
+   "sev": "info"
+  },
+  {
+   "t": "Retirements do happen",
+   "b": "HMRC closed CHIEF after about 30 years, with no new declarations after July 2024. Police forces were migrated to LEDS in September 2025. Both took years longer than first planned.",
+   "s": [
+    "S18",
+    "S5",
+    "S19"
+   ],
+   "sev": "ok"
+  }
+ ],
+ "languages": [
+  {
+   "id": "cobol",
+   "n": "COBOL",
+   "y": 1959,
+   "by": "CODASYL committee, US Department of Defense initiative; drew on Grace Hopper's FLOW-MATIC",
+   "cat": "legacy",
+   "purpose": "Business data processing: records, files, batch runs, money arithmetic.",
+   "traits": "English-like, verbose, fixed decimal arithmetic, strong batch and file handling. Fixed format echoes the 80-column card.",
+   "gov": "DWP benefits and pensions (Micro Focus COBOL); HMRC tax systems; formerly HMRC CHIEF and DWP VME systems.",
+   "talent": "Shrinking. Many experienced specialists are nearing retirement, and few new developers learn it. DWP still recruits for it.",
+   "tp": 1,
+   "debt": "Strong link. NAO named COBOL skills as a risk at HMRC and DWP in 2013.",
+   "modern": "Java, C# on .NET, or modern COBOL on Linux and cloud.",
+   "repos": "0 repositories with COBOL as main language; 4 code mentions",
+   "out": "Long tail. Stable systems will keep running for a decade or more while skills get scarcer and dearer.",
+   "s": [
+    "S48",
+    "S2",
+    "S3",
+    "S10",
+    "S13",
+    "S8"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "id": "fortran",
+   "n": "Fortran",
+   "y": 1957,
+   "by": "IBM team led by John Backus",
+   "cat": "science",
+   "purpose": "Numerical and scientific computing.",
+   "traits": "Fast array maths, strong compilers, modern versions (2003 onwards) add object orientation and parallelism.",
+   "gov": "Met Office Unified Model and its replacement LFRic; STFC, UKAEA and UKCEH research codes.",
+   "talent": "Niche but renewing through universities and HPC centres.",
+   "tp": 2,
+   "debt": "Weak link. The language is current; the old code style and HPC skills are the pressure points.",
+   "modern": "Modern Fortran with code generation (PSyclone); C++, Julia or Python for some tools.",
+   "repos": "14 primary-language repositories in the 14-organisation scan; 28 across science organisations",
+   "out": "Stays. Weather and climate models will run on Fortran for years.",
+   "s": [
+    "S49",
+    "S32",
+    "S34",
+    "S53"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "id": "jcl",
+   "n": "JCL",
+   "y": 1964,
+   "by": "IBM, for OS/360",
+   "cat": "legacy",
+   "purpose": "Job control: telling an IBM mainframe which programs to run, in what order, with which files.",
+   "traits": "Terse card-image statements; batch schedules depend on it.",
+   "gov": "Likely wherever IBM Z mainframes run batch, such as the managed mainframe services used by DVLA and HMRC.",
+   "talent": "Tied to the mainframe pool; rarely taught.",
+   "tp": 1,
+   "debt": "Strong link through batch scheduling knowledge.",
+   "modern": "Workflow schedulers and cloud batch services.",
+   "repos": "Not measured",
+   "out": "Goes when the mainframe goes.",
+   "s": [
+    "S27"
+   ],
+   "ev": "unconfirmed"
+  },
+  {
+   "id": "vme",
+   "n": "ICL VME and SCL",
+   "y": 1974,
+   "by": "ICL (now Fujitsu); VME developed in the mid-1970s",
+   "cat": "legacy",
+   "purpose": "Mainframe operating system and its System Control Language.",
+   "traits": "Proprietary; ran UK revenue and benefit systems; vendor-specific COBOL dialect.",
+   "gov": "Formerly DWP's benefit systems and HMRC's CHIEF; HMRC VAT ran on VME in 2013.",
+   "talent": "Very small. Fujitsu stopped selling VME as a licensed product at the end of 2020.",
+   "tp": 1,
+   "debt": "Strong link. Government was called the world's biggest VME customer.",
+   "modern": "Open systems with modern COBOL, or rewrite.",
+   "repos": "0 code mentions",
+   "out": "Ending. Fujitsu mainframe sales stop by 2030 and support by 2035.",
+   "s": [
+    "S14",
+    "S36",
+    "S35",
+    "S60",
+    "S2"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "id": "abap",
+   "n": "ABAP",
+   "y": 1983,
+   "by": "SAP",
+   "cat": "data",
+   "purpose": "Programming language of SAP business systems.",
+   "traits": "Database-centred, report and transaction oriented; customisations live in ABAP.",
+   "gov": "HMRC's ETMP, which handles more than 40 taxes, is built on SAP. ABAP use inside ETMP is our inference.",
+   "talent": "Healthy commercial market, though S/4HANA migration demand is high across industry.",
+   "tp": 2,
+   "debt": "Medium. The base product's end of support forces the migration, not the language.",
+   "modern": "ABAP on S/4HANA (system conversion keeps customisations).",
+   "repos": "Not measured",
+   "out": "Continues inside SAP estates.",
+   "s": [
+    "S15",
+    "S16"
+   ],
+   "ev": "analysis"
+  },
+  {
+   "id": "natural",
+   "n": "Natural and Adabas",
+   "y": 1979,
+   "by": "Software AG",
+   "cat": "data",
+   "purpose": "4GL and database for high-volume transaction systems.",
+   "traits": "Fast on mainframes; proprietary; small skills base.",
+   "gov": "A 2014 reader comment on DVLA's blog mentions Adabas databases. We have not confirmed current use.",
+   "talent": "Very small.",
+   "tp": 1,
+   "debt": "Likely strong where present.",
+   "modern": "Relational or cloud databases with Java or C#.",
+   "repos": "Not measured",
+   "out": "Declining.",
+   "s": [
+    "S29"
+   ],
+   "ev": "unconfirmed"
+  },
+  {
+   "id": "plsql",
+   "n": "PL/SQL",
+   "y": 1988,
+   "by": "Oracle",
+   "cat": "data",
+   "purpose": "Procedural code that runs inside Oracle databases.",
+   "traits": "Business rules held in stored procedures, close to the data.",
+   "gov": "Ministry of Justice prison data (NOMIS) tooling appears in public repositories.",
+   "talent": "Large but ageing database developer pool.",
+   "tp": 2,
+   "debt": "Medium. Logic locked in the database makes migration harder.",
+   "modern": "Application services plus PostgreSQL or managed databases.",
+   "repos": "3 primary-language repositories",
+   "out": "Persists while Oracle estates persist.",
+   "s": [
+    "S53"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "id": "perl",
+   "n": "Perl",
+   "y": 1987,
+   "by": "Larry Wall",
+   "cat": "ops",
+   "purpose": "Text processing, scripting and early web applications.",
+   "traits": "Flexible, terse, strong regular expressions.",
+   "gov": "Companies House's core web application repository lists Perl as its main language.",
+   "talent": "Shrinking; few new learners.",
+   "tp": 1,
+   "debt": "Medium. Older web estates depend on it.",
+   "modern": "Python, Go or Java services.",
+   "repos": "29 primary-language repositories",
+   "out": "Slow decline.",
+   "s": [
+    "S53"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "id": "vb",
+   "n": "Visual Basic 6 and VBA",
+   "y": 1991,
+   "by": "Microsoft",
+   "cat": "legacy",
+   "purpose": "Desktop apps and Office automation (macros).",
+   "traits": "Quick to build; tied to Windows and Office versions.",
+   "gov": "Widely reported in desktop tools across the public sector. Not measured in this scan.",
+   "talent": "Many casual users; few professional maintainers.",
+   "tp": 2,
+   "debt": "Hidden debt: end-user tools sit outside IT asset registers.",
+   "modern": "Low-code platforms, Python, C#.",
+   "repos": "Not measured (search query failed)",
+   "out": "Fades as Office automation moves to new tooling.",
+   "s": [],
+   "ev": "unconfirmed"
+  },
+  {
+   "id": "java",
+   "n": "Java",
+   "y": 1995,
+   "by": "Sun Microsystems",
+   "cat": "modern",
+   "purpose": "General-purpose enterprise applications.",
+   "traits": "Portable, large ecosystem; old versions such as Java 8 now count as legacy in their own right.",
+   "gov": "Widely used for back-end services and as the main COBOL conversion target.",
+   "talent": "Large.",
+   "tp": 3,
+   "debt": "Low, except on out-of-support versions.",
+   "modern": "Current Java LTS, Kotlin.",
+   "repos": "442 repositories",
+   "out": "Main target for COBOL conversion.",
+   "s": [
+    "S53",
+    "S47"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "id": "scala",
+   "n": "Scala",
+   "y": 2004,
+   "by": "Martin Odersky, EPFL",
+   "cat": "modern",
+   "purpose": "Functional and object-oriented code on the JVM.",
+   "traits": "Expressive, strongly typed; HMRC's MDTP services are built in it.",
+   "gov": "HMRC's digital tax platform; 1,560 public repositories, most of them HMRC's.",
+   "talent": "Smaller than Java's.",
+   "tp": 2,
+   "debt": "Watch item: a niche skills pool could make this tomorrow's legacy.",
+   "modern": "n/a",
+   "repos": "1,560 repositories",
+   "out": "Stable but worth workforce planning.",
+   "s": [
+    "S53"
+   ],
+   "ev": "analysis"
+  },
+  {
+   "id": "ruby",
+   "n": "Ruby",
+   "y": 1995,
+   "by": "Yukihiro Matsumoto",
+   "cat": "modern",
+   "purpose": "Web applications (Rails).",
+   "traits": "Productive; GOV.UK publishing runs on it.",
+   "gov": "GOV.UK publishing apps.",
+   "talent": "Moderate.",
+   "tp": 2,
+   "debt": "Low.",
+   "modern": "n/a",
+   "repos": "675 repositories",
+   "out": "Stable.",
+   "s": [
+    "S53"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "id": "python",
+   "n": "Python",
+   "y": 1991,
+   "by": "Guido van Rossum",
+   "cat": "modern",
+   "purpose": "General purpose, data and AI.",
+   "traits": "Readable; dominant in data science.",
+   "gov": "Data, analytics, services and tooling.",
+   "talent": "Very large.",
+   "tp": 3,
+   "debt": "Low.",
+   "modern": "n/a",
+   "repos": "799 repositories",
+   "out": "Growing.",
+   "s": [
+    "S53"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "id": "js",
+   "n": "JavaScript",
+   "y": 1995,
+   "by": "Brendan Eich, Netscape",
+   "cat": "modern",
+   "purpose": "Web front ends and services.",
+   "traits": "Runs in every browser; GOV.UK Frontend is written in it.",
+   "gov": "Front ends and Node services.",
+   "talent": "Very large.",
+   "tp": 3,
+   "debt": "Low; dependency churn is the risk.",
+   "modern": "TypeScript.",
+   "repos": "1,820 repositories",
+   "out": "Stable.",
+   "s": [
+    "S53"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "id": "ts",
+   "n": "TypeScript",
+   "y": 2012,
+   "by": "Microsoft",
+   "cat": "modern",
+   "purpose": "Typed JavaScript.",
+   "traits": "Safer large front ends.",
+   "gov": "Home Office Design System and new services.",
+   "talent": "Large.",
+   "tp": 3,
+   "debt": "Low.",
+   "modern": "n/a",
+   "repos": "427 repositories",
+   "out": "Growing.",
+   "s": [
+    "S53"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "id": "csharp",
+   "n": "C#",
+   "y": 2000,
+   "by": "Microsoft",
+   "cat": "modern",
+   "purpose": "Enterprise applications on .NET.",
+   "traits": "Common COBOL conversion target alongside Java.",
+   "gov": ".NET services and clients such as GOV.UK Notify's .NET client.",
+   "talent": "Large.",
+   "tp": 3,
+   "debt": "Low on current .NET; .NET Framework 4.x estates are a growing legacy.",
+   "modern": "Current .NET.",
+   "repos": "429 repositories",
+   "out": "Stable.",
+   "s": [
+    "S53"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "id": "go",
+   "n": "Go",
+   "y": 2009,
+   "by": "Google",
+   "cat": "modern",
+   "purpose": "Network services and infrastructure.",
+   "traits": "Simple, fast to compile.",
+   "gov": "GOV.UK router and platform tooling.",
+   "talent": "Moderate.",
+   "tp": 2,
+   "debt": "Low.",
+   "modern": "n/a",
+   "repos": "181 repositories",
+   "out": "Growing.",
+   "s": [
+    "S53"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "id": "kotlin",
+   "n": "Kotlin",
+   "y": 2011,
+   "by": "JetBrains",
+   "cat": "modern",
+   "purpose": "JVM and mobile applications.",
+   "traits": "Modern JVM language.",
+   "gov": "HMRC tax calculator library; MoJ services.",
+   "talent": "Moderate.",
+   "tp": 2,
+   "debt": "Low.",
+   "modern": "n/a",
+   "repos": "206 repositories",
+   "out": "Growing.",
+   "s": [
+    "S53"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "id": "hcl",
+   "n": "HCL (Terraform)",
+   "y": 2014,
+   "by": "HashiCorp",
+   "cat": "ops",
+   "purpose": "Infrastructure as code.",
+   "traits": "Declares cloud infrastructure.",
+   "gov": "MoJ Modernisation Platform, one of the main routes off legacy hosting.",
+   "talent": "Moderate.",
+   "tp": 2,
+   "debt": "Low.",
+   "modern": "n/a",
+   "repos": "604 repositories",
+   "out": "Stable.",
+   "s": [
+    "S53"
+   ],
+   "ev": "sourced"
+  }
+ ],
+ "systems": [
+  {
+   "n": "Benefit and pension systems (VME-R)",
+   "org": "DWP",
+   "sector": "Central government",
+   "tech": "COBOL",
+   "plat": "Formerly ICL VME; now Micro Focus COBOL on open systems",
+   "svc": "State Pension, Jobseeker's Allowance, Income Support, Disability Living Allowance and other benefits",
+   "status": "Re-platformed, still COBOL",
+   "route": "Re-platform",
+   "sup": "OneAdvanced; Micro Focus (now Rocket Software)",
+   "plan": "June 2025: DWP agreed a plan to modernise priority legacy benefit and pension services.",
+   "s": [
+    "S10",
+    "S11",
+    "S12",
+    "S5",
+    "S13"
+   ]
+  },
+  {
+   "n": "VAT systems",
+   "org": "HMRC",
+   "sector": "Central government",
+   "tech": "COBOL",
+   "plat": "ICL VME (2013 audit)",
+   "svc": "VAT collection",
+   "status": "Live legacy",
+   "route": "Retain",
+   "sup": "Aspire (Capgemini, Fujitsu) at the time of audit",
+   "plan": "No public retirement date found.",
+   "s": [
+    "S2",
+    "S60"
+   ]
+  },
+  {
+   "n": "Enterprise Tax Management Platform (ETMP)",
+   "org": "HMRC",
+   "sector": "Central government",
+   "tech": "ABAP",
+   "plat": "SAP ECC6",
+   "svc": "Accounting for more than 40 taxes; about 40,000 daily users; over £800bn a year",
+   "status": "Migrating",
+   "route": "Re-platform (system conversion)",
+   "sup": "SAP; Capgemini",
+   "plan": "Move to S/4HANA; decommission ECC6 in 2030.",
+   "s": [
+    "S15",
+    "S16",
+    "S17"
+   ]
+  },
+  {
+   "n": "CHIEF customs system",
+   "org": "HMRC",
+   "sector": "Central government",
+   "tech": "COBOL",
+   "plat": "VME with IDMSX database",
+   "svc": "Import and export declarations",
+   "status": "Decommissioned",
+   "route": "Replace",
+   "sup": "BT, then Aspire, then Fujitsu",
+   "plan": "No new declarations since July 2024; closure work due by March 2025. Replaced by the Customs Declaration Service.",
+   "s": [
+    "S18",
+    "S19",
+    "S59"
+   ]
+  },
+  {
+   "n": "Money management services",
+   "org": "HMRC",
+   "sector": "Central government",
+   "tech": "Mainframe",
+   "plat": "Two mainframe-hosted systems with indexed master files",
+   "svc": "Recording and allocating tax receipts",
+   "status": "Replaced",
+   "route": "Rebuild",
+   "sup": "Capgemini on AWS",
+   "plan": "Merged into one cloud service; green-screen interface replaced.",
+   "s": [
+    "S20"
+   ]
+  },
+  {
+   "n": "Trade statistics",
+   "org": "HMRC",
+   "sector": "Central government",
+   "tech": "Mainframe",
+   "plat": "Legacy mainframe",
+   "svc": "UK trade statistics",
+   "status": "Replaced",
+   "route": "Rebuild",
+   "sup": "Capgemini on Microsoft Azure",
+   "plan": "Delivered over 18 months in two stages.",
+   "s": [
+    "S21"
+   ]
+  },
+  {
+   "n": "Police National Computer (PNC)",
+   "org": "Home Office",
+   "sector": "Policing",
+   "tech": "Mainframe",
+   "plat": "Mainframe architecture from 1974",
+   "svc": "Arrests, convictions, wanted and missing people, vehicles and drivers for every UK force",
+   "status": "Migrating",
+   "route": "Replace",
+   "sup": "Home Office with suppliers",
+   "plan": "Forces migrated to LEDS in September 2025; PNC to be switched off once dependence ends. Switch-off date not confirmed in our sources.",
+   "s": [
+    "S23",
+    "S22",
+    "S5",
+    "S25",
+    "S24"
+   ]
+  },
+  {
+   "n": "Driver licensing (Drivers90 and successors)",
+   "org": "DVLA",
+   "sector": "Central government",
+   "tech": "Mainframe",
+   "plat": "IBM-compatible mainframe; managed zCloud service",
+   "svc": "Records for over 53 million drivers and 47 million vehicles",
+   "status": "Migrating",
+   "route": "Rehost, then rebuild",
+   "sup": "Kyndryl (managed mainframe)",
+   "plan": "Migrate all digital driver licensing services to the strategic cloud platform by March 2026.",
+   "s": [
+    "S28",
+    "S27",
+    "S26"
+   ]
+  },
+  {
+   "n": "Defra legacy applications",
+   "org": "Defra",
+   "sector": "Central government",
+   "tech": "Mixed",
+   "plat": "Many platforms; 30% of applications unsupported in 2022",
+   "svc": "Trade, animal disease, flood and air quality services; 21 million transactions a year",
+   "status": "Migrating",
+   "route": "Rehost and replace",
+   "sup": "Various",
+   "plan": "Migrate 19 critical legacy applications to the cloud by March 2026.",
+   "s": [
+    "S30",
+    "S31",
+    "S5"
+   ]
+  },
+  {
+   "n": "Unified Model",
+   "org": "Met Office",
+   "sector": "Science agency",
+   "tech": "Fortran",
+   "plat": "Supercomputer",
+   "svc": "National weather forecasts and climate projections",
+   "status": "Migrating",
+   "route": "Rebuild",
+   "sup": "Met Office with STFC and universities",
+   "plan": "Replaced by LFRic, written in modern Fortran, for operational forecasting around 2027.",
+   "s": [
+    "S32",
+    "S33",
+    "S34"
+   ]
+  },
+  {
+   "n": "Companies House core web application",
+   "org": "Companies House",
+   "sector": "Central government",
+   "tech": "Perl",
+   "plat": "Web application",
+   "svc": "Company search and filing",
+   "status": "Live",
+   "route": "Retain",
+   "sup": "In-house",
+   "plan": "No legacy classification found. Shown because Perl is its main language.",
+   "s": [
+    "S53"
+   ]
+  },
+  {
+   "n": "Prison records (NOMIS) tooling",
+   "org": "Ministry of Justice",
+   "sector": "Central government",
+   "tech": "PL/SQL",
+   "plat": "Oracle",
+   "svc": "Prisoner records",
+   "status": "Live",
+   "route": "Retain",
+   "sup": "In-house",
+   "plan": "Public repositories show PL/SQL services; legacy status not confirmed.",
+   "s": [
+    "S53"
+   ]
+  }
+ ],
+ "devolved_and_local": [
+  {
+   "nation": "Northern Ireland",
+   "n": "encompass patient records",
+   "org": "Department of Health",
+   "tech": "Not published",
+   "f": "Replaces about 45 Health and Social Care patient record systems that cost about £6.5m a year to run. None had been switched off when audited; decommissioning is targeted for March 2029.",
+   "s": [
+    "S64"
+   ]
+  },
+  {
+   "nation": "Northern Ireland",
+   "n": "ABBACUS rates and benefits",
+   "org": "Land and Property Services",
+   "tech": "Not published",
+   "f": "Contract expired in 2013 and was extended to 2030, 17 years, worth £42.4m. Its replacement is expected by October 2026, nearly five years late.",
+   "s": [
+    "S64"
+   ]
+  },
+  {
+   "nation": "Northern Ireland",
+   "n": "LandWeb land registration",
+   "org": "Land and Property Services",
+   "tech": "Not published",
+   "f": "Contract expired in 2019 and was extended to July 2028. Phased replacement began in April 2025, due to finish by October 2027.",
+   "s": [
+    "S64"
+   ]
+  },
+  {
+   "nation": "Northern Ireland",
+   "n": "APHIS animal health system",
+   "org": "DAERA",
+   "tech": "Not published",
+   "f": "Contract extensions total 18 years, the longest in the portfolio. Its replacement, NIFAIS, was due in full operation by December 2025.",
+   "s": [
+    "S64"
+   ]
+  },
+  {
+   "nation": "Northern Ireland",
+   "n": "Major IT portfolio",
+   "org": "Northern Ireland Civil Service",
+   "tech": "Not published",
+   "f": "Legacy contracts were extended by almost eight years on average, a third of them by ten years or more. Reported skills gaps include software development and cyber security.",
+   "s": [
+    "S64"
+   ]
+  },
+  {
+   "nation": "Scotland",
+   "n": "New Payment and Accounting Service",
+   "org": "Social Security Scotland",
+   "tech": "Not published",
+   "f": "Replaces reliance on DWP's Central Payment System, which DWP is replacing. April 2025 to October 2027, about £33.2m.",
+   "s": [
+    "S65"
+   ]
+  },
+  {
+   "nation": "Scotland",
+   "n": "Legacy Services Programme",
+   "org": "Scottish Government",
+   "tech": "Not published",
+   "f": "Moves agriculture and rural economy services off legacy technologies and out of the Saughton House data centre. April 2024 to March 2027, about £14.6m.",
+   "s": [
+    "S65"
+   ]
+  },
+  {
+   "nation": "Scotland",
+   "n": "Stage 2 Digital Transformation",
+   "org": "Care Inspectorate",
+   "tech": "Not published",
+   "f": "Replaces inflexible legacy systems described as at high risk of failure. Due January 2027, about £9.35m.",
+   "s": [
+    "S65"
+   ]
+  },
+  {
+   "nation": "Scotland",
+   "n": "Core Systems Replacement",
+   "org": "Student Awards Agency Scotland",
+   "tech": "Not published",
+   "f": "Replaces most core operational systems. April 2024 to December 2028, about £15m.",
+   "s": [
+    "S65"
+   ]
+  },
+  {
+   "nation": "Wales",
+   "n": "Digital transformation review",
+   "org": "Digital Health and Care Wales",
+   "tech": "Not published",
+   "f": "Workforce capability assessment was slower than planned, so key digital skills gaps are not yet fully understood.",
+   "s": [
+    "S66"
+   ]
+  },
+  {
+   "nation": "England (local government)",
+   "n": "Council systems market",
+   "org": "English councils",
+   "tech": "Not published",
+   "f": "Supplier concentration in revenues and benefits, social care case management, electoral and planning systems. Leaving a revenues and benefits system could cost up to £300,000 per council.",
+   "s": [
+    "S63"
+   ]
+  },
+  {
+   "nation": "England (local government)",
+   "n": "Council IT workforce",
+   "org": "English councils",
+   "tech": "Not published",
+   "f": "About 18% of council IT posts were vacant in October 2023, and only 24% of councils had an ICT succession training programme.",
+   "s": [
+    "S63"
+   ]
+  },
+  {
+   "nation": "England (NHS)",
+   "n": "NHS Spine",
+   "org": "NHS England",
+   "tech": "Moving to cloud-native",
+   "f": "The Spine Futures programme is rebuilding Spine services over two to three years, starting by moving the MESH messaging service to the cloud. Start year not stated in our source.",
+   "s": [
+    "S67"
+   ]
+  }
+ ],
+ "suppliers": [
+  {
+   "n": "Fujitsu (formerly ICL)",
+   "r": "VME platform owner; ran CHIEF under a £168.8m contract awarded without competition in 2020.",
+   "s": [
+    "S19",
+    "S36",
+    "S35"
+   ]
+  },
+  {
+   "n": "Capgemini",
+   "r": "Long-running ETMP 'run and change' services at HMRC; rebuilt HMRC mainframe services on AWS and Azure.",
+   "s": [
+    "S17",
+    "S20",
+    "S21"
+   ]
+  },
+  {
+   "n": "Kyndryl",
+   "r": "Managed mainframe services for DVLA (zCloud). Reported to have also prepared HMRC's mainframe estate for cloud migration.",
+   "s": [
+    "S27"
+   ]
+  },
+  {
+   "n": "SAP",
+   "r": "Awarded about £275m to migrate ETMP from ECC6 to S/4HANA.",
+   "s": [
+    "S17"
+   ]
+  },
+  {
+   "n": "OneAdvanced and Rocket Software",
+   "r": "Converted DWP's 11 VME benefit systems to Visual COBOL on open systems.",
+   "s": [
+    "S12",
+    "S11"
+   ]
+  }
+ ],
+ "wider": [
+  {
+   "t": "Police forces",
+   "b": "Between 10% and 70% of police force technology estates count as legacy.",
+   "s": [
+    "S51"
+   ]
+  },
+  {
+   "t": "NHS trusts",
+   "b": "Between 10% and 50% of NHS trust estates count as legacy. The NHS security standard says no unsupported operating systems, software or browsers should be in use.",
+   "s": [
+    "S51",
+    "S50"
+   ]
+  },
+  {
+   "t": "Courts",
+   "b": "HM Courts and Tribunals Service finished moving out of old data centres in 2026 and is still retiring replaced applications.",
+   "s": [
+    "S56"
+   ]
+  },
+  {
+   "t": "International comparison",
+   "b": "The US GAO found that only 3 of 10 critical federal legacy systems flagged in 2019 had been modernised by 2025.",
+   "s": [
+    "S57"
+   ]
+  }
+ ],
+ "skills_evidence": [
+  {
+   "t": "NAO, HMRC VAT (2013)",
+   "b": "Sourcing VME and COBOL skills would get harder. HMRC planned to recruit mainframe developers and set up succession plans and knowledge transfer.",
+   "s": [
+    "S2"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "t": "NAO, DWP Pension Service (2013)",
+   "b": "COBOL skills and knowledge of the legacy system were declining, both in-house and among contractors.",
+   "s": [
+    "S3"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "t": "DWP COBOL engineer advert (March 2026)",
+   "b": "Salary £44,447 to £59,813 to lead five engineers on Micro Focus COBOL systems that DWP calls central to its operational stability.",
+   "s": [
+    "S13"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "t": "Industry survey (2012)",
+   "b": "Half of organisations said their COBOL staff averaged 45 or older, and 46% already saw a shortage. The risk is fewer people entering the field, not the age of those in it.",
+   "s": [
+    "S38"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "t": "Micro Focus survey",
+   "b": "About a quarter of COBOL professionals were 56 or older and 38% were 45 to 55. 63% of respondents named knowledge transfer as a top concern for future skills planning.",
+   "s": [
+    "S39"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "t": "Forrester (2018)",
+   "b": "Enterprises lost 23% of specialist mainframe staff in five years; 63% of those posts stayed unfilled.",
+   "s": [
+    "S40"
+   ],
+   "ev": "sourced"
+  }
+ ],
+ "skills_and_debt": [
+  {
+   "t": "Evidence that shortages deepen debt",
+   "b": "Departments keep systems running rather than change them, and pay a premium for contractors. HMRC still pays contractors top rates for COBOL work. COBOL systems also need extra software before they can share data through APIs.",
+   "s": [
+    "S8",
+    "S52"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "t": "Evidence against a simple story",
+   "b": "Some systems with a shrinking skills base are very stable: the NAO called HMRC's VAT systems robust. And the 2012 survey found organisations could cross-train programmers in COBOL. The bigger drivers may be funding and supplier lock-in.",
+   "s": [
+    "S2",
+    "S38",
+    "S9"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "t": "Funding model",
+   "b": "Re:State argues that legacy persists because capital comes as project money, not service money, and proposes a central taskforce with match funding.",
+   "s": [
+    "S9"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "t": "Our reading",
+   "b": "Skills scarcity is a multiplier rather than the root cause. It raises the cost and risk of every change, which makes deferral look cheaper each year.",
+   "s": [],
+   "ev": "analysis"
+  }
+ ],
+ "age_inclusive": [
+  {
+   "t": "The civil service age profile",
+   "b": "38% of civil servants were over 50 in 2022, up from 33% in 2010. Large delivery departments such as DWP, HMRC and MoD have older age profiles than policy departments.",
+   "s": [
+    "S69"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "t": "DWP's age-friendly commitment",
+   "b": "48% of DWP staff were 50 or over, against 38% across the civil service. In 2023 DWP signed the Age-friendly Employer Pledge, covering age-positive hiring, flexible working and career development at all ages.",
+   "s": [
+    "S68"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "t": "Council IT teams",
+   "b": "42% of councils cited retirement as a reason for IT staff turnover, and only 24% had a succession training programme for ICT staff.",
+   "s": [
+    "S63"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "t": "Our reading",
+   "b": "Treat experienced specialists as teachers: recognise and pay for knowledge transfer, and offer phased retirement and flexible working. Open legacy roles to people of every age, including apprentices, career changers and returners. Age is a protected characteristic, so it must never stand in for skill in recruitment, selection or redundancy decisions.",
+   "s": [
+    "S70"
+   ],
+   "ev": "analysis"
+  }
+ ],
+ "routes": [
+  {
+   "k": "Rehost",
+   "d": "Move the system to new hosting, unchanged. Example: DVLA's managed mainframe service.",
+   "s": [
+    "S27",
+    "S37"
+   ]
+  },
+  {
+   "k": "Re-platform",
+   "d": "Move to a new platform with small changes, such as old COBOL to modern COBOL on Linux. Example: DWP's VME-R programme.",
+   "s": [
+    "S12",
+    "S37"
+   ]
+  },
+  {
+   "k": "Repurchase",
+   "d": "Replace with a product. HMRC's ETMP 'system conversion' keeps its customisations on the successor product.",
+   "s": [
+    "S16",
+    "S37"
+   ]
+  },
+  {
+   "k": "Refactor",
+   "d": "Restructure or convert the code into a modern language, often with tools or AI.",
+   "s": [
+    "S37",
+    "S45"
+   ]
+  },
+  {
+   "k": "Retain",
+   "d": "Keep it, contain the risk, and wrap it with APIs. The NAO noted government once preferred these 'wrappers'.",
+   "s": [
+    "S3",
+    "S37"
+   ]
+  },
+  {
+   "k": "Retire",
+   "d": "Switch it off once a replacement carries the load. Example: HMRC's CHIEF after dual running with CDS.",
+   "s": [
+    "S18",
+    "S37"
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "t": "Inventory and risk-rate",
+   "b": "Register the system and score it with the Legacy IT Risk Assessment Framework. A score of 16 or more makes it red-rated.",
+   "s": [
+    "S6"
+   ]
+  },
+  {
+   "t": "Understand what it really does",
+   "b": "Map programs, batch jobs, data stores and interfaces. Extract the business rules, many of which are policy written into code. Remove dead code; one supplier reports up to 25% in large COBOL estates.",
+   "s": [
+    "S46"
+   ]
+  },
+  {
+   "t": "Pin current behaviour with tests",
+   "b": "Write characterisation tests and capture real inputs and outputs, so the new system can be proved equivalent.",
+   "s": []
+  },
+  {
+   "t": "Choose the route",
+   "b": "Pick from the 6 Rs per component, not per estate. Patterns such as strangler (replace piece by piece) reduce big-bang risk.",
+   "s": [
+    "S37"
+   ]
+  },
+  {
+   "t": "Convert or rebuild",
+   "b": "Translate, rewrite or reconfigure in slices, reviewing generated code with people who know the old system.",
+   "s": [
+    "S47"
+   ]
+  },
+  {
+   "t": "Migrate and reconcile data",
+   "b": "Move records and prove totals match. DWP moved about 11 billion database records in its conversion.",
+   "s": [
+    "S12"
+   ]
+  },
+  {
+   "t": "Dual-run and cut over",
+   "b": "Run old and new side by side until the new one carries all load, as HMRC did with CHIEF and CDS.",
+   "s": [
+    "S18"
+   ]
+  },
+  {
+   "t": "Decommission and close contracts",
+   "b": "Switch off, archive data lawfully, and end support contracts. Record the decommissioning on the legacy register.",
+   "s": [
+    "S18",
+    "S25"
+   ]
+  }
+ ],
+ "ai_translation": [
+  {
+   "t": "What vendors report",
+   "b": "Microsoft describes teams of AI agents that analyse COBOL, convert it to Java and generate tests. HCLTech reports large efficiency gains in a 2026 pilot.",
+   "s": [
+    "S45",
+    "S46"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "t": "What the same industry warns",
+   "b": "IBM's software chief argues translation captures little of the real complexity. Rocket Software notes that code translation alone cannot reproduce decades of behaviour.",
+   "s": [
+    "S44",
+    "S61"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "t": "Skills still needed",
+   "b": "Infosys finds AI or tool conversion still needs COBOL subject experts to validate output, plus Java developers and mainframe knowledge.",
+   "s": [
+    "S47"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "t": "Our reading",
+   "b": "AI shortens the reading and documenting stages most. It does not remove the need for equivalence tests, data reconciliation or people who understand the policy in the code. No UK government department has published results of AI conversion at scale.",
+   "s": [],
+   "ev": "analysis"
+  }
+ ],
+ "decommissioning": [
+  {
+   "d": "July 2024",
+   "w": "HMRC CHIEF",
+   "e": "No new declarations; closure work completed by March 2025",
+   "s": [
+    "S18"
+   ]
+  },
+  {
+   "d": "September 2025",
+   "w": "Police National Computer",
+   "e": "Police forces and agencies migrated to LEDS",
+   "s": [
+    "S5"
+   ]
+  },
+  {
+   "d": "March 2026",
+   "w": "DVLA legacy digital platform",
+   "e": "All digital driver licensing services move to the strategic cloud platform (planned)",
+   "s": [
+    "S26"
+   ]
+  },
+  {
+   "d": "March 2026",
+   "w": "Defra critical applications",
+   "e": "19 critical legacy applications migrated to the cloud (planned)",
+   "s": [
+    "S5"
+   ]
+  },
+  {
+   "d": "2027",
+   "w": "Met Office Unified Model",
+   "e": "LFRic replaces it for operational forecasting (planned)",
+   "s": [
+    "S33"
+   ]
+  },
+  {
+   "d": "2030",
+   "w": "HMRC ETMP on SAP ECC6",
+   "e": "ECC6 decommissioned after move to S/4HANA (planned)",
+   "s": [
+    "S16"
+   ]
+  },
+  {
+   "d": "2030",
+   "w": "Fujitsu mainframes",
+   "e": "Sales end",
+   "s": [
+    "S35"
+   ]
+  },
+  {
+   "d": "2035",
+   "w": "Fujitsu mainframes",
+   "e": "Support ends",
+   "s": [
+    "S35"
+   ]
+  }
+ ],
+ "futures": [
+  {
+   "n": "COBOL",
+   "b": "Will run core benefits and tax for years. Expect fewer, dearer specialists, more re-platformed COBOL on cloud, and AI-assisted documentation before any wholesale rewrite."
+  },
+  {
+   "n": "Mainframes and VME",
+   "b": "VME ends with Fujitsu's mainframe exit in 2035. IBM Z continues, often bought as a managed service, so the question becomes contract and skills rather than hardware."
+  },
+  {
+   "n": "Fortran",
+   "b": "Remains the language of weather and climate. Risk moves to keeping HPC and code-generation skills."
+  },
+  {
+   "n": "Today's modern stacks",
+   "b": "Scala, Ruby and older Java and .NET versions are the next candidates for legacy. Workforce planning now is cheaper than remediation later."
+  }
+ ],
+ "learning_exists": [
+  {
+   "t": "Government Digital and Data Profession Capability Framework",
+   "b": "Defines digital, data and technology roles and four skill levels: awareness, working, practitioner and expert.",
+   "s": [
+    "S41"
+   ]
+  },
+  {
+   "t": "Digital, data and AI skills commitment",
+   "b": "GDS and departments provide learning pathways, apprenticeships and leadership development so every civil servant has enough digital understanding.",
+   "s": [
+    "S42"
+   ]
+  },
+  {
+   "t": "Growing digital workforce",
+   "b": "The share of civil servants working in digital and data rose from 2.8% in 2018 to 5% in 2023, with a stated aim of reducing reliance on contingent labour.",
+   "s": [
+    "S43"
+   ]
+  },
+  {
+   "t": "Departmental legacy actions",
+   "b": "HMRC planned mainframe recruitment, succession plans and knowledge transfer in 2013. DWP built 'heritage reliability engineering' around its large legacy services.",
+   "s": [
+    "S2",
+    "S55"
+   ]
+  }
+ ],
+ "learning_gaps": [
+  {
+   "t": "No language-level view of skills",
+   "b": "We found no public cross-government count of staff or contractors by programming language. Without it, skills risk cannot be set against the red-rated register.",
+   "ev": "analysis"
+  },
+  {
+   "t": "Legacy skills are not visible in the framework",
+   "b": "In this scan we did not find a role or skill in the capability framework for maintaining or migrating legacy languages. This needs confirming with the framework team.",
+   "ev": "unconfirmed"
+  },
+  {
+   "t": "Knowledge held by suppliers",
+   "b": "Where suppliers run legacy systems, the system knowledge leaves with the contract. Reporting on HMRC records a watchdog call to grow its 'intelligent client' function.",
+   "ev": "analysis",
+   "s": [
+    "S62"
+   ]
+  },
+  {
+   "t": "Business rules undocumented",
+   "b": "Policy logic often exists only in code. Losing the people who know it is a service risk, not just an IT one.",
+   "ev": "analysis"
+  }
+ ],
+ "learning_options": [
+  {
+   "t": "Add a legacy-language field to the legacy register",
+   "b": "Record language, platform, in-house and supplier headcount, and named knowledge holders for every red-rated system."
+  },
+  {
+   "t": "Create a modernisation engineer pathway",
+   "b": "Pair legacy readers with modern engineers; teach COBOL and JCL reading, characterisation testing and data reconciliation."
+  },
+  {
+   "t": "Capture rules before people leave",
+   "b": "Use AI-assisted documentation to turn code into reviewed, plain-English business rules held by the service owner."
+  },
+  {
+   "t": "Build knowledge transfer into contracts",
+   "b": "Require suppliers to deliver documentation, tests and shadowing as contract outputs, not optional extras."
+  },
+  {
+   "t": "Plan for the next legacy",
+   "b": "Track Scala, Ruby and end-of-support Java and .NET skills now, before they become scarce."
+  }
+ ],
+ "equality_impacts": [
+  {
+   "t": "People who rely on benefits and pensions",
+   "b": "DWP's COBOL systems pay State Pension and other benefits. When legacy systems fail or are slow to change, the effect falls hardest on people with the least financial cushion.",
+   "s": [
+    "S10"
+   ],
+   "ev": "analysis"
+  },
+  {
+   "t": "Paper and offline processes",
+   "b": "Defra handles around 14 million transactions a year that still involve paper forms. Paper can suit some people and exclude others, such as people with some visual impairments or those who move often.",
+   "s": [
+    "S31"
+   ],
+   "ev": "analysis"
+  },
+  {
+   "t": "Staff who use legacy screens",
+   "b": "Text-only mainframe screens often work poorly with assistive technology such as screen readers. We found no audit of this across government, so the scale is unknown.",
+   "s": [],
+   "ev": "unconfirmed"
+  },
+  {
+   "t": "Digital skills across the workforce",
+   "b": "Research cited by the LGA found 59% of the workforce cannot do all basic digital tasks. Upskilling plans need to start where people are, not where new systems assume they are.",
+   "s": [
+    "S63"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "t": "Fairness across the UK",
+   "b": "Devolved and local bodies report legacy by contract, rarely by technology. Less visibility can mean less shared support, so people in some places may depend on older systems for longer.",
+   "s": [
+    "S64",
+    "S65"
+   ],
+   "ev": "analysis"
+  },
+  {
+   "t": "The Public Sector Equality Duty",
+   "b": "Public bodies must have due regard to eliminating discrimination and advancing equality of opportunity. That applies to decommissioning plans, service changes and workforce decisions made during modernisation.",
+   "s": [
+    "S70"
+   ],
+   "ev": "sourced"
+  }
+ ],
+ "inclusive_routes": [
+  {
+   "t": "Apprenticeships",
+   "b": "Government's digital skills commitment includes apprenticeships. Legacy reading and modernisation engineering could be built into them.",
+   "s": [
+    "S42"
+   ]
+  },
+  {
+   "t": "Returners",
+   "b": "Government Science and Engineering publishes a returners pack. A similar route could bring back people who left technical roles, including former mainframe staff.",
+   "s": [
+    "S73"
+   ]
+  },
+  {
+   "t": "Career changers and cross-training",
+   "b": "Survey evidence suggests programmers can be cross-trained in COBOL. Business knowledge is often the harder part to replace.",
+   "s": [
+    "S38"
+   ]
+  },
+  {
+   "t": "Paired working",
+   "b": "Pair each experienced specialist with a newer engineer on real changes, so knowledge moves through practice rather than documents alone.",
+   "s": [],
+   "ev": "analysis"
+  },
+  {
+   "t": "Flexible and phased retirement",
+   "b": "Flexible working and phased retirement keep knowledge available for longer, on terms that suit the person.",
+   "s": [
+    "S68"
+   ]
+  },
+  {
+   "t": "Neurodiversity-friendly practice",
+   "b": "Clear written specifications, predictable routines and quiet working suit many people, including many neurodivergent engineers, and suit legacy maintenance work well.",
+   "s": [],
+   "ev": "analysis"
+  }
+ ],
+ "case_studies": [
+  {
+   "t": "DWP: moving 11 benefit systems off ICL VME",
+   "ctx": "Benefit systems from the 1980s ran on ICL VME mainframes in COBOL, with daytime online and overnight batch services.",
+   "appr": "Re-platformed one system at a time, starting with the smallest, converting COBOL to a modern dialect on open systems.",
+   "out": "All 11 systems moved by January 2021, about 25 million lines of code and 11 billion database records.",
+   "less": "Starting small built skills. Re-platforming removed the hardware risk but kept COBOL, so the skills risk remains.",
+   "s": [
+    "S10",
+    "S11",
+    "S12"
+   ]
+  },
+  {
+   "t": "HMRC: retiring CHIEF for the Customs Declaration Service",
+   "ctx": "A customs system of about 30 years on VME, run through several outsourcing arrangements.",
+   "appr": "Built a new service and ran both in parallel, moving more than 6,000 declarants.",
+   "out": "No new declarations on CHIEF after July 2024; closure work due by March 2025.",
+   "less": "Dual running made retirement safe but took years longer than planned and needed contract extensions.",
+   "s": [
+    "S18",
+    "S19"
+   ]
+  },
+  {
+   "t": "Met Office: from the Unified Model to LFRic",
+   "ctx": "A 35-year-old Fortran model on a latitude-longitude grid that does not suit new supercomputers.",
+   "appr": "A new model in modern Fortran, with code generation (PSyclone) separating science from parallel code.",
+   "out": "Planned for operational forecasting around 2027.",
+   "less": "Modernising does not always mean changing language; architecture and tooling can matter more.",
+   "s": [
+    "S32",
+    "S33",
+    "S34"
+   ]
+  },
+  {
+   "t": "Home Office: replacing the Police National Computer",
+   "ctx": "A mainframe system from 1974 used by every UK police force.",
+   "appr": "After a 2021 reset, a focused programme to replace it with LEDS.",
+   "out": "Forces migrated to LEDS in September 2025; PNC to be switched off once dependence ends.",
+   "less": "Narrowing scope helped delivery; long overlap periods cost money to run both systems.",
+   "s": [
+    "S24",
+    "S5",
+    "S25"
+   ]
+  },
+  {
+   "t": "HMRC: regenerating ETMP",
+   "ctx": "The SAP platform behind more than 40 taxes and over £800bn a year faces end of mainstream support.",
+   "appr": "A system conversion to S/4HANA that keeps existing customisations, tested first in a sandbox.",
+   "out": "ECC6 to be decommissioned in 2030.",
+   "less": "Forced by a product's end of support, not by the language; the choice of route still matters.",
+   "s": [
+    "S15",
+    "S16",
+    "S17"
+   ]
+  },
+  {
+   "t": "Northern Ireland: encompass and the cost of overlap",
+   "ctx": "About 45 legacy patient record systems costing about £6.5m a year.",
+   "appr": "A single regional electronic record replacing them in stages.",
+   "out": "None of the legacy systems had been switched off when audited; target March 2029.",
+   "less": "Decommissioning needs its own plan and budget, or old systems run on alongside the new.",
+   "s": [
+    "S64"
+   ]
+  }
+ ],
+ "scenarios": [
+  {
+   "t": "Your key legacy specialist is leaving",
+   "steps": [
+    "Agree a handover period and pay for knowledge transfer",
+    "Pair them with a newer engineer on live changes",
+    "Capture business rules in plain English, reviewed by the service owner",
+    "Record the risk against the system in the legacy register"
+   ],
+   "links": [
+    [
+     "sk-age",
+     "Age-inclusive approach"
+    ],
+    [
+     "le-recs",
+     "Options to consider"
+    ]
+   ],
+   "s": [
+    "S2",
+    "S55"
+   ]
+  },
+  {
+   "t": "Your supplier contract ends within a year",
+   "steps": [
+    "Ask for documentation, tests and code as contract deliverables",
+    "Compare a short extension with an exit plan",
+    "Price the exit, including data migration",
+    "Avoid repeated long extensions, a pattern audits criticise"
+   ],
+   "links": [
+    [
+     "sy-nations",
+     "Contract extensions"
+    ],
+    [
+     "sy-suppliers",
+     "Who runs the estate"
+    ]
+   ],
+   "s": [
+    "S64",
+    "S63"
+   ]
+  },
+  {
+   "t": "Your platform vendor announces end of support",
+   "steps": [
+    "Check the published support dates",
+    "Decide between rehost on a supported platform and a route off the platform",
+    "Plan dual running before the cut-over",
+    "Set a decommissioning date and track it"
+   ],
+   "links": [
+    [
+     "mi-decom",
+     "Decommissioning tracker"
+    ],
+    [
+     "mi-routes",
+     "Migration routes"
+    ]
+   ],
+   "s": [
+    "S35",
+    "S18"
+   ]
+  },
+  {
+   "t": "A supplier pitches AI code conversion",
+   "steps": [
+    "Ask for evidence from comparable public sector work",
+    "Run a pilot on one module with equivalence tests written first",
+    "Keep legacy experts to validate the output",
+    "Measure behaviour, not lines converted"
+   ],
+   "links": [
+    [
+     "mi-ai",
+     "AI code translation"
+    ],
+    [
+     "mi-process",
+     "Process"
+    ]
+   ],
+   "s": [
+    "S44",
+    "S47"
+   ]
+  },
+  {
+   "t": "An audit rates your system red",
+   "steps": [
+    "Confirm the score with the Legacy IT Risk Assessment Framework",
+    "Agree a remediation plan, as required for red-rated systems",
+    "Brief your board on service and skills risk",
+    "Set review dates"
+   ],
+   "links": [
+    [
+     "mi-process",
+     "Process"
+    ],
+    [
+     "ov-matrix",
+     "Risk matrix"
+    ]
+   ],
+   "s": [
+    "S6"
+   ]
+  },
+  {
+   "t": "You inherit a system nobody understands",
+   "steps": [
+    "Map programs, jobs, data and interfaces",
+    "Remove dead code before anything else",
+    "Write characterisation tests from real inputs",
+    "Only then choose a route"
+   ],
+   "links": [
+    [
+     "mi-process",
+     "Process"
+    ],
+    [
+     "gu-worked",
+     "Worked examples"
+    ]
+   ],
+   "s": [
+    "S46"
+   ]
+  }
+ ],
+ "themes": [
+  {
+   "t": "Cyber security",
+   "b": "Unsupported systems cannot receive security fixes. The red-rated category includes systems with known vulnerabilities.",
+   "s": [
+    "S4",
+    "S50"
+   ],
+   "l": "ov-numbers"
+  },
+  {
+   "t": "Commercial and supplier lock-in",
+   "b": "Long single-supplier arrangements and repeated extensions are a recurring pattern, from CHIEF to Northern Ireland's portfolio.",
+   "s": [
+    "S19",
+    "S64"
+   ],
+   "l": "sy-suppliers"
+  },
+  {
+   "t": "Data interoperability",
+   "b": "COBOL systems at HMRC need extra software to share data through APIs, which slows real-time data sharing.",
+   "s": [
+    "S52"
+   ],
+   "l": "sy-table"
+  },
+  {
+   "t": "AI adoption",
+   "b": "MPs warned that legacy IT is a barrier to government's AI plans.",
+   "s": [
+    "S58"
+   ],
+   "l": "mi-ai"
+  },
+  {
+   "t": "Funding models",
+   "b": "Capital is often allocated as project money rather than service money, which leaves maintenance underfunded.",
+   "s": [
+    "S9",
+    "S63"
+   ],
+   "l": "sk-corr"
+  },
+  {
+   "t": "Workforce and contingent labour",
+   "b": "Government aims to reduce reliance on contractors as its digital workforce grows.",
+   "s": [
+    "S43"
+   ],
+   "l": "sk-pool"
+  },
+  {
+   "t": "Knowledge management",
+   "b": "Policy logic often lives only in code. Rule extraction and documentation protect services when people move on.",
+   "s": [
+    "S3"
+   ],
+   "l": "le-gaps"
+  },
+  {
+   "t": "Data migration and quality",
+   "b": "Moving records safely means reconciling every total; DWP moved about 11 billion records.",
+   "s": [
+    "S12"
+   ],
+   "l": "mi-process"
+  },
+  {
+   "t": "Records and archiving",
+   "b": "Decommissioning includes keeping data lawfully after a system is switched off.",
+   "s": [
+    "S25"
+   ],
+   "l": "mi-decom"
+  },
+  {
+   "t": "Resilience and outages",
+   "b": "Delays in replacing legacy police systems were judged a risk to public safety.",
+   "s": [
+    "S24"
+   ],
+   "l": "sy-table"
+  },
+  {
+   "t": "Sustainability",
+   "b": "The NHS Spine rebuild includes lower carbon emissions among its goals.",
+   "s": [
+    "S67"
+   ],
+   "l": "sy-nations"
+  },
+  {
+   "t": "Accessibility of legacy interfaces",
+   "b": "Text-only screens can exclude staff who use assistive technology; the scale is unknown.",
+   "s": [],
+   "l": "in-impacts"
+  },
+  {
+   "t": "Risk management",
+   "b": "The Legacy IT Risk Assessment Framework defines legacy and red-rated systems for all ministerial departments.",
+   "s": [
+    "S6"
+   ],
+   "l": "ov-matrix"
+  },
+  {
+   "t": "International comparison",
+   "b": "The US faces the same pattern: only 3 of 10 critical federal legacy systems flagged in 2019 had been modernised by 2025.",
+   "s": [
+    "S57"
+   ],
+   "l": "sy-nations"
+  }
+ ],
+ "personas": [
+  {
+   "n": "Amara",
+   "r": "Service owner, pensions service",
+   "ctx": "Owns a service that runs on a re-platformed COBOL system. Two of the three people who understand the batch jobs plan to retire within three years.",
+   "goals": "Keep payments accurate; plan continuity without a big-bang rewrite.",
+   "pains": "Knowledge sits with a few people; the supplier contract renews next year.",
+   "access": "Uses a screen magnifier at 200%.",
+   "uses": [
+    "sy-table",
+    "sk-age",
+    "gu-planner"
+   ]
+  },
+  {
+   "n": "Rhys",
+   "r": "Chief technology officer, devolved body",
+   "ctx": "Leads technology for a Welsh public body with mixed legacy and cloud estates.",
+   "goals": "Prioritise a limited budget by risk; make the case for funding.",
+   "pains": "Audit reports describe contracts, not technology; little shared evidence across nations.",
+   "access": "Mostly reads on a phone between meetings.",
+   "uses": [
+    "ov-matrix",
+    "sy-nations",
+    "mi-routes"
+   ]
+  },
+  {
+   "n": "Priya",
+   "r": "Workforce and learning lead",
+   "ctx": "Plans skills for a large delivery department with an older-than-average workforce.",
+   "goals": "Keep legacy knowledge without age-based assumptions; open routes for new entrants.",
+   "pains": "No data on staff by programming language.",
+   "access": "Prefers dyslexia-friendly spacing and type.",
+   "uses": [
+    "sk-pool",
+    "sk-age",
+    "in-routes"
+   ]
+  },
+  {
+   "n": "Tomasz",
+   "r": "Senior engineer, modernisation team",
+   "ctx": "Asked to assess an AI tool a supplier says can convert COBOL to Java.",
+   "goals": "Choose a safe route and prove equivalence.",
+   "pains": "Vendor claims are hard to test; business rules are undocumented.",
+   "access": "Uses the keyboard only, because of a repetitive strain injury.",
+   "uses": [
+    "mi-ai",
+    "mi-process",
+    "sk-needed"
+   ]
+  },
+  {
+   "n": "Grace",
+   "r": "Commercial lead, local council",
+   "ctx": "Manages a revenues and benefits system contract nearing renewal.",
+   "goals": "Avoid another long extension; secure documentation and knowledge transfer.",
+   "pains": "Few suppliers in the market; high exit costs.",
+   "access": "Uses voice control software.",
+   "uses": [
+    "sy-nations",
+    "sy-suppliers",
+    "le-recs"
+   ]
+  },
+  {
+   "n": "Daniel",
+   "r": "Researcher at a think tank",
+   "ctx": "Writing about state capacity and legacy IT.",
+   "goals": "Find citable, checkable facts and reusable data.",
+   "pains": "Figures are spread across many reports with different definitions.",
+   "access": "Uses a screen reader.",
+   "uses": [
+    "ov-findings",
+    "ab-sources",
+    "kn-layer"
+   ]
+  }
+ ],
+ "user_needs": [
+  [
+   "N1",
+   "Service owner",
+   "know whether my service depends on a legacy language",
+   "I can plan for continuity"
+  ],
+  [
+   "N2",
+   "Digital leader",
+   "see where risk concentrates",
+   "I can prioritise funding and remediation"
+  ],
+  [
+   "N3",
+   "Workforce or learning lead",
+   "see evidence on legacy skills supply and fair ways to build it",
+   "I can plan recruitment and training"
+  ],
+  [
+   "N4",
+   "Engineer or architect",
+   "follow a proven process and see honest evidence on AI tools",
+   "I can choose an approach"
+  ],
+  [
+   "N5",
+   "Commercial lead",
+   "see supplier dependencies and contract extensions",
+   "I can build exit and knowledge transfer into contracts"
+  ],
+  [
+   "N6",
+   "Researcher or member of the public",
+   "check every fact against its source",
+   "I can trust and reuse it"
+  ],
+  [
+   "N7",
+   "Disabled user",
+   "use every part of the site with my settings and assistive technology",
+   "I am not excluded"
+  ],
+  [
+   "N8",
+   "Maintainer working alone",
+   "update the site with little effort and rely on automatic checks",
+   "it stays accurate"
+  ]
+ ],
+ "requirements": [
+  [
+   "R1",
+   "Every figure links to a public source",
+   [
+    "N6"
+   ],
+   "ov-numbers",
+   [
+    "C1",
+    "C2",
+    "C3"
+   ],
+   [
+    "S4"
+   ],
+   "Done"
+  ],
+  [
+   "R2",
+   "Every judgement and unverified claim is labelled",
+   [
+    "N6"
+   ],
+   "ov-matrix",
+   [
+    "C4"
+   ],
+   [],
+   "Done"
+  ],
+  [
+   "R3",
+   "Systems register filters by sector, status and technology",
+   [
+    "N1",
+    "N5"
+   ],
+   "sy-table",
+   [
+    "C7",
+    "C1"
+   ],
+   [
+    "S10",
+    "S16"
+   ],
+   "Done"
+  ],
+  [
+   "R4",
+   "Risk view across legacy languages and platforms",
+   [
+    "N2"
+   ],
+   "ov-matrix",
+   [
+    "C7"
+   ],
+   [
+    "S4",
+    "S9"
+   ],
+   "Done"
+  ],
+  [
+   "R5",
+   "Skills evidence and the skills each migration route needs",
+   [
+    "N3",
+    "N4"
+   ],
+   "sk-needed",
+   [
+    "C7"
+   ],
+   [
+    "S2",
+    "S47"
+   ],
+   "Done"
+  ],
+  [
+   "R6",
+   "Migration routes, steps, AI evidence and decommissioning dates",
+   [
+    "N4",
+    "N1"
+   ],
+   "mi-process",
+   [
+    "C7"
+   ],
+   [
+    "S37",
+    "S18"
+   ],
+   "Done"
+  ],
+  [
+   "R7",
+   "Coverage of devolved administrations, local government and the NHS",
+   [
+    "N1",
+    "N5"
+   ],
+   "sy-nations",
+   [
+    "C1",
+    "C7"
+   ],
+   [
+    "S63",
+    "S64",
+    "S65"
+   ],
+   "Partial: Wales limited"
+  ],
+  [
+   "R8",
+   "Search across all content, and an assistant that cites sources",
+   [
+    "N6",
+    "N1"
+   ],
+   "ov-hero",
+   [
+    "C2"
+   ],
+   [],
+   "Done"
+  ],
+  [
+   "R9",
+   "Display controls for text size, contrast, reading and motion",
+   [
+    "N7"
+   ],
+   "in-a11y",
+   [
+    "C9",
+    "C15"
+   ],
+   [
+    "S71"
+   ],
+   "Done"
+  ],
+  [
+   "R10",
+   "Keyboard and screen reader support for controls, dialogs and charts",
+   [
+    "N7"
+   ],
+   "in-a11y",
+   [
+    "C8",
+    "C10",
+    "C14"
+   ],
+   [
+    "S71",
+    "S75"
+   ],
+   "Done; user testing pending"
+  ],
+  [
+   "R11",
+   "A plain-English summary opens every page",
+   [
+    "N7",
+    "N6"
+   ],
+   "ov-hero",
+   [
+    "C11"
+   ],
+   [
+    "S75"
+   ],
+   "Done"
+  ],
+  [
+   "R12",
+   "Open data and vocabulary for reuse by other portals",
+   [
+    "N6"
+   ],
+   "kn-layer",
+   [
+    "C2"
+   ],
+   [],
+   "Done"
+  ],
+  [
+   "R13",
+   "Contact without publishing any email address",
+   [
+    "N6",
+    "N8"
+   ],
+   "ab-contact",
+   [
+    "C5"
+   ],
+   [],
+   "Done"
+  ],
+  [
+   "R14",
+   "Self-checks with negative tests on every load",
+   [
+    "N8"
+   ],
+   "ab-checks",
+   [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7",
+    "C8",
+    "C9",
+    "C10",
+    "C11",
+    "C12",
+    "C13",
+    "C14",
+    "C15",
+    "C16"
+   ],
+   [],
+   "Done"
+  ],
+  [
+   "R15",
+   "Equality and inclusion analysis, including age-inclusive workforce planning",
+   [
+    "N3",
+    "N7"
+   ],
+   "in-impacts",
+   [
+    "C1"
+   ],
+   [
+    "S70",
+    "S68"
+   ],
+   "Done"
+  ],
+  [
+   "R16",
+   "GitHub repository with issue forms and a scheduled scan",
+   [
+    "N8"
+   ],
+   "ab-run",
+   [
+    "C3"
+   ],
+   [],
+   "Done"
+  ],
+  [
+   "R17",
+   "Guided tour, tutorials and user guide",
+   [
+    "N1",
+    "N7"
+   ],
+   "gu-start",
+   [
+    "C8",
+    "C11"
+   ],
+   [],
+   "Done"
+  ],
+  [
+   "R18",
+   "Readiness planner giving an indicative band and plan",
+   [
+    "N1",
+    "N2"
+   ],
+   "gu-planner",
+   [
+    "C8"
+   ],
+   [
+    "S6"
+   ],
+   "Done"
+  ],
+  [
+   "R19",
+   "Personas, journeys, scenarios, use cases, case studies and worked examples",
+   [
+    "N1",
+    "N3",
+    "N4",
+    "N5"
+   ],
+   "gu-cases",
+   [
+    "C2"
+   ],
+   [
+    "S10",
+    "S18"
+   ],
+   "Done"
+  ],
+  [
+   "R20",
+   "Related themes and automatic glossary tooltips",
+   [
+    "N6",
+    "N7"
+   ],
+   "kn-layer",
+   [
+    "C2"
+   ],
+   [],
+   "Done"
+  ],
+  [
+   "R21",
+   "No part of the page scrolls sideways on a phone",
+   [
+    "N7"
+   ],
+   "in-a11y",
+   [
+    "C16"
+   ],
+   [
+    "S71"
+   ],
+   "Done"
+  ]
+ ],
+ "defects": [
+  [
+   "D1",
+   "Risk matrix showed all ratings in one stray row",
+   "The cell builder returned bare labels without table cells",
+   "Wrapped each rating in a table cell",
+   "C7: every table row has as many cells as its header"
+  ],
+  [
+   "D2",
+   "Tables squeezed into unreadable columns on phones",
+   "Tables were set to 100% width with no minimum",
+   "Set a minimum table width inside a scrolling container",
+   "C15: every table keeps a minimum width of 640px"
+  ],
+  [
+   "D3",
+   "Knowledge graph used near-identical colours for languages and migration routes",
+   "Two amber tokens were assigned to different node types",
+   "Gave routes their own violet token",
+   "C12: every node type in the graph has a distinct colour"
+  ],
+  [
+   "D4",
+   "The content checks would have scanned their own test sample",
+   "Checks read the whole page, including scripts",
+   "Limited checks to the page's visible content",
+   "C5 and C6 negative tests confirm the sample is caught only when supplied"
+  ],
+  [
+   "D5",
+   "Secondary grey text fell below 4.5:1 contrast on the light theme",
+   "The light token was too pale on the grey background",
+   "Darkened the token; also darkened the light accent",
+   "C9: text tokens meet 4.5:1 in both themes"
+  ],
+  [
+   "D6",
+   "Grids of four cards left one card alone on a row",
+   "Auto-fit grids made three columns at desktop width",
+   "Used fixed two-column grids for sets of four",
+   "Covered by the visual inspection at every release"
+  ],
+  [
+   "D10",
+   "A repository test hung for minutes",
+   "A 400,000-character padding in the shared bad sample made the email pattern scan quadratically",
+   "Moved the size test to its own sample and bounded the email pattern",
+   "Repository unit tests run in under a second; the size check keeps its own negative test"
+  ],
+  [
+   "D12",
+   "On phones the header took three rows and the open contents list could not be dismissed by tapping outside it",
+   "Header tools wrapped as one block; the overlay had no outside-tap handler",
+   "Search takes its own full-width row with Display and Ask beside the name; tapping outside or pressing Escape closes the list",
+   "Visual inspection at 400px with the list open and closed"
+  ],
+  [
+   "D11",
+   "The contents switch sat in the masthead, away from the list it controls",
+   "It was placed with the search and tools",
+   "Moved the switch into the top of the drawer, with a slim rail that keeps it visible when the list is hidden",
+   "Visual inspection with the drawer open and closed, at desktop and phone widths"
+  ],
+  [
+   "D8",
+   "Pages scrolled sideways on phones",
+   "Screen-reader-only labels inside tables were positioned against the whole page, escaping their scrolling container",
+   "Made table, chart and tab containers the positioning context",
+   "C16: nothing makes the page scroll sideways at the current width"
+  ],
+  [
+   "D9",
+   "The table-width check could not fail",
+   "Its negative sample inherited the page-wide minimum width",
+   "Gave the sample an explicit zero minimum width",
+   "C15 negative test now fails as expected"
+  ],
+  [
+   "D7",
+   "Card headings jumped two levels below their section heading",
+   "Card templates always used level 4 headings, even under level 2 section headings",
+   "Card headings now sit one level below their section heading",
+   "C14: headings do not skip levels"
+  ]
+ ],
+ "glossary": [
+  {
+   "term": "Legacy IT",
+   "definition": "Systems that are end-of-life, out of supplier support or impossible to update, as defined in government's review.",
+   "alternatives": "legacy system; heritage system"
+  },
+  {
+   "term": "Red-rated system",
+   "definition": "A legacy system scoring 16 or more on the Legacy IT Risk Assessment Framework, the highest risk category.",
+   "alternatives": "critical legacy"
+  },
+  {
+   "term": "Technical debt",
+   "definition": "The future cost of keeping a system running and changeable because of past shortcuts or ageing technology.",
+   "alternatives": "tech debt"
+  },
+  {
+   "term": "Mainframe",
+   "definition": "A large central computer built for high-volume, reliable transaction and batch processing.",
+   "alternatives": "big iron; IBM Z"
+  },
+  {
+   "term": "VME",
+   "definition": "Virtual Machine Environment, ICL's mainframe operating system, later owned by Fujitsu.",
+   "alternatives": "ICL VME; MVE"
+  },
+  {
+   "term": "COBOL",
+   "definition": "Common Business-Oriented Language, designed in 1959 for business data processing.",
+   "alternatives": "Cobol"
+  },
+  {
+   "term": "Fortran",
+   "definition": "Formula Translation, IBM's 1957 language for numerical computing.",
+   "alternatives": "FORTRAN"
+  },
+  {
+   "term": "JCL",
+   "definition": "Job Control Language, which tells an IBM mainframe what to run and with which files.",
+   "alternatives": "job control"
+  },
+  {
+   "term": "CICS",
+   "definition": "IBM's transaction processing monitor for online mainframe applications.",
+   "alternatives": "Customer Information Control System"
+  },
+  {
+   "term": "Copybook",
+   "definition": "A shared COBOL file describing a record layout, included by many programs.",
+   "alternatives": "COBOL include"
+  },
+  {
+   "term": "Batch processing",
+   "definition": "Running large jobs in sequence, often overnight, rather than one transaction at a time.",
+   "alternatives": "overnight batch"
+  },
+  {
+   "term": "Green screen",
+   "definition": "A text-only terminal interface used with mainframes.",
+   "alternatives": "3270 terminal"
+  },
+  {
+   "term": "Application modernisation",
+   "definition": "Updating or replacing legacy software so it is supported and can change at the pace services need.",
+   "alternatives": "modernization; legacy remediation"
+  },
+  {
+   "term": "Code conversion",
+   "definition": "Translating source code from one programming language to another.",
+   "alternatives": "code translation; transpilation"
+  },
+  {
+   "term": "6 Rs",
+   "definition": "Rehost, re-platform, repurchase, refactor, retain and retire: the common menu of migration routes.",
+   "alternatives": "6R model"
+  },
+  {
+   "term": "Rehost",
+   "definition": "Moving a system to new hosting without changing it.",
+   "alternatives": "lift and shift"
+  },
+  {
+   "term": "Re-platform",
+   "definition": "Moving to a new platform with limited changes, such as new hardware or runtime.",
+   "alternatives": "lift, tinker and shift"
+  },
+  {
+   "term": "Refactor",
+   "definition": "Restructuring code, or converting it to a new language, without changing what it does.",
+   "alternatives": "re-engineer"
+  },
+  {
+   "term": "Strangler pattern",
+   "definition": "Replacing a system piece by piece while the old one keeps running.",
+   "alternatives": "strangler fig"
+  },
+  {
+   "term": "Wrapper",
+   "definition": "A software layer that lets old systems talk to new ones, often through APIs.",
+   "alternatives": "API wrapper"
+  },
+  {
+   "term": "Characterisation test",
+   "definition": "A test that records what existing code actually does, so a replacement can be proved equivalent.",
+   "alternatives": "golden master test"
+  },
+  {
+   "term": "Dual running",
+   "definition": "Operating old and new systems in parallel during migration.",
+   "alternatives": "parallel running"
+  },
+  {
+   "term": "Decommissioning",
+   "definition": "Switching off a system, archiving its data and closing its contracts.",
+   "alternatives": "retirement; switch-off"
+  },
+  {
+   "term": "Intelligent client",
+   "definition": "An organisation's in-house capability to specify, manage and challenge suppliers.",
+   "alternatives": "informed client"
+  },
+  {
+   "term": "Dead code",
+   "definition": "Code that never runs and can be removed before migration.",
+   "alternatives": "unreachable code"
+  },
+  {
+   "term": "LEDS",
+   "definition": "Law Enforcement Data Service, the Police National Computer's replacement.",
+   "alternatives": "NLEDS"
+  },
+  {
+   "term": "ETMP",
+   "definition": "Enterprise Tax Management Platform, HMRC's SAP-based tax accounting system.",
+   "alternatives": "SAP ECC6 at HMRC"
+  },
+  {
+   "term": "CHIEF",
+   "definition": "Customs Handling of Import and Export Freight, HMRC's retired customs system.",
+   "alternatives": "CDS predecessor"
+  },
+  {
+   "term": "LFRic",
+   "definition": "The Met Office's new modelling system, named after Lewis Fry Richardson.",
+   "alternatives": "Momentum"
+  }
+ ],
+ "repo_counts": [
+  {
+   "name": "JavaScript",
+   "count": 1820,
+   "legacy": false
+  },
+  {
+   "name": "Scala",
+   "count": 1560,
+   "legacy": false
+  },
+  {
+   "name": "Python",
+   "count": 799,
+   "legacy": false
+  },
+  {
+   "name": "Ruby",
+   "count": 675,
+   "legacy": false
+  },
+  {
+   "name": "HCL",
+   "count": 604,
+   "legacy": false
+  },
+  {
+   "name": "Shell",
+   "count": 511,
+   "legacy": false
+  },
+  {
+   "name": "Java",
+   "count": 442,
+   "legacy": false
+  },
+  {
+   "name": "C#",
+   "count": 429,
+   "legacy": false
+  },
+  {
+   "name": "TypeScript",
+   "count": 427,
+   "legacy": false
+  },
+  {
+   "name": "Kotlin",
+   "count": 206,
+   "legacy": false
+  },
+  {
+   "name": "Go",
+   "count": 181,
+   "legacy": false
+  },
+  {
+   "name": "PHP",
+   "count": 78,
+   "legacy": false
+  },
+  {
+   "name": "Perl",
+   "count": 29,
+   "legacy": true
+  },
+  {
+   "name": "R",
+   "count": 22,
+   "legacy": false
+  },
+  {
+   "name": "Fortran",
+   "count": 14,
+   "legacy": true
+  },
+  {
+   "name": "PL/SQL",
+   "count": 3,
+   "legacy": true
+  },
+  {
+   "name": "COBOL",
+   "count": 0,
+   "legacy": true
+  }
+ ]
+}

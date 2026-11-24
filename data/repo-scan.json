@@ -1,0 +1,94 @@
+{
+ "date": "2026-11-24T00:00:00Z",
+ "method": "GitHub repository search by primary language; public repositories only",
+ "orgs": [
+  "alphagov",
+  "hmrc",
+  "dwp",
+  "ministryofjustice",
+  "UKHomeOffice",
+  "nhsdigital",
+  "DFE-Digital",
+  "companieshouse",
+  "ONSdigital",
+  "MetOffice",
+  "co-cddo",
+  "dvla",
+  "DVSA",
+  "Defra"
+ ],
+ "languages": [
+  {
+   "name": "JavaScript",
+   "count": 1820
+  },
+  {
+   "name": "Scala",
+   "count": 1560
+  },
+  {
+   "name": "Python",
+   "count": 799
+  },
+  {
+   "name": "Ruby",
+   "count": 675
+  },
+  {
+   "name": "HCL",
+   "count": 604
+  },
+  {
+   "name": "Shell",
+   "count": 511
+  },
+  {
+   "name": "Java",
+   "count": 442
+  },
+  {
+   "name": "C#",
+   "count": 429
+  },
+  {
+   "name": "TypeScript",
+   "count": 427
+  },
+  {
+   "name": "Kotlin",
+   "count": 206
+  },
+  {
+   "name": "Go",
+   "count": 181
+  },
+  {
+   "name": "PHP",
+   "count": 78
+  },
+  {
+   "name": "Perl",
+   "count": 29
+  },
+  {
+   "name": "R",
+   "count": 22
+  },
+  {
+   "name": "Fortran",
+   "count": 14
+  },
+  {
+   "name": "PL/SQL",
+   "count": 3
+  },
+  {
+   "name": "COBOL",
+   "count": 0
+  }
+ ],
+ "mentions": {
+  "COBOL": 4,
+  "mainframe": 333
+ }
+}

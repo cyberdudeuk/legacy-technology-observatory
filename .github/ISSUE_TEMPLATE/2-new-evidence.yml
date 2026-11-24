@@ -1,0 +1,37 @@
+name: Suggest a system or source
+description: A legacy system, migration, skills initiative or report the observatory should include.
+title: "[Evidence] "
+labels: ["evidence", "content"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What are you suggesting?
+      options:
+        - A system that runs on a legacy language or platform
+        - A migration, replacement or decommissioning
+        - Skills, training or workforce evidence
+        - A report or audit
+        - Something else
+    validations: {required: true}
+  - type: dropdown
+    id: where
+    attributes:
+      label: Which part of the public sector?
+      options:
+        - UK central government
+        - Scotland
+        - Wales
+        - Northern Ireland
+        - Local government
+        - NHS or health and care
+        - Policing or justice
+        - Supplier working for the public sector
+        - Outside the UK
+    validations: {required: true}
+  - type: textarea
+    id: detail
+    attributes:
+      label: Details and public source
+      description: What it is, the language or platform if known, and a public link we can cite.
+    validations: {required: true}

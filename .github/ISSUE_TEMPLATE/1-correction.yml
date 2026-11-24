@@ -1,0 +1,22 @@
+name: Report an error
+description: A figure, date, source or statement on the site is wrong or out of date.
+title: "[Correction] "
+labels: ["correction", "content"]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: Where is it?
+      description: Section name, record name or source ID (for example S16).
+    validations: {required: true}
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What is wrong?
+    validations: {required: true}
+  - type: textarea
+    id: right
+    attributes:
+      label: What should it say, and what is your source?
+      description: A public link lets us check and cite it.
+    validations: {required: true}

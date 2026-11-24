@@ -1,0 +1,34 @@
+# Runs on every pull request and push to main: static checks with negative tests, then the automated
+# visual inspection (every section, desktop and phone, light and dark, drawer open and closed).
+# A failure blocks the merge; screenshots are attached to the run for a quick look.
+name: CI
+on:
+  pull_request:
+  push: {branches: [main]}
+  workflow_dispatch:
+permissions: {contents: read}
+concurrency: {group: "ci-${{ github.ref }}", cancel-in-progress: true}
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
+        with: {python-version: "3.12"}
+      - name: Static checks
+        run: python tools/checks.py
+      - name: Unit tests, including negative tests for every check
+        run: python -m unittest discover -s tests -v
+  visual-inspection:
+    needs: checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
+        with: {python-version: "3.12"}
+      - run: pip install playwright==1.48.0 && python -m playwright install --with-deps chromium
+      - name: Visual inspection
+        run: python tools/visual_qa.py
+      - if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with: {name: qa-screenshots, path: qa-shots/, retention-days: 14}

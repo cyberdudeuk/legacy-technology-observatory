@@ -1,0 +1,25 @@
+name: Accessibility problem
+description: Something on the site is hard or impossible to use with your setup.
+title: "[Accessibility] "
+labels: ["accessibility"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Which section, what you were trying to do, and what got in the way.
+    validations: {required: true}
+  - type: input
+    id: setup
+    attributes:
+      label: Your setup (optional)
+      description: For example browser, device, screen reader, magnifier, voice control or display settings.
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Can you complete your task?
+      options:
+        - No, I'm blocked
+        - Yes, but with difficulty
+        - Yes, it's a minor issue
+    validations: {required: true}

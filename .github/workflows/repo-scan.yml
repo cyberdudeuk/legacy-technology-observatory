@@ -1,0 +1,37 @@
+# Quarterly: recount public government repositories by language and open a pull request with the
+# new numbers and a comparison, for review before merging. Runs on the first of Feb, May, Aug and Nov.
+name: Quarterly repository scan
+on:
+  schedule: [{cron: "23 6 1 2,5,8,11 *"}]
+  workflow_dispatch:
+permissions: {contents: write, pull-requests: write}
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
+        with: {python-version: "3.12"}
+      - name: Scan
+        run: python tools/repo_scan.py --report scan-report.md
+        env: {GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"}
+      - name: Commit to a branch
+        id: commit
+        run: |
+          if git diff --quiet data/repo-scan.json; then echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          branch="scan/$(date -u +%Y-%m-%d)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add data/repo-scan.json
+          git commit -m "Quarterly repository scan $(date -u +%Y-%m-%d)"
+          git push -u origin "$branch"
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "branch=$branch" >> "$GITHUB_OUTPUT"
+      - if: steps.commit.outputs.changed == 'true'
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          script: |
+            const body = require('fs').readFileSync('scan-report.md', 'utf8');
+            await github.rest.pulls.create({...context.repo, head: '${{ steps.commit.outputs.branch }}', base: 'main',
+              title: 'Quarterly repository scan', body});
