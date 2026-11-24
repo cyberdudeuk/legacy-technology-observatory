@@ -1,5 +1,8 @@
 # Changelog
 
+## 3.2.1 — 24 November 2026
+- Added `.zenodo.json` so Zenodo can archive each release and issue a DOI (Zenodo could not read the two-licence citation file). Clearer wording in the citation abstract. No change to the site.
+
 ## 3.2.0 — 24 November 2026
 - **From evidence to decisions** in Analytics: seven kinds of decision (investment and funding, workforce and resourcing, commercial and contracts, cyber security and resilience, roadmaps and sequencing, missions and strategy, inclusion and equality), each with the question, what the evidence signals, its strength, what to do, the governing framework (Green Book, GovS 005, Legacy IT Risk Assessment Framework and others) and the evidence.
 - **Set your priorities**: weight four risk factors and the ranking of legacy languages and platforms updates; copy a decision brief for a business case.

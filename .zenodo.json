@@ -1,0 +1,37 @@
+{
+  "upload_type": "software",
+  "title": "Legacy Technology Observatory",
+  "creators": [
+    {
+      "name": "Silva, Emanuel",
+      "orcid": "0009-0000-5880-7219"
+    }
+  ],
+  "description": "The old technology behind UK public services, from programming languages and mainframes to networks, devices, operational technology and encryption: where it runs, what it costs, who can maintain it, how it drives technical debt, how the public sector is moving off it, and what that means for skills and equality. Every figure links to its public source.",
+  "keywords": [
+    "legacy-it",
+    "legacy-technology",
+    "technical-debt",
+    "cobol",
+    "mainframe",
+    "public-sector",
+    "modernisation",
+    "digital-skills",
+    "accessibility"
+  ],
+  "notes": "Personal project, not an official government service, policy or endorsement. Code is MIT licensed; content and data are CC BY 4.0. Status at release: Prototype.",
+  "related_identifiers": [
+    {
+      "identifier": "https://cyberdudeuk.github.io/legacy-technology-observatory/",
+      "relation": "isDocumentedBy",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/cyberdudeuk/",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "version": "3.2.1",
+  "license": "mit"
+}
