@@ -8,7 +8,7 @@ body:
       value: |
         Thank you for getting in touch. What you write here is **public**, so please don't include names, contact details, personal data or anything with a protective marking. We reply on this issue, usually within 10 working days.
 
-        - Security problem? Use the [security policy](https://github.com/cyberdudeuk/legacy-code-observatory/security/policy) so it stays private.
+        - Security problem? Use the [security policy](https://github.com/cyberdudeuk/legacy-technology-observatory/security/policy) so it stays private.
         - No GitHub account, or need another format? Ask someone who has one to post for you, or describe your access need below.
   - type: dropdown
     id: topic

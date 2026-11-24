@@ -8,4 +8,4 @@ This project is about systems that real people build, run and rely on. Treat eve
 - Don't share anyone's personal information.
 - Harassment, discrimination and personal attacks are not accepted.
 
-The maintainer may edit, hide or remove comments and contributions that break this code, and block people who repeatedly do so. To raise a concern, use the [contact form](https://github.com/cyberdudeuk/legacy-code-observatory/issues/new?template=0-contact.yml), or for something sensitive, report it privately through GitHub's own reporting tools.
+The maintainer may edit, hide or remove comments and contributions that break this code, and block people who repeatedly do so. To raise a concern, use the [contact form](https://github.com/cyberdudeuk/legacy-technology-observatory/issues/new?template=0-contact.yml), or for something sensitive, report it privately through GitHub's own reporting tools.

@@ -4,7 +4,7 @@ The site is a static page with no server, accounts or tracking. When opened insi
 
 ## Reporting a problem
 
-Please report security problems privately using GitHub's **Report a vulnerability** button on the [Security tab](https://github.com/cyberdudeuk/legacy-code-observatory/security). Don't open a public issue. We aim to respond within 10 working days.
+Please report security problems privately using GitHub's **Report a vulnerability** button on the [Security tab](https://github.com/cyberdudeuk/legacy-technology-observatory/security). Don't open a public issue. We aim to respond within 10 working days.
 
 ## How the code is kept safe
 

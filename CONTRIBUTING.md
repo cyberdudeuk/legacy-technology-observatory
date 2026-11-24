@@ -4,7 +4,7 @@ Thank you for helping keep the evidence accurate.
 
 ## Without code
 
-Use an [issue form](https://github.com/cyberdudeuk/legacy-code-observatory/issues/new/choose): report an error, suggest a system or source, or report an accessibility problem. Please include a public link for any fact, so it can be checked and cited.
+Use an [issue form](https://github.com/cyberdudeuk/legacy-technology-observatory/issues/new/choose): report an error, suggest a system or source, or report an accessibility problem. Please include a public link for any fact, so it can be checked and cited.
 
 ## With code
 

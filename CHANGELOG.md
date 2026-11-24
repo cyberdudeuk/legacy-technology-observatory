@@ -1,5 +1,15 @@
 # Changelog
 
+## 3.0.0 — 24 November 2026
+- Renamed the Legacy Code Observatory to the **Legacy Technology Observatory**: the scope now covers the whole legacy stack, not only code.
+- New **Beyond code** section: the six-layer legacy stack, a register of 12 technologies (analogue landlines, 2G and 3G, PSN, Airwave, unsupported operating systems, medical technology, operational technology, NHS fax and pagers, pre-quantum encryption, mainframes, data centres) with the skills to replace each, and a table of the dates that matter.
+- New **What legacy costs** section on the overview: 14 published figures across seven types of cost (savings missed, running premium, share of spend, keeping it alive, replacing it, incidents, skills). Figures are not added together because they overlap.
+- Four new headline numbers, an eighth finding, 11 new glossary terms and new knowledge graph links.
+- **Find and reuse code**: links from the repository scan into the GitHub Repos Asset Catalogue for every scanned organisation and for legacy code, reuse and code practice.
+- `data/xref.json` publishes shared keys (languages, layers, organisations); `#language-cobol` and `#layer-pstn` open the matching record.
+- Checks C17 and C18 with negative tests; the repository register check now covers beyond-code and cost records; visual inspection covers 13 sections.
+- The public sector tech hub and app store will be a separate site; this one links to it once it is published.
+
 ## 2.2.0 — 24 November 2026
 - Moved the Page contents switch into the drawer itself, with a slim rail that keeps it visible when the list is hidden.
 - Compact phone header: search on its own row; Display and Ask as labelled icon buttons.

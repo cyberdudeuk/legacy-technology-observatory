@@ -1,8 +1,12 @@
-# Legacy Code Observatory
+# Legacy Technology Observatory
 
-Which programming languages and platforms run UK public services, who can still maintain them, how they drive technical debt, and how the public sector is moving off them.
+*Formerly the Legacy Code Observatory (renamed in 3.0 when it widened beyond code).*
 
-**Read it:** https://cyberdudeuk.github.io/legacy-code-observatory/
+The old technology behind UK public services, from programming languages and mainframes to phone lines, emergency radio, devices and encryption: where it runs, what it costs, who can maintain it, and how the public sector is moving off it.
+
+One of three linked sites, each with one job: the [GitHub Repos Asset Catalogue](https://cyberdudeuk.github.io/github-repos-asset-catalogue/) shows code that exists (what you could reuse); this observatory shows what is old and risky (what you need to replace); a public sector tech hub with an app store, in development, will show what public bodies make and run (what you can adopt).
+
+**Read it:** https://cyberdudeuk.github.io/legacy-technology-observatory/
 
 Every figure links to a public source. Judgements are labelled *Analysis*, modelled figures *Estimate*, and weak or single-source claims *Unconfirmed*.
 
@@ -10,15 +14,16 @@ Every figure links to a public source. Judgements are labelled *Analysis*, model
 
 | Section | What it covers |
 |---|---|
-| Overview | Headline numbers, findings, legacy share by sector, risk matrix, and role-based starting points |
+| Overview | Headline numbers, findings, what legacy costs by type of cost, legacy share by sector, risk matrix, and role-based starting points |
 | Guide | Guided tour, readiness planner, tutorials, personas, journeys, user stories, scenarios, use cases, case studies, worked examples, user guide |
 | Languages | 19 languages and platforms, from FORTRAN (1957) to TypeScript (2012): origin, purpose, talent pool, debt link, outlook |
+| Beyond code | The whole legacy stack: networks (landlines, 2G/3G, PSN, Airwave), devices, medical and operational technology, practices and encryption, with the dates that matter |
 | Systems and services | Named legacy systems across central government, devolved administrations, local government, the NHS and suppliers |
 | Skills and talent | Talent pool evidence, the link to technical debt, an age-inclusive approach, and skills needed by migration route |
 | Migration | The 6 Rs, a step-by-step process, AI code translation evidence, decommissioning dates and outlook |
 | Learning | What exists, gaps and options for training and keeping skills |
 | Inclusion | Equality impacts, inclusive routes into skills, language guide and accessibility statement |
-| Repo scan | Public government repositories by language, refreshed quarterly |
+| Repo scan | Public government repositories by language, refreshed quarterly, with links into the GitHub Repos Asset Catalogue |
 | Knowledge | Glossary, knowledge graph, data dictionary, taxonomy, related themes, open data |
 | Documents | Theory of change, research, service blueprint, PRD, functional and technical requirements, architecture, HLD, LLD, ontology, traceability explorer |
 | About | Method, the case against this work, self-checks, defect register, running costs, sources, contact |
@@ -29,10 +34,12 @@ Every figure links to a public source. Judgements are labelled *Analysis*, model
 site/index.html            the whole site: one self-contained page
 data/observatory.json      every record on the site, for reuse
 data/repo-scan.json        latest repository scan (the site reads it when hosted here)
+data/xref.json             shared keys for other portals (languages, layers, organisations)
 tools/checks.py            static checks (each proved to fail on a bad sample)
 tools/visual_qa.py         automated visual inspection of every section
 tools/repo_scan.py         quarterly repository scan
 tools/maintenance.py       monthly link and freshness check
+tools/export_data.py       refreshes data/observatory.json and data/xref.json from the page
 tests/                     unit tests, including negative tests for every check
 docs/                      verification approach and defect register
 ```
@@ -56,7 +63,7 @@ One-off setting after the first push: **Settings > Pages > Build and deployment 
 
 ## Contact
 
-Use the [contact form](https://github.com/cyberdudeuk/legacy-code-observatory/issues/new?template=0-contact.yml). Corrections, new evidence and accessibility problems each have their own form. We never publish email addresses.
+Use the [contact form](https://github.com/cyberdudeuk/legacy-technology-observatory/issues/new?template=0-contact.yml). Corrections, new evidence and accessibility problems each have their own form. We never publish email addresses.
 
 ## Licence
 

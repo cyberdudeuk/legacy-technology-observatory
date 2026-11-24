@@ -2,7 +2,7 @@
 
 Every release passes three layers of checks. Each check is proved to fail on a known-bad sample, so a check that cannot fail is caught.
 
-## 1. In-page self-checks (16)
+## 1. In-page self-checks (18)
 
 Run in the reader's browser every time the page loads, and shown on the About page with their negative tests.
 
@@ -24,13 +24,15 @@ Run in the reader's browser every time the page loads, and shown on the About pa
 | C14 | Headings do not skip levels |
 | C15 | Every table keeps a minimum width so it scrolls instead of squeezing on phones |
 | C16 | Nothing makes the page scroll sideways at the current width |
+| C17 | Every record beyond code and every cost figure cites a known source and says what it measures |
+| C18 | Every link to the GitHub Repos Asset Catalogue uses a key the catalogue publishes |
 
 ## 2. Repository checks (`tools/checks.py`, 11)
 
-No email addresses, no retired names, https sources, known citations, cited registers, labelled unsourced records, traced requirements, page size, pinned scripts from cdnjs only, no `eval`, valid JSON-LD. `tests/test_checks.py` runs each against the real site and a bad sample.
+No email addresses, no retired names, https sources, known citations, cited registers (systems, devolved and local, beyond code, costs), labelled unsourced records, traced requirements, page size, pinned scripts from cdnjs only, no `eval`, valid JSON-LD. `tests/test_checks.py` runs each against the real site and a bad sample.
 
 ## 3. Visual inspection (`tools/visual_qa.py`)
 
-Every section at 1366px and 400px, in light and dark themes, with the contents drawer as loaded and toggled. Fails on any script error, any sideways scrolling, or any in-page self-check or negative test that does not behave. Screenshots are attached to each CI run.
+Every section (13) at 1366px and 400px, in light and dark themes, with the contents drawer as loaded and toggled. Fails on any script error, any sideways scrolling, or any in-page self-check or negative test that does not behave. Screenshots are attached to each CI run.
 
 A failure in any layer blocks publishing.

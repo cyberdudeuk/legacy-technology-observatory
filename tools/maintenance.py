@@ -25,7 +25,7 @@ SOFT = (403, 405, 406, 429, 999)
 
 
 def check_url(url: str) -> tuple[str, str]:
-    req = urllib.request.Request(url, method="GET", headers={"User-Agent": "Mozilla/5.0 (link check; legacy-code-observatory)"})
+    req = urllib.request.Request(url, method="GET", headers={"User-Agent": "Mozilla/5.0 (link check; legacy-technology-observatory)"})
     try:
         with urllib.request.urlopen(req, timeout=25) as r:  # noqa: S310 (https only, from our own data)
             return "ok", str(r.status)

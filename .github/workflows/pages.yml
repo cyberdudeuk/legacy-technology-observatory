@@ -22,7 +22,7 @@ jobs:
         run: |
           mkdir -p dist/data
           cp site/index.html dist/index.html
-          cp data/observatory.json data/repo-scan.json dist/data/
+          cp data/observatory.json data/repo-scan.json data/xref.json dist/data/
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
         with: {path: dist}
   deploy:

@@ -1,15 +1,15 @@
 cff-version: 1.2.0
-message: "Code is MIT; content and data are CC BY 4.0. If you use the Legacy Code Observatory in research or a publication, please cite it as below."
-title: "Legacy Code Observatory"
-abstract: "An evidence portal on the programming languages and platforms behind UK public services: where they run, who can maintain them, how they drive technical debt, how the public sector is moving off them, and the equality and skills implications."
+message: "Code is MIT; content and data are CC BY 4.0. If you use the Legacy Technology Observatory in research or a publication, please cite it as below."
+title: "Legacy Technology Observatory"
+abstract: "An evidence portal on the old technology behind UK public services, from programming languages and mainframes to networks, devices, operational technology and encryption: where it runs, what it costs, who can maintain them, how they drive technical debt, how the public sector is moving off them, and the equality and skills implications."
 type: software
 authors:
   - given-names: Emanuel
     family-names: Silva
     orcid: "https://orcid.org/0009-0000-5880-7219"
-repository-code: "https://github.com/cyberdudeuk/legacy-code-observatory"
-url: "https://cyberdudeuk.github.io/legacy-code-observatory/"
+repository-code: "https://github.com/cyberdudeuk/legacy-technology-observatory"
+url: "https://cyberdudeuk.github.io/legacy-technology-observatory/"
 license: [MIT, CC-BY-4.0]
-version: "2.2.0"
+version: "3.0.0"
 date-released: "2026-11-24"
-keywords: [legacy IT, COBOL, mainframe, technical debt, public sector, modernisation, digital skills, accessibility]
+keywords: [legacy IT, legacy technology, COBOL, mainframe, PSTN switch-off, Airwave, operational technology, post-quantum cryptography, cost of legacy, technical debt, public sector, modernisation, digital skills, accessibility]

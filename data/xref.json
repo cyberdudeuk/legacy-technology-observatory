@@ -1,0 +1,301 @@
+{
+ "portal": "Legacy Technology Observatory",
+ "id": "lto",
+ "version": "3.0",
+ "as_of": "2026-11-24",
+ "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/",
+ "status": "Evidence base, prototype",
+ "licence": "Code MIT; content and data CC BY 4.0",
+ "links": "Every address also works with a hyphen for hosts that pass only a plain #name: #language-cobol, #layer-pstn.",
+ "keys": {
+  "languages": [
+   {
+    "id": "cobol",
+    "name": "COBOL",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#language=cobol"
+   },
+   {
+    "id": "fortran",
+    "name": "Fortran",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#language=fortran"
+   },
+   {
+    "id": "jcl",
+    "name": "JCL",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#language=jcl"
+   },
+   {
+    "id": "vme",
+    "name": "ICL VME and SCL",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#language=vme"
+   },
+   {
+    "id": "abap",
+    "name": "ABAP",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#language=abap"
+   },
+   {
+    "id": "natural",
+    "name": "Natural and Adabas",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#language=natural"
+   },
+   {
+    "id": "plsql",
+    "name": "PL/SQL",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#language=plsql"
+   },
+   {
+    "id": "perl",
+    "name": "Perl",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#language=perl"
+   },
+   {
+    "id": "vb",
+    "name": "Visual Basic 6 and VBA",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#language=vb"
+   },
+   {
+    "id": "java",
+    "name": "Java",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#language=java"
+   },
+   {
+    "id": "scala",
+    "name": "Scala",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#language=scala"
+   },
+   {
+    "id": "ruby",
+    "name": "Ruby",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#language=ruby"
+   },
+   {
+    "id": "python",
+    "name": "Python",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#language=python"
+   },
+   {
+    "id": "js",
+    "name": "JavaScript",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#language=js"
+   },
+   {
+    "id": "ts",
+    "name": "TypeScript",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#language=ts"
+   },
+   {
+    "id": "csharp",
+    "name": "C#",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#language=csharp"
+   },
+   {
+    "id": "go",
+    "name": "Go",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#language=go"
+   },
+   {
+    "id": "kotlin",
+    "name": "Kotlin",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#language=kotlin"
+   },
+   {
+    "id": "hcl",
+    "name": "HCL (Terraform)",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#language=hcl"
+   }
+  ],
+  "layers": [
+   {
+    "id": "pstn",
+    "name": "Analogue landlines (PSTN)",
+    "layer": "Networks",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#layer=pstn"
+   },
+   {
+    "id": "mobile",
+    "name": "2G and 3G mobile networks",
+    "layer": "Networks",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#layer=mobile"
+   },
+   {
+    "id": "psn",
+    "name": "Public Services Network (PSN)",
+    "layer": "Networks",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#layer=psn"
+   },
+   {
+    "id": "airwave",
+    "name": "Airwave emergency radio",
+    "layer": "Networks",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#layer=airwave"
+   },
+   {
+    "id": "windows",
+    "name": "Unsupported operating systems",
+    "layer": "Devices",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#layer=windows"
+   },
+   {
+    "id": "medical",
+    "name": "Legacy medical and health technology",
+    "layer": "Devices",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#layer=medical"
+   },
+   {
+    "id": "ot",
+    "name": "Operational technology",
+    "layer": "Operational technology",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#layer=ot"
+   },
+   {
+    "id": "fax",
+    "name": "Fax machines in the NHS",
+    "layer": "Security and practice",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#layer=fax"
+   },
+   {
+    "id": "pagers",
+    "name": "Pagers in the NHS",
+    "layer": "Security and practice",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#layer=pagers"
+   },
+   {
+    "id": "pqc",
+    "name": "Pre-quantum encryption",
+    "layer": "Security and practice",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#layer=pqc"
+   },
+   {
+    "id": "mainframe",
+    "name": "Mainframe and midrange platforms",
+    "layer": "Platforms",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#layer=mainframe"
+   },
+   {
+    "id": "datacentre",
+    "name": "Ageing data centres",
+    "layer": "Platforms",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#layer=datacentre"
+   }
+  ],
+  "organisations": [
+   {
+    "id": "government-digital-service",
+    "github": "alphagov",
+    "url": "https://cyberdudeuk.github.io/github-repos-asset-catalogue/#org-government-digital-service"
+   },
+   {
+    "id": "hm-revenue-customs",
+    "github": "hmrc",
+    "url": "https://cyberdudeuk.github.io/github-repos-asset-catalogue/#org-hm-revenue-customs"
+   },
+   {
+    "id": "department-for-work-pensions",
+    "github": "dwp",
+    "url": "https://cyberdudeuk.github.io/github-repos-asset-catalogue/#org-department-for-work-pensions"
+   },
+   {
+    "id": "ministry-of-justice",
+    "github": "ministryofjustice",
+    "url": "https://cyberdudeuk.github.io/github-repos-asset-catalogue/#org-ministry-of-justice"
+   },
+   {
+    "id": "home-office",
+    "github": "UKHomeOffice",
+    "url": "https://cyberdudeuk.github.io/github-repos-asset-catalogue/#org-home-office"
+   },
+   {
+    "id": "nhs-digital",
+    "github": "nhsdigital",
+    "url": "https://cyberdudeuk.github.io/github-repos-asset-catalogue/#org-nhs-digital"
+   },
+   {
+    "id": "department-for-education",
+    "github": "DFE-Digital",
+    "url": "https://cyberdudeuk.github.io/github-repos-asset-catalogue/#org-department-for-education"
+   },
+   {
+    "id": "companies-house",
+    "github": "companieshouse",
+    "url": "https://cyberdudeuk.github.io/github-repos-asset-catalogue/#org-companies-house"
+   },
+   {
+    "id": "office-for-national-statistics",
+    "github": "ONSdigital",
+    "url": "https://cyberdudeuk.github.io/github-repos-asset-catalogue/#org-office-for-national-statistics"
+   },
+   {
+    "id": "met-office",
+    "github": "MetOffice",
+    "url": "https://cyberdudeuk.github.io/github-repos-asset-catalogue/#org-met-office"
+   },
+   {
+    "id": "central-digital-and-data-office",
+    "github": "co-cddo",
+    "url": "https://cyberdudeuk.github.io/github-repos-asset-catalogue/#org-central-digital-and-data-office"
+   },
+   {
+    "id": "driver-and-vehicle-licensing-agency",
+    "github": "dvla",
+    "url": "https://cyberdudeuk.github.io/github-repos-asset-catalogue/#org-driver-and-vehicle-licensing-agency"
+   },
+   {
+    "id": "driver-and-vehicle-standards-agency",
+    "github": "DVSA",
+    "url": "https://cyberdudeuk.github.io/github-repos-asset-catalogue/#org-driver-and-vehicle-standards-agency"
+   },
+   {
+    "id": "department-for-environment-food-rural-affairs",
+    "github": "Defra",
+    "url": "https://cyberdudeuk.github.io/github-repos-asset-catalogue/#org-department-for-environment-food-rural-affairs"
+   }
+  ],
+  "views": [
+   {
+    "id": "overview",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#overview"
+   },
+   {
+    "id": "languages",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#languages"
+   },
+   {
+    "id": "layers",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#layers"
+   },
+   {
+    "id": "systems",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#systems"
+   },
+   {
+    "id": "skills",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#skills"
+   },
+   {
+    "id": "migration",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#migration"
+   },
+   {
+    "id": "learning",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#learning"
+   },
+   {
+    "id": "repos",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#repos"
+   },
+   {
+    "id": "knowledge",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#knowledge"
+   }
+  ]
+ },
+ "related": [
+  {
+   "id": "cat",
+   "name": "GitHub Repos Asset Catalogue",
+   "url": "https://cyberdudeuk.github.io/github-repos-asset-catalogue/",
+   "manifest": "https://cyberdudeuk.github.io/github-repos-asset-catalogue/data/xref.json"
+  }
+ ]
+}

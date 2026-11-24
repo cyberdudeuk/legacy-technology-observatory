@@ -38,7 +38,7 @@ def _get(path: str, params: dict) -> dict:
     req = urllib.request.Request(url, headers={
         "Accept": "application/vnd.github+json",
         "Authorization": f"Bearer {os.environ['GITHUB_TOKEN']}",
-        "User-Agent": "legacy-code-observatory-scan",
+        "User-Agent": "legacy-technology-observatory-scan",
     })
     with urllib.request.urlopen(req, timeout=30) as r:  # noqa: S310 (fixed https host)
         return json.load(r)

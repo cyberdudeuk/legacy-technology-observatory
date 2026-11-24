@@ -1,5 +1,5 @@
 {
- "edition": "LCO-2.2-20261124",
+ "edition": "LTO-3.0-20261124",
  "evidence_date": "2026-11-24",
  "sources": {
   "S2": {
@@ -293,6 +293,78 @@
   "S75": {
    "title": "Service Standard point 5: Make sure everyone can use the service",
    "url": "https://www.gov.uk/service-manual/service-standard/point-5-make-sure-everyone-can-use-the-service"
+  },
+  "S76": {
+   "title": "GOV.UK: Moving landlines to digital technologies",
+   "url": "https://www.gov.uk/guidance/moving-landlines-to-digital-technologies"
+  },
+  "S77": {
+   "title": "Ofcom: Switching off the UK's 2G and 3G mobile networks",
+   "url": "https://www.ofcom.org.uk/phones-and-broadband/coverage-and-speeds/3g-switch-off"
+  },
+  "S78": {
+   "title": "GDS Technology blog: The road to closing down the PSN (2020)",
+   "url": "https://technology.blog.gov.uk/2020/09/08/the-road-to-closing-down-the-psn/"
+  },
+  "S79": {
+   "title": "GOV.UK: Future Networks for Government (FN4G)",
+   "url": "https://www.gov.uk/guidance/future-networks-for-government-fn4g"
+  },
+  "S80": {
+   "title": "NAO: Progress with delivering the Emergency Services Network (2023)",
+   "url": "https://nao.org.uk/press-releases/progress-with-delivering-the-emergency-services-network"
+  },
+  "S81": {
+   "title": "Home Office: Emergency Services Network summary business case (July 2026)",
+   "url": "https://www.gov.uk/government/publications/27-july-2026-emergency-services-network-summary-business-case"
+  },
+  "S82": {
+   "title": "NAO: Investigation, WannaCry cyber attack and the NHS (2017)",
+   "url": "https://www.nao.org.uk/reports/investigation-wannacry-cyber-attack-and-the-nhs/"
+  },
+  "S83": {
+   "title": "Microsoft: Windows 10 support has ended on 14 October 2025",
+   "url": "https://support.microsoft.com/kb/5056949"
+  },
+  "S84": {
+   "title": "NHS digital regulations: Managing legacy systems and decommissioning digital health technologies",
+   "url": "https://digitalregulations.innovation.nhs.uk/regulations-and-guidance-for-adopters/all-adopters-guidance/planning-for-managing-legacy-systems-and-decommissioning-digital-healthcare-technologies/"
+  },
+  "S85": {
+   "title": "NCSC: Operational technology collection",
+   "url": "https://www.ncsc.gov.uk/collection/operational-technology"
+  },
+  "S86": {
+   "title": "DHSC: Health and Social Care Secretary bans fax machines in NHS (2018)",
+   "url": "https://www.gov.uk/government/news/health-and-social-care-secretary-bans-fax-machines-in-nhs"
+  },
+  "S87": {
+   "title": "DHSC: Health and Social Care Secretary bans pagers from the NHS (2019)",
+   "url": "https://www.gov.uk/government/news/health-and-social-care-secretary-bans-pagers-from-the-nhs"
+  },
+  "S88": {
+   "title": "NCSC: Timelines for migration to post-quantum cryptography",
+   "url": "https://ncsc.gov.uk/guidance/pqc-migration-timelines"
+  },
+  "S89": {
+   "title": "GitHub Repos Asset Catalogue: Legacy and technical debt",
+   "url": "https://cyberdudeuk.github.io/github-repos-asset-catalogue/#legacy"
+  },
+  "S90": {
+   "title": "Service Standard point 12: Make new source code open",
+   "url": "https://www.gov.uk/service-manual/service-standard/point-12-make-new-source-code-open"
+  },
+  "S91": {
+   "title": "Technology Code of Practice: Be open and use open source",
+   "url": "https://www.gov.uk/guidance/be-open-and-use-open-source"
+  },
+  "S92": {
+   "title": "DSIT press release: Archaic tech sees public sector miss £45 billion annual savings (Jan 2025)",
+   "url": "https://www.gov.uk/government/news/archaic-tech-sees-public-sector-miss-45-billion-annual-savings"
+  },
+  "S93": {
+   "title": "Digital Health: DHSC puts cost of WannaCry to the NHS at £92m (2018)",
+   "url": "https://www.digitalhealth.net/2018/10/dhsc-puts-cost-wannacry-nhs-92m"
   }
  },
  "tiles": [
@@ -361,6 +433,40 @@
     "S53"
    ],
    "ev": "sourced"
+  },
+  {
+   "v": "Jan 2027",
+   "l": "every analogue landline, and the telecare and alarms that use one, must be on digital lines.",
+   "s": [
+    "S76"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "v": "2033",
+   "l": "latest date for switching off the UK's 2G mobile networks; 3G is already largely gone.",
+   "s": [
+    "S77"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "v": "81",
+   "u": "of 236",
+   "l": "NHS trusts in England hit by WannaCry in 2017, on unpatched or unsupported Windows.",
+   "s": [
+    "S82"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "v": "£250m",
+   "u": "a year",
+   "l": "at least, to keep the Airwave emergency radio network running into the 2030s.",
+   "s": [
+    "S80"
+   ],
+   "ev": "sourced"
   }
  ],
  "findings": [
@@ -427,6 +533,17 @@
     "S19"
    ],
    "sev": "ok"
+  },
+  {
+   "t": "Legacy is wider than code",
+   "b": "Phone lines, mobile networks, emergency radio, devices and encryption all have switch-off or migration dates. Some are fixed (landlines by January 2027); others keep slipping (Airwave was due to close in 2020).",
+   "s": [
+    "S76",
+    "S77",
+    "S80",
+    "S88"
+   ],
+   "sev": "warn"
   }
  ],
  "languages": [
@@ -2194,6 +2311,18 @@
    "Maintainer working alone",
    "update the site with little effort and rely on automatic checks",
    "it stays accurate"
+  ],
+  [
+   "N9",
+   "Technology or estates lead",
+   "see which non-code technology my services rely on and when it is switched off",
+   "I can replace it in time"
+  ],
+  [
+   "N10",
+   "Engineer replacing a system",
+   "find code other public bodies have already published",
+   "I can reuse it instead of starting again"
   ]
  ],
  "requirements": [
@@ -2428,7 +2557,9 @@
     "C13",
     "C14",
     "C15",
-    "C16"
+    "C16",
+    "C17",
+    "C18"
    ],
    [],
    "Done"
@@ -2541,6 +2672,103 @@
     "S71"
    ],
    "Done"
+  ],
+  [
+   "R22",
+   "Register of technology beyond code: networks, devices, operational technology, practices and encryption",
+   [
+    "N9",
+    "N2"
+   ],
+   "ly-register",
+   [
+    "C17"
+   ],
+   [
+    "S76",
+    "S80",
+    "S88"
+   ],
+   "Done"
+  ],
+  [
+   "R23",
+   "Dates that matter for each layer, in one table",
+   [
+    "N9"
+   ],
+   "ly-dates",
+   [
+    "C7",
+    "C17"
+   ],
+   [
+    "S76",
+    "S77"
+   ],
+   "Done"
+  ],
+  [
+   "R24",
+   "Links to the GitHub Repos Asset Catalogue for each scanned organisation and for legacy code",
+   [
+    "N10",
+    "N4"
+   ],
+   "re-reuse",
+   [
+    "C18"
+   ],
+   [
+    "S89",
+    "S90",
+    "S91"
+   ],
+   "Done"
+  ],
+  [
+   "R25",
+   "Shared keys published for other portals (data/xref.json)",
+   [
+    "N6",
+    "N10"
+   ],
+   "kn-layer",
+   [
+    "C18"
+   ],
+   [],
+   "Done"
+  ],
+  [
+   "R27",
+   "What legacy costs, by type of cost and layer, without adding up figures that overlap",
+   [
+    "N2",
+    "N9"
+   ],
+   "ov-cost",
+   [
+    "C17",
+    "C7"
+   ],
+   [
+    "S92",
+    "S30",
+    "S80"
+   ],
+   "Done"
+  ],
+  [
+   "R26",
+   "Links to the public sector tech hub and app store once it is published",
+   [
+    "N10"
+   ],
+   "re-reuse",
+   [],
+   [],
+   "Planned"
   ]
  ],
  "defects": [
@@ -2774,6 +3002,61 @@
    "term": "LFRic",
    "definition": "The Met Office's new modelling system, named after Lewis Fry Richardson.",
    "alternatives": "Momentum"
+  },
+  {
+   "term": "PSTN",
+   "definition": "Public Switched Telephone Network, the analogue landline network being switched off by January 2027.",
+   "alternatives": "analogue landline; copper line"
+  },
+  {
+   "term": "Digital Voice",
+   "definition": "Landline calls carried over a broadband connection instead of the analogue network.",
+   "alternatives": "VoIP; all-IP"
+  },
+  {
+   "term": "Telecare",
+   "definition": "Alarms and sensors that let people, often older or disabled, call for help at home.",
+   "alternatives": "care alarm; personal alarm"
+  },
+  {
+   "term": "Airwave",
+   "definition": "The radio network the emergency services have used since the early 2000s, due to be replaced by ESN.",
+   "alternatives": "TETRA network"
+  },
+  {
+   "term": "ESN",
+   "definition": "Emergency Services Network, the mobile replacement for Airwave run by the Home Office's ESMCP programme.",
+   "alternatives": "ESMCP"
+  },
+  {
+   "term": "PSN",
+   "definition": "Public Services Network, a closed government network that departments are leaving for the internet and modern networks.",
+   "alternatives": "GCF"
+  },
+  {
+   "term": "Operational technology",
+   "definition": "Technology that controls physical equipment, such as water treatment, energy and traffic systems.",
+   "alternatives": "OT; ICS; SCADA"
+  },
+  {
+   "term": "End of support",
+   "definition": "The date after which a supplier stops fixing faults and security flaws in a product.",
+   "alternatives": "end of life; EOL"
+  },
+  {
+   "term": "Post-quantum cryptography",
+   "definition": "Encryption designed to stay secure against future quantum computers.",
+   "alternatives": "PQC; quantum-safe encryption"
+  },
+  {
+   "term": "Opportunity cost",
+   "definition": "The value of what could have been done instead, such as savings missed because old systems block better ways of working.",
+   "alternatives": "savings forgone"
+  },
+  {
+   "term": "Working in the open",
+   "definition": "Publishing code and decisions openly so others can reuse, check and improve them.",
+   "alternatives": "open source; coding in the open"
   }
  ],
  "repo_counts": [
@@ -2861,6 +3144,367 @@
    "name": "COBOL",
    "count": 0,
    "legacy": true
+  }
+ ],
+ "beyond_code": [
+  {
+   "id": "pstn",
+   "n": "Analogue landlines (PSTN)",
+   "layer": "Networks",
+   "date": "January 2027",
+   "dk": "2027-01",
+   "what": "The copper telephone network is being switched off. Every landline must move to a digital line.",
+   "where": "Telecare and personal alarms, fire and security alarms, lifts, payment terminals and intercoms.",
+   "risk": "Devices that cannot work on a digital line stop working, and some fail without power where the old line did not.",
+   "skills": "Telecoms procurement, device testing, telecare service redesign, and knowing which buildings and residents rely on analogue lines.",
+   "status": "Switch-off under way",
+   "s": [
+    "S76"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "id": "mobile",
+   "n": "2G and 3G mobile networks",
+   "layer": "Networks",
+   "date": "2033 at the latest (2G)",
+   "dk": "2033-12",
+   "what": "3G has largely been switched off: Vodafone and EE in early 2024, O2 in 2025. All operators have committed to switching off 2G by 2033 at the latest.",
+   "where": "Care alarms, security alarms and payment terminals that use a mobile connection.",
+   "risk": "Devices with 2G or 3G radios lose their connection without warning to the service that relies on them.",
+   "skills": "Device inventory, supplier management and testing on 4G and 5G.",
+   "status": "3G mostly off; 2G due by 2033",
+   "s": [
+    "S77"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "id": "psn",
+   "n": "Public Services Network (PSN)",
+   "layer": "Networks",
+   "date": "Closedown planned from 2023",
+   "dk": "2023-12",
+   "what": "A closed government network. In 2020 GDS called leaving it an urgent priority and said closedown could take place as early as 2023.",
+   "where": "Departments and councils that still route services or email through PSN connections.",
+   "risk": "Paying for a closed network while the policy has moved to the internet and modern networks.",
+   "skills": "Network design, zero-trust security and migration to Future Networks for Government arrangements.",
+   "status": "Current status not confirmed",
+   "s": [
+    "S78",
+    "S79"
+   ],
+   "ev": "unconfirmed"
+  },
+  {
+   "id": "airwave",
+   "n": "Airwave emergency radio",
+   "layer": "Networks",
+   "date": "Switch-off date not yet set",
+   "dk": "2098-01",
+   "what": "Police, fire and ambulance radio since the early 2000s, to be replaced by the Emergency Services Network (ESN). Switch-off moved from 2020 to 2022, then 2026, and the NAO expected it to slip further.",
+   "where": "Every 999 response in Great Britain.",
+   "risk": "Running two networks at once, and a critical service on ageing equipment.",
+   "skills": "Mobile network engineering, device certification, control-room integration and large programme management.",
+   "status": "Replacement in delivery",
+   "s": [
+    "S80",
+    "S81"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "id": "windows",
+   "n": "Unsupported operating systems",
+   "layer": "Devices",
+   "date": "Windows 10: 14 October 2025",
+   "dk": "2025-10",
+   "what": "Microsoft stopped routine security updates for Windows 10 on 14 October 2025. In 2017 WannaCry spread through NHS computers running unpatched or unsupported Windows.",
+   "where": "Desktop computers, and devices such as scanners and lab equipment with Windows built in.",
+   "risk": "Known security flaws stay open. WannaCry hit 81 of 236 NHS trusts in England and led to an estimated 19,000 cancelled appointments.",
+   "skills": "Desktop engineering, patch management, application compatibility testing, and asset registers that record each device's operating system.",
+   "status": "Past end of support",
+   "s": [
+    "S83",
+    "S82",
+    "S50"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "id": "medical",
+   "n": "Legacy medical and health technology",
+   "layer": "Devices",
+   "date": "Plan at procurement",
+   "dk": "2099-01",
+   "what": "NHS guidance says the organisation using a technology must plan its end of life and decommissioning when it buys it, and assess the clinical risk of switching it off.",
+   "where": "Imaging, monitoring and laboratory equipment and clinical software across the NHS.",
+   "risk": "Equipment that is clinically safe but no longer updated becomes a way in for attackers.",
+   "skills": "Clinical safety (DCB0160), medical device cyber security, data migration and procurement that sets exit terms.",
+   "status": "Ongoing",
+   "s": [
+    "S84"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "id": "ot",
+   "n": "Operational technology",
+   "layer": "Operational technology",
+   "date": "No single date",
+   "dk": "2099-02",
+   "what": "Industrial control systems such as SCADA monitor and control physical processes. NCSC says connecting them to wider networks and the internet can increase their vulnerability.",
+   "where": "Water, energy, traffic lights and other critical national infrastructure.",
+   "risk": "A failure can cause physical harm, so systems are often kept unchanged for years.",
+   "skills": "Control system engineering, OT security architecture and keeping an accurate map of OT assets.",
+   "status": "Ongoing",
+   "s": [
+    "S85"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "id": "fax",
+   "n": "Fax machines in the NHS",
+   "layer": "Security and practice",
+   "date": "31 March 2020 (ban)",
+   "dk": "2020-03",
+   "what": "In December 2018 the Health Secretary banned the NHS from buying fax machines and set 31 March 2020 for phasing them out. More than 8,000 were in use in England in 2018.",
+   "where": "Referrals and records sent between hospitals, GPs and pharmacies.",
+   "risk": "Paper and fax break digital records and are hard to audit.",
+   "skills": "Secure email and messaging set-up, and redesigning referral processes.",
+   "status": "Banned; whether every machine has gone is not confirmed",
+   "s": [
+    "S86"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "id": "pagers",
+   "n": "Pagers in the NHS",
+   "layer": "Security and practice",
+   "date": "End of 2021 (ban)",
+   "dk": "2021-12",
+   "what": "In February 2019 the NHS was told to phase out its 130,000 pagers, more than one in ten of the world's, by the end of 2021. They cost about £6.6 million a year.",
+   "where": "Hospital staff on call.",
+   "risk": "One-way messages with no confirmation that a call was received.",
+   "skills": "Clinical communications systems and emergency call design.",
+   "status": "Banned; whether every pager has gone is not confirmed",
+   "s": [
+    "S87"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "id": "pqc",
+   "n": "Pre-quantum encryption",
+   "layer": "Security and practice",
+   "date": "2028, 2031, 2035",
+   "dk": "2028-12",
+   "what": "NCSC sets three milestones: by 2028 find out what needs upgrading and plan; by 2031 finish the highest-priority migrations; by 2035 move all systems to post-quantum cryptography.",
+   "where": "Every system that encrypts data or signs messages, including long-lived hardware.",
+   "risk": "Data taken now could be decrypted once quantum computers are powerful enough.",
+   "skills": "Cryptography, an inventory of where encryption is used, and working with suppliers on their plans.",
+   "status": "Discovery due by 2028",
+   "s": [
+    "S88"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "id": "mainframe",
+   "n": "Mainframe and midrange platforms",
+   "layer": "Platforms",
+   "date": "Fujitsu: sales end 2030, support 2035",
+   "dk": "2035-03",
+   "what": "Large central computers that still run benefits, tax and policing systems. See the Systems and Languages pages for each one.",
+   "where": "DWP, HMRC, the Home Office and DVLA, among others.",
+   "risk": "Supplier exit dates and a shrinking pool of people who can run them.",
+   "skills": "Mainframe operations, COBOL and JCL, re-platforming and data migration.",
+   "status": "Supplier exit dates set",
+   "s": [
+    "S35",
+    "S10"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "id": "datacentre",
+   "n": "Ageing data centres",
+   "layer": "Platforms",
+   "date": "Under way",
+   "dk": "2026-02",
+   "what": "Government is moving systems out of old data centres. In 2026 the justice system was reported to be leaving ageing data centres for the cloud.",
+   "where": "Courts, tribunals and other services hosted in government-owned buildings.",
+   "risk": "Power, cooling and hardware failures, and contracts tied to buildings.",
+   "skills": "Cloud migration, hosting contracts and service continuity planning.",
+   "status": "Migrating",
+   "s": [
+    "S56"
+   ],
+   "ev": "sourced"
+  }
+ ],
+ "costs": [
+  {
+   "type": "missed",
+   "v": "£45bn",
+   "u": "a year",
+   "l": "Productivity savings the public sector misses, including the NHS, councils and central government, partly because of outdated technology.",
+   "layer": "All layers",
+   "yr": "2025",
+   "s": [
+    "S92",
+    "S58"
+   ],
+   "ev": "estimate"
+  },
+  {
+   "type": "premium",
+   "v": "3 to 4×",
+   "l": "What taxpayers can pay to run outdated technology, compared with keeping it up to date.",
+   "layer": "All layers",
+   "yr": "2025",
+   "s": [
+    "S92"
+   ],
+   "ev": "estimate"
+  },
+  {
+   "type": "share",
+   "v": "Nearly half",
+   "l": "Of government technology spending in 2019 went on keeping legacy systems running.",
+   "layer": "Code and platforms",
+   "yr": "2019",
+   "s": [
+    "S30"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "type": "share",
+   "v": "76%",
+   "l": "Of Defra's digital, data and technology spending requirement is legacy.",
+   "layer": "Code and platforms",
+   "yr": "2022",
+   "s": [
+    "S30"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "type": "share",
+   "v": "80%",
+   "l": "Of US federal IT spending of more than $100bn a year goes on running existing systems. A comparison from the US, not a UK figure.",
+   "layer": "All layers",
+   "yr": "2025",
+   "s": [
+    "S57"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "type": "programme",
+   "v": "£2.6bn",
+   "l": "Committed across government to cyber and legacy IT for 2022-23 to 2024-25.",
+   "layer": "Code and platforms",
+   "yr": "2022",
+   "s": [
+    "S30"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "type": "programme",
+   "v": "£726m vs £78.5m",
+   "l": "What Defra estimated it needed for legacy over four years, against its four-year Legacy Applications Programme allocation.",
+   "layer": "Code and platforms",
+   "yr": "2022",
+   "s": [
+    "S30"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "type": "programme",
+   "v": "21 of 72",
+   "l": "Highest-risk legacy systems that had not received the remediation funding promised for 2022 to 2025.",
+   "layer": "Code and platforms",
+   "yr": "2025",
+   "s": [
+    "S58"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "type": "extension",
+   "v": "£168.8m",
+   "l": "Contract awarded to Fujitsu without competition in 2020 to keep HMRC's CHIEF customs system running beyond March 2021.",
+   "layer": "Code and platforms",
+   "yr": "2020",
+   "s": [
+    "S19"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "type": "extension",
+   "v": "£250m",
+   "u": "a year",
+   "l": "At least, to keep Airwave emergency radio running into the 2030s while its replacement is delayed.",
+   "layer": "Networks",
+   "yr": "2023",
+   "s": [
+    "S80"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "type": "programme",
+   "v": "£11bn",
+   "l": "Lifetime cost of the Emergency Services Network including running Airwave, the 2021 estimate, which the NAO expected to rise.",
+   "layer": "Networks",
+   "yr": "2023",
+   "s": [
+    "S80"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "type": "incident",
+   "v": "£92m",
+   "l": "Cost of WannaCry to the NHS: £19m in lost output and £73m in IT costs to restore systems and data.",
+   "layer": "Devices",
+   "yr": "2018",
+   "s": [
+    "S93",
+    "S82"
+   ],
+   "ev": "estimate"
+  },
+  {
+   "type": "extension",
+   "v": "£6.6m",
+   "u": "a year",
+   "l": "Running cost of the NHS's 130,000 pagers when the 2021 phase-out was set.",
+   "layer": "Security and practice",
+   "yr": "2019",
+   "s": [
+    "S87"
+   ],
+   "ev": "sourced"
+  },
+  {
+   "type": "skills",
+   "v": "£14.5bn",
+   "u": "a year",
+   "l": "Spent on contractors, who cost about three times as much as civil servants. This covers all contractors, not only those keeping legacy running.",
+   "layer": "All layers",
+   "yr": "2025",
+   "s": [
+    "S92"
+   ],
+   "ev": "sourced"
   }
  ]
 }
