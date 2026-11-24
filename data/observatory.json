@@ -1,5 +1,5 @@
 {
- "edition": "LTO-3.0-20261124",
+ "edition": "LTO-3.1-20261124",
  "evidence_date": "2026-11-24",
  "sources": {
   "S2": {
@@ -365,6 +365,38 @@
   "S93": {
    "title": "Digital Health: DHSC puts cost of WannaCry to the NHS at £92m (2018)",
    "url": "https://www.digitalhealth.net/2018/10/dhsc-puts-cost-wannacry-nhs-92m"
+  },
+  "S94": {
+   "title": "BCS: Women in Tech report 2026, key findings",
+   "url": "https://www.bcs.org/policy-and-influence/equity-diversity-and-inclusion/bcs-women-in-tech-report-2026/key-findings/"
+  },
+  "S95": {
+   "title": "BCS diversity report 2024: Ethnicity, key findings",
+   "url": "https://bcs.org/policy-and-influence/equity-diversity-and-inclusion/bcs-diversity-report-2024-ethnicity/ethnicity-key-findings"
+  },
+  "S96": {
+   "title": "BCS diversity report 2024: Age, key findings",
+   "url": "https://www.bcs.org/policy-and-influence/equity-diversity-and-inclusion/bcs-diversity-report-2024-age/age-key-findings/"
+  },
+  "S97": {
+   "title": "BCS diversity report 2024: Disability, key findings",
+   "url": "https://www.bcs.org/policy-and-influence/equity-diversity-and-inclusion/bcs-diversity-report-2024-disability/disability-key-findings/"
+  },
+  "S98": {
+   "title": "BCS and Coding Black Females: Thousands of Black women missing from the IT industry (2022)",
+   "url": "https://www.bcs.org/articles-opinion-and-research/thousands-of-black-women-missing-from-the-it-industry-report-warns/"
+  },
+  "S99": {
+   "title": "Civil Service Statistics 2025: age by profession",
+   "url": "https://civil-service-statistics.jdac.service.cabinetoffice.gov.uk/data_browser_2025/Age/Profession_of_post/index.html"
+  },
+  "S100": {
+   "title": "Civil Service Statistics 2025: ethnicity by profession",
+   "url": "https://civil-service-statistics.jdac.service.cabinetoffice.gov.uk/data_browser_2025/Ethnicity/Profession_of_post/index.html"
+  },
+  "S101": {
+   "title": "Civil Service Statistics 2025: profession by sex",
+   "url": "https://civil-service-statistics.jdac.service.cabinetoffice.gov.uk/data_browser_2025/Profession_of_post/Sex/index.html"
   }
  },
  "tiles": [
@@ -2323,6 +2355,12 @@
    "Engineer replacing a system",
    "find code other public bodies have already published",
    "I can reuse it instead of starting again"
+  ],
+  [
+   "N11",
+   "Inclusion or workforce lead",
+   "see who is under-represented in technology, how pay differs, and who is working on it",
+   "I can act on the gaps"
   ]
  ],
  "requirements": [
@@ -2559,7 +2597,9 @@
     "C15",
     "C16",
     "C17",
-    "C18"
+    "C18",
+    "C19",
+    "C20"
    ],
    [],
    "Done"
@@ -2760,6 +2800,71 @@
    "Done"
   ],
   [
+   "R28",
+   "Analytics section: volumes and heatmaps of representation, age, pay gaps, per-language evidence, risk and dates",
+   [
+    "N11",
+    "N2"
+   ],
+   "an-rep",
+   [
+    "C19",
+    "C7",
+    "C15"
+   ],
+   [
+    "S94",
+    "S99"
+   ],
+   "Done"
+  ],
+  [
+   "R29",
+   "Pay gaps by gender, ethnicity, disability and age, with their limits stated",
+   [
+    "N11"
+   ],
+   "an-pay",
+   [
+    "C19"
+   ],
+   [
+    "S94",
+    "S95",
+    "S97",
+    "S100"
+   ],
+   "Done"
+  ],
+  [
+   "R30",
+   "Organisations working to remove barriers, filterable by barrier",
+   [
+    "N11",
+    "N3"
+   ],
+   "an-orgs",
+   [
+    "C20"
+   ],
+   [
+    "S98"
+   ],
+   "Done"
+  ],
+  [
+   "R31",
+   "Workforce demographics for each programming language",
+   [
+    "N3",
+    "N11"
+   ],
+   "an-lang",
+   [],
+   [],
+   "Planned"
+  ],
+  [
    "R26",
    "Links to the public sector tech hub and app store once it is published",
    [
@@ -2772,6 +2877,13 @@
   ]
  ],
  "defects": [
+  [
+   "D13",
+   "The per-language heatmap counted 3 PL/SQL systems that do not exist",
+   "System counts matched the first word of each language name anywhere in the text, so 'PL' matched 'platform'",
+   "Matched whole keywords for each language against the technology and platform fields only",
+   "C19 now proves the matcher ignores 'platform' and 'JavaScript' for PL/SQL and Java, and still finds COBOL"
+  ],
   [
    "D1",
    "Risk matrix showed all ratings in one stray row",
@@ -3052,6 +3164,26 @@
    "term": "Opportunity cost",
    "definition": "The value of what could have been done instead, such as savings missed because old systems block better ways of working.",
    "alternatives": "savings forgone"
+  },
+  {
+   "term": "Heatmap",
+   "definition": "A grid where colour shows size: here, darker or redder cells mean a larger number. Every cell also shows its number.",
+   "alternatives": "heat map"
+  },
+  {
+   "term": "Pay gap",
+   "definition": "The difference in pay between two groups, as a percentage of the higher-paid group's pay. It does not by itself show unequal pay for the same work.",
+   "alternatives": "earnings gap"
+  },
+  {
+   "term": "Representation ratio",
+   "definition": "A group's share of a profession divided by its share of all workers. Below 1 means under-represented.",
+   "alternatives": "representation gap"
+  },
+  {
+   "term": "Median age band",
+   "definition": "The age band that holds the middle person when everyone is lined up by age.",
+   "alternatives": "median age"
   },
   {
    "term": "Working in the open",
@@ -3505,6 +3637,244 @@
     "S92"
    ],
    "ev": "sourced"
+  }
+ ],
+ "representation": [
+  {
+   "g": "Women",
+   "it": 22,
+   "wf": 49,
+   "dd": 35.11491181186531,
+   "cs": 54.645852664519765,
+   "s": [
+    "S94",
+    "S101"
+   ]
+  },
+  {
+   "g": "Ethnic minority groups (all)",
+   "it": 21,
+   "wf": 15,
+   "dd": 19.85720660419456,
+   "cs": 17.954977245614813,
+   "s": [
+    "S95",
+    "S100"
+   ]
+  },
+  {
+   "g": "Asian",
+   "it": null,
+   "wf": null,
+   "dd": 11.267291387773316,
+   "cs": 9.497194362214465,
+   "s": [
+    "S100"
+   ]
+  },
+  {
+   "g": "Black",
+   "it": null,
+   "wf": null,
+   "dd": 5.332440874609549,
+   "cs": 5.152874121857465,
+   "s": [
+    "S100"
+   ]
+  },
+  {
+   "g": "Mixed",
+   "it": null,
+   "wf": null,
+   "dd": 2.431950022311468,
+   "cs": 2.536119825034242,
+   "s": [
+    "S100"
+   ]
+  },
+  {
+   "g": "Black women",
+   "it": 0.7,
+   "wf": 1.8,
+   "dd": null,
+   "cs": null,
+   "s": [
+    "S98"
+   ]
+  },
+  {
+   "g": "Disabled people",
+   "it": 14,
+   "wf": 17,
+   "dd": null,
+   "cs": null,
+   "s": [
+    "S97"
+   ]
+  },
+  {
+   "g": "Aged 50 and over",
+   "it": 22,
+   "wf": 30,
+   "dd": 31.439258995368718,
+   "cs": 36.558230082055196,
+   "s": [
+    "S96",
+    "S99"
+   ]
+  }
+ ],
+ "pay_gaps": [
+  {
+   "g": "Women",
+   "cmp": "men",
+   "it": 10,
+   "itNote": "Full-time median hourly pay, 2025",
+   "dd": 1.3551301355130136,
+   "s": [
+    "S94",
+    "S101"
+   ]
+  },
+  {
+   "g": "Ethnic minority groups (all)",
+   "cmp": "white staff",
+   "it": 4,
+   "itNote": "Calculated from BCS median hourly pay of £23 against £24 in 2023; both are rounded, so the true gap may differ",
+   "dd": null,
+   "s": [
+    "S95"
+   ]
+  },
+  {
+   "g": "Asian",
+   "cmp": "white staff",
+   "it": null,
+   "dd": 1.0755001075500108,
+   "s": [
+    "S100"
+   ]
+  },
+  {
+   "g": "Black",
+   "cmp": "white staff",
+   "it": null,
+   "dd": 3.8933103893310386,
+   "s": [
+    "S100"
+   ]
+  },
+  {
+   "g": "Mixed",
+   "cmp": "white staff",
+   "it": null,
+   "dd": -0.5162400516240052,
+   "s": [
+    "S100"
+   ]
+  },
+  {
+   "g": "Other ethnic group",
+   "cmp": "white staff",
+   "it": null,
+   "dd": -2.516670251667025,
+   "s": [
+    "S100"
+   ]
+  },
+  {
+   "g": "Disabled people",
+   "cmp": "non-disabled staff",
+   "it": 11,
+   "itNote": "£21 against £24 an hour, 2023 (BCS does not say whether this is a median)",
+   "dd": null,
+   "s": [
+    "S97"
+   ]
+  },
+  {
+   "g": "Aged 50 and over",
+   "cmp": "all IT specialists",
+   "it": -17,
+   "itNote": "Median hourly pay £28, 17% above IT specialists overall, 2023",
+   "dd": null,
+   "s": [
+    "S96"
+   ]
+  }
+ ],
+ "organisations_removing_barriers": [
+  {
+   "n": "Coding Black Females",
+   "b": "Ethnicity and gender",
+   "d": "A community for Black women in technology. With BCS it published the 2022 report on Black women missing from the IT industry.",
+   "u": "https://codingblackfemales.com",
+   "s": [
+    "S98"
+   ]
+  },
+  {
+   "n": "UKBlackTech",
+   "b": "Ethnicity",
+   "d": "Works to make UK technology more ethnically diverse, with a toolkit for employers.",
+   "u": "https://ukblacktech.com"
+  },
+  {
+   "n": "Code First Girls",
+   "b": "Gender",
+   "d": "Free coding courses and routes into technology jobs for women and non-binary people.",
+   "u": "https://www.codefirstgirls.com"
+  },
+  {
+   "n": "BCSWomen",
+   "b": "Gender",
+   "d": "The BCS specialist group supporting women working in IT.",
+   "u": "https://www.bcs.org/membership-and-registrations/member-communities/bcswomen-specialist-group/"
+  },
+  {
+   "n": "Women in Data",
+   "b": "Gender",
+   "d": "A community for women working in data careers.",
+   "u": "https://www.womenindata.co.uk"
+  },
+  {
+   "n": "Code Your Future",
+   "b": "Refugees and people facing barriers",
+   "d": "Free software development training for refugees and people on low incomes.",
+   "u": "https://codeyourfuture.io"
+  },
+  {
+   "n": "Ada, the National College for Digital Skills",
+   "b": "Socio-economic background",
+   "d": "A college offering digital skills courses and apprenticeships.",
+   "u": "https://ada.ac.uk"
+  },
+  {
+   "n": "Neurodiversity in Business",
+   "b": "Neurodivergence",
+   "d": "An industry forum on including neurodivergent people at work.",
+   "u": "https://www.neurodiversityinbusiness.org"
+  },
+  {
+   "n": "Disability Confident",
+   "b": "Disability",
+   "d": "The government scheme that helps employers recruit and keep disabled people.",
+   "u": "https://www.gov.uk/government/collections/disability-confident-campaign"
+  },
+  {
+   "n": "Age-friendly Employer Pledge",
+   "b": "Age",
+   "d": "The Centre for Ageing Better's pledge for employers to support workers aged 50 and over. DWP has signed it.",
+   "u": "https://ageing-better.org.uk/age-friendly-employer-pledge",
+   "s": [
+    "S68"
+   ]
+  },
+  {
+   "n": "Tech Talent Charter",
+   "b": "All groups",
+   "d": "An employer-led charter on diversity in technology, with an annual Diversity in Tech report.",
+   "u": "https://www.techtalentcharter.co.uk"
   }
  ]
 }

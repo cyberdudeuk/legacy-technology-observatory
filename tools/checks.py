@@ -105,11 +105,11 @@ def check_citations_known(html: str, data: dict) -> list[str]:
 def check_registers_cited(html: str, data: dict) -> list[str]:
     """Every system, devolved/local, beyond-code and cost record cites at least one source."""
     bad = []
-    for key in ("systems", "devolved_and_local", "beyond_code", "costs"):
+    for key in ("systems", "devolved_and_local", "beyond_code", "costs", "representation", "pay_gaps"):
         for rec in data.get(key, []):
             if not rec.get("s"):
                 bad.append(f"{key}: {rec.get('n', rec.get('v', '?'))} has no source")
-    for key in ("beyond_code", "costs"):
+    for key in ("beyond_code", "costs", "representation", "pay_gaps"):
         if not data.get(key):
             bad.append(f"{key}: no records (expected from release 3.0)")
     return bad

@@ -130,6 +130,10 @@ main{min-width:0;padding-block:1.5rem 3rem;padding-left:max(16px,env(safe-area-i
 .g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
 .g2x{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media (max-width:700px){.g2x{grid-template-columns:minmax(0,1fr)}}
+.heat{min-width:640px}.heat td.hc{text-align:center;color:var(--ink);font-variant-numeric:tabular-nums;border:1px solid var(--surface)}
+.heat td.hc-gap{background:repeating-linear-gradient(45deg,var(--sunk) 0 6px,var(--surface) 6px 12px);color:var(--ink-2);font-size:.8rem}
+.heat tbody th{text-transform:none;letter-spacing:0;font-family:var(--f-body);font-size:.9rem;color:var(--ink);font-weight:600}
+.heat-legend{font-size:.85rem;color:var(--ink-2);max-width:75ch;margin-top:.5rem}
 .tile{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1rem;display:flex;flex-direction:column;gap:.4rem;min-width:0}
 .tile .big{font-family:var(--f-display);font-size:2.5rem;font-weight:700;line-height:1;color:var(--ink)}
 .tile .big small{font-size:1rem;color:var(--ink-3);font-weight:500}
@@ -382,6 +386,7 @@ html.calm *,html.calm *::before,html.calm *::after{animation:none!important;tran
   <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M5 21h14"/><path d="M5 7h14"/><path d="M5 7l-3 7h6zM19 7l-3 7h6z"/></symbol>
   <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></symbol>
   <symbol id="i-map" viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="5" height="5"/><rect x="10" y="3" width="5" height="5"/><rect x="17" y="3" width="4" height="5"/><rect x="3" y="10" width="5" height="5"/><rect x="10" y="10" width="5" height="5"/><rect x="17" y="10" width="4" height="5"/><rect x="3" y="17" width="5" height="4"/><rect x="10" y="17" width="5" height="4"/><rect x="17" y="17" width="4" height="4"/></symbol>
   <symbol id="i-chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="1"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
 </svg>
 
@@ -410,7 +415,7 @@ html.calm *,html.calm *::before,html.calm *::after{animation:none!important;tran
   <div class="view" data-view="overview">
     <section class="sec hero" id="ov-hero" data-label="The question" data-icon="i-home">
       <div class="sec-head" style="gap:1rem">
-        <p class="eyebrow">Evidence as at 24 November 2026 · version 3.0</p>
+        <p class="eyebrow">Evidence as at 24 November 2026 · version 3.1</p>
         <h1>Public services still run on <em>1959</em> code.</h1>
         <p class="lede">This observatory maps the old technology behind UK public services, from programming languages and mainframes to phone lines, radio networks, devices and encryption: where they still run, who can maintain them, how they drive technical debt, and how government is moving off them. Every figure links to its public source. Our own judgements are labelled as such.</p>
         <div class="toolbar"><button class="btn btn-primary" type="button" data-tour>Take the one-minute tour</button><a class="btn" href="#guide" data-jump="gu-planner">Check a system</a></div>
@@ -466,6 +471,52 @@ html.calm *,html.calm *::before,html.calm *::after{animation:none!important;tran
       <div class="sec-head"><h3>Language and platform profiles</h3></div>
       <div class="toolbar" role="group" aria-label="Filter languages" id="langFilters"></div>
       <div class="langs" id="langCards"></div>
+    </section>
+  </div>
+
+  <!-- ANALYTICS (3.1) -->
+  <div class="view" data-view="analytics" hidden>
+    <section class="sec" id="an-volumes" data-label="Volumes at a glance" data-icon="i-layers" data-new="1">
+      <div class="sec-head"><p class="eyebrow">Analytics</p><h2>The numbers in one place</h2><p class="lede">Counts from across the site and its sources. Each heatmap below is also a table, and every shaded cell shows its number.</p></div>
+      <div class="grid g4" id="anVolumes"></div>
+    </section>
+    <section class="sec" id="an-rep" data-label="Who works in tech" data-icon="i-people" data-new="1">
+      <div class="sec-head"><h3>Who works in technology</h3><p class="lede">Representation of women, ethnic minority groups, disabled people and people aged 50 and over in UK IT jobs and in the civil service Digital and Data profession, against their share of all workers.</p></div>
+      <div id="anRep"></div>
+    </section>
+    <section class="sec" id="an-age" data-label="Age profile" data-icon="i-clock" data-new="1">
+      <div class="sec-head"><h3>Age profile and pay by age</h3><p class="lede">How old digital and data staff in the civil service are, compared with the whole civil service, and what they earn at each age.</p></div>
+      <div id="anAge"></div>
+    </section>
+    <section class="sec" id="an-pay" data-label="Pay gaps" data-icon="i-scale" data-new="1">
+      <div class="sec-head"><h3>Pay gaps</h3><p class="lede">How pay differs by gender, ethnicity, disability and age, in UK IT jobs and in the civil service Digital and Data profession.</p></div>
+      <div id="anPay"></div>
+    </section>
+    <section class="sec" id="an-lang" data-label="What is known per language" data-icon="i-code" data-new="1">
+      <div class="sec-head"><h3>What is known for each language</h3><p class="lede">Some evidence exists for every language; workforce demographics do not exist for any of them.</p></div>
+      <div id="anLang"></div>
+    </section>
+    <section class="sec" id="an-risk" data-label="Risk by factor" data-icon="i-alert" data-new="1">
+      <div class="sec-head"><h3>Risk by factor</h3></div>
+      <div id="anRisk"></div>
+    </section>
+    <section class="sec" id="an-dates" data-label="Dates by layer" data-icon="i-chip" data-new="1">
+      <div class="sec-head"><h3>When each layer's dates fall</h3></div>
+      <div id="anDates"></div>
+    </section>
+    <section class="sec" id="an-orgs" data-label="Removing barriers" data-icon="i-check" data-new="1">
+      <div class="sec-head"><h3>Organisations working to remove barriers</h3><p class="lede">Groups and schemes that help under-represented people into technology careers and help employers keep them. Descriptions are our summaries; each organisation's own site is the authority. Listing is not endorsement. To suggest another, use the contact form.</p></div>
+      <div class="toolbar" role="group" aria-label="Filter organisations by barrier" id="orgFilters"></div>
+      <div class="grid g2" id="orgList"></div>
+    </section>
+    <section class="sec" id="an-limits" data-label="Reading these figures" data-icon="i-info" data-new="1">
+      <div class="sec-head"><h3>Reading these figures</h3></div>
+      <div class="panel"><ul>
+        <li>UK IT figures are from BCS's analysis of the ONS Labour Force Survey and cover all IT specialist jobs, public and private. Civil service figures cover the Digital and Data profession only. The two are different groups measured in different years (2023 to 2025).</li>
+        <li>Civil service shares exclude suppressed small counts. Ethnicity shares are of staff who declared an ethnicity; nearly a quarter of digital and data staff did not.</li>
+        <li>Our civil service pay gaps compare median salaries for each group. They are not adjusted for grade, so they show where pay differs, not why.</li>
+        <li>Nothing here measures the people who work on legacy code itself. We found no source that does, and say so rather than estimate it.</li>
+      </ul></div>
     </section>
   </div>
 
@@ -733,7 +784,7 @@ html.calm *,html.calm *::before,html.calm *::after{animation:none!important;tran
     <div><h3>Disclaimer</h3><p>An independent research aid built from public sources. It is not an official government statistic, and it does not represent the policy of any department. Assessments marked Analysis are judgements, not measurements.</p></div>
     <div><h3>Transparency</h3><ul><li>Researched and built with AI assistance (Claude), with human direction.</li><li>Evidence cut-off 24 November 2026; next review due February 2027.</li><li>No cookies or tracking. The Ask feature sends your question and this page's data to Claude on your own account, after you agree.</li></ul></div>
     <div><h3>Contact and source</h3><p>Use the <a href="#about" data-jump="ab-contact">contact form</a>. We do not publish email addresses.</p><p>Source, data, backlog and change history: <a href="https://github.com/cyberdudeuk/legacy-technology-observatory" target="_blank" rel="noopener">GitHub repository</a>.</p></div>
-    <div><h3>Colophon</h3><div class="colophon"><div class="qr" id="qr" role="img" aria-label="QR code holding the observatory's name, version and evidence date"></div><svg class="bc" id="bc" role="img" aria-label="Barcode for edition LTO-3.0-20261124"></svg></div><p class="mono" style="font-size:.75rem;margin-top:.4rem">Edition LTO-3.0-20261124 · IBM Plex type</p></div>
+    <div><h3>Colophon</h3><div class="colophon"><div class="qr" id="qr" role="img" aria-label="QR code holding the observatory's name, version and evidence date"></div><svg class="bc" id="bc" role="img" aria-label="Barcode for edition LTO-3.1-20261124"></svg></div><p class="mono" style="font-size:.75rem;margin-top:.4rem">Edition LTO-3.1-20261124 · IBM Plex type</p></div>
   </div>
 </footer>
 
@@ -851,7 +902,15 @@ S89:["GitHub Repos Asset Catalogue: Legacy and technical debt","https://cyberdud
 S90:["Service Standard point 12: Make new source code open","https://www.gov.uk/service-manual/service-standard/point-12-make-new-source-code-open"],
 S91:["Technology Code of Practice: Be open and use open source","https://www.gov.uk/guidance/be-open-and-use-open-source"],
 S92:["DSIT press release: Archaic tech sees public sector miss £45 billion annual savings (Jan 2025)","https://www.gov.uk/government/news/archaic-tech-sees-public-sector-miss-45-billion-annual-savings"],
-S93:["Digital Health: DHSC puts cost of WannaCry to the NHS at £92m (2018)","https://www.digitalhealth.net/2018/10/dhsc-puts-cost-wannacry-nhs-92m"]
+S93:["Digital Health: DHSC puts cost of WannaCry to the NHS at £92m (2018)","https://www.digitalhealth.net/2018/10/dhsc-puts-cost-wannacry-nhs-92m"],
+S94:["BCS: Women in Tech report 2026, key findings","https://www.bcs.org/policy-and-influence/equity-diversity-and-inclusion/bcs-women-in-tech-report-2026/key-findings/"],
+S95:["BCS diversity report 2024: Ethnicity, key findings","https://bcs.org/policy-and-influence/equity-diversity-and-inclusion/bcs-diversity-report-2024-ethnicity/ethnicity-key-findings"],
+S96:["BCS diversity report 2024: Age, key findings","https://www.bcs.org/policy-and-influence/equity-diversity-and-inclusion/bcs-diversity-report-2024-age/age-key-findings/"],
+S97:["BCS diversity report 2024: Disability, key findings","https://www.bcs.org/policy-and-influence/equity-diversity-and-inclusion/bcs-diversity-report-2024-disability/disability-key-findings/"],
+S98:["BCS and Coding Black Females: Thousands of Black women missing from the IT industry (2022)","https://www.bcs.org/articles-opinion-and-research/thousands-of-black-women-missing-from-the-it-industry-report-warns/"],
+S99:["Civil Service Statistics 2025: age by profession","https://civil-service-statistics.jdac.service.cabinetoffice.gov.uk/data_browser_2025/Age/Profession_of_post/index.html"],
+S100:["Civil Service Statistics 2025: ethnicity by profession","https://civil-service-statistics.jdac.service.cabinetoffice.gov.uk/data_browser_2025/Ethnicity/Profession_of_post/index.html"],
+S101:["Civil Service Statistics 2025: profession by sex","https://civil-service-statistics.jdac.service.cabinetoffice.gov.uk/data_browser_2025/Profession_of_post/Sex/index.html"]
 };
 
 const TILES = [
@@ -1106,6 +1165,10 @@ const GLOSSARY = [
  ["End of support","The date after which a supplier stops fixing faults and security flaws in a product.","end of life; EOL"],
  ["Post-quantum cryptography","Encryption designed to stay secure against future quantum computers.","PQC; quantum-safe encryption"],
  ["Opportunity cost","The value of what could have been done instead, such as savings missed because old systems block better ways of working.","savings forgone"],
+ ["Heatmap","A grid where colour shows size: here, darker or redder cells mean a larger number. Every cell also shows its number.","heat map"],
+ ["Pay gap","The difference in pay between two groups, as a percentage of the higher-paid group's pay. It does not by itself show unequal pay for the same work.","earnings gap"],
+ ["Representation ratio","A group's share of a profession divided by its share of all workers. Below 1 means under-represented.","representation gap"],
+ ["Median age band","The age band that holds the middle person when everyone is lined up by age.","median age"],
  ["Working in the open","Publishing code and decisions openly so others can reuse, check and improve them.","open source; coding in the open"]
 ];
 
@@ -1242,7 +1305,7 @@ $("#pan-dict").innerHTML=`<div class="tablewrap"><table><thead><tr><th>Entity</t
 $("#pan-tax").innerHTML=`<div class="grid g3">${[["Language family",CATS.slice(1).map(c=>c[1])],["Migration route",RH],["System status",["Live legacy","Live","Migrating","Re-platformed","Replaced","Decommissioned"]],["Sector",["Central government","Policing","Health","Science agency","Justice","Local government (not yet covered)"]],["Evidence label",["Sourced","Estimate","Analysis","Unconfirmed"]],["Skill area",["Legacy reading","Analysis","Testing","Modern engineering","Architecture","Data","Platform","Security","Commercial"]]].map(([h,l])=>`<div class="panel"><h4>${esc(h)}</h4><ul style="margin:0;padding-left:1.1rem">${l.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`).join("")}</div>`;
 $("#pan-themes").innerHTML=`<p class="lede">Capabilities, domains and topics connected to legacy languages, for future sections.</p><div class="chips">${THEMES.map(t=>`<span class="chip" style="font-family:var(--f-body);font-size:.85rem">${esc(t)}</span>`).join("")}</div>`;
 $("#pan-data").innerHTML=`<p>All records on this site as JSON, for reuse under the same evidence labels. A JSON-LD Dataset description is embedded in the page head for harvesters.</p><div class="toolbar"><button class="btn" id="copyJson">Copy data as JSON</button><span id="copyStatus" class="sr" aria-live="polite"></span></div><pre class="code" id="jsonOut"></pre>`;
-const ALL={edition:"LTO-3.0-20261124",languages:LANGS,systems:SYS,suppliers:SUPPLIERS,decommissioning:DECOM,glossary:GLOSSARY.map(g=>({term:g[0],definition:g[1],alternatives:g[2]})),sources:Object.entries(SRC).map(([id,v])=>({id,title:v[0],url:v[1]}))};
+const ALL={edition:"LTO-3.1-20261124",languages:LANGS,systems:SYS,suppliers:SUPPLIERS,decommissioning:DECOM,glossary:GLOSSARY.map(g=>({term:g[0],definition:g[1],alternatives:g[2]})),sources:Object.entries(SRC).map(([id,v])=>({id,title:v[0],url:v[1]}))};
 $("#jsonOut").textContent=JSON.stringify(ALL,null,1).slice(0,4000)+"\n…";
 $("#copyJson").addEventListener("click",async()=>{const t=JSON.stringify(ALL,null,1);try{await navigator.clipboard.writeText(t);$("#copyJson").textContent="Copied";}catch(e){$("#jsonOut").textContent=t;const r=document.createRange();r.selectNodeContents($("#jsonOut"));const sel=getSelection();sel.removeAllRanges();sel.addRange(r);$("#copyJson").textContent="Selected: press Ctrl+C to copy"}});
 $("#knTabs").addEventListener("click",e=>{const b=e.target.closest("[role=tab]");if(b)selTab(b)});
@@ -1308,6 +1371,7 @@ document.documentElement.lang="en-GB";
 const SUMMARY={
  overview:"Some of the most important public services, such as pensions, benefits and tax, still run on code written in languages from the 1950s to the 1980s. Fewer people can maintain that code each year. Government is replacing some systems, but the share of old systems is still growing.",
  languages:"A programming language is how people write instructions for computers. This page explains each language found in public services: when it was made, what it is for, and how easy it is to find people who know it.",
+ analytics:"The numbers in one place, shown as heatmaps: darker or redder cells mean more. It covers who works in technology, how pay differs between groups, what is known for each language, and the organisations working to remove barriers.",
  layers:"Old technology is not only code. Phone lines, mobile and radio networks, computers, medical and industrial equipment, and encryption all age too, and several have fixed switch-off dates.",
  systems:"These are the computer systems behind public services that rely on old technology, who runs them, and what is planned for each, across the UK.",
  skills:"Old systems need people who understand them. This page shows the evidence on how many such people there are, how to plan fairly for retirement, and the skills needed to move to newer technology.",
@@ -1389,7 +1453,8 @@ const NEEDS=[
  ["N7","Disabled user","use every part of the site with my settings and assistive technology","I am not excluded"],
  ["N8","Maintainer working alone","update the site with little effort and rely on automatic checks","it stays accurate"],
  ["N9","Technology or estates lead","see which non-code technology my services rely on and when it is switched off","I can replace it in time"],
- ["N10","Engineer replacing a system","find code other public bodies have already published","I can reuse it instead of starting again"]
+ ["N10","Engineer replacing a system","find code other public bodies have already published","I can reuse it instead of starting again"],
+ ["N11","Inclusion or workforce lead","see who is under-represented in technology, how pay differs, and who is working on it","I can act on the gaps"]
 ];
 const REQS=[
  ["R1","Every figure links to a public source",["N6"],"ov-numbers",["C1","C2","C3"],["S4"],"Done"],
@@ -1405,7 +1470,7 @@ const REQS=[
  ["R11","A plain-English summary opens every page",["N7","N6"],"ov-hero",["C11"],["S75"],"Done"],
  ["R12","Open data and vocabulary for reuse by other portals",["N6"],"kn-layer",["C2"],[],"Done"],
  ["R13","Contact without publishing any email address",["N6","N8"],"ab-contact",["C5"],[],"Done"],
- ["R14","Self-checks with negative tests on every load",["N8"],"ab-checks",["C1","C2","C3","C4","C5","C6","C7","C8","C9","C10","C11","C12","C13","C14","C15","C16","C17","C18"],[],"Done"],
+ ["R14","Self-checks with negative tests on every load",["N8"],"ab-checks",["C1","C2","C3","C4","C5","C6","C7","C8","C9","C10","C11","C12","C13","C14","C15","C16","C17","C18","C19","C20"],[],"Done"],
  ["R15","Equality and inclusion analysis, including age-inclusive workforce planning",["N3","N7"],"in-impacts",["C1"],["S70","S68"],"Done"],
  ["R16","GitHub repository with issue forms and a scheduled scan",["N8"],"ab-run",["C3"],[],"Done"],
  ["R17","Guided tour, tutorials and user guide",["N1","N7"],"gu-start",["C8","C11"],[],"Done"],
@@ -1418,9 +1483,14 @@ const REQS=[
  ["R24","Links to the GitHub Repos Asset Catalogue for each scanned organisation and for legacy code",["N10","N4"],"re-reuse",["C18"],["S89","S90","S91"],"Done"],
  ["R25","Shared keys published for other portals (data/xref.json)",["N6","N10"],"kn-layer",["C18"],[],"Done"],
  ["R27","What legacy costs, by type of cost and layer, without adding up figures that overlap",["N2","N9"],"ov-cost",["C17","C7"],["S92","S30","S80"],"Done"],
+ ["R28","Analytics section: volumes and heatmaps of representation, age, pay gaps, per-language evidence, risk and dates",["N11","N2"],"an-rep",["C19","C7","C15"],["S94","S99"],"Done"],
+ ["R29","Pay gaps by gender, ethnicity, disability and age, with their limits stated",["N11"],"an-pay",["C19"],["S94","S95","S97","S100"],"Done"],
+ ["R30","Organisations working to remove barriers, filterable by barrier",["N11","N3"],"an-orgs",["C20"],["S98"],"Done"],
+ ["R31","Workforce demographics for each programming language",["N3","N11"],"an-lang",[],[],"Planned"],
  ["R26","Links to the public sector tech hub and app store once it is published",["N10"],"re-reuse",[],[],"Planned"]
 ];
 const DEFECTS=[
+ ["D13","The per-language heatmap counted 3 PL/SQL systems that do not exist","System counts matched the first word of each language name anywhere in the text, so 'PL' matched 'platform'","Matched whole keywords for each language against the technology and platform fields only","C19 now proves the matcher ignores 'platform' and 'JavaScript' for PL/SQL and Java, and still finds COBOL"],
  ["D1","Risk matrix showed all ratings in one stray row","The cell builder returned bare labels without table cells","Wrapped each rating in a table cell","C7: every table row has as many cells as its header"],
  ["D2","Tables squeezed into unreadable columns on phones","Tables were set to 100% width with no minimum","Set a minimum table width inside a scrolling container","C15: every table keeps a minimum width of 640px"],
  ["D3","Knowledge graph used near-identical colours for languages and migration routes","Two amber tokens were assigned to different node types","Gave routes their own violet token","C12: every node type in the graph has a distinct colour"],
@@ -1512,7 +1582,7 @@ $("#dispOpen").addEventListener("click",()=>openOv("dispOv"));
 
 /* ============ SELF-CHECKS: defined here, run at the end ============ */
 /* ============ NAV, DRAWER, ROUTING ============ */
-const VIEWS=[["overview","Overview","i-home"],["languages","Languages","i-code"],["layers","Beyond code","i-chip"],["systems","Systems and services","i-server"],["skills","Skills and talent","i-people"],["migration","Migration","i-route"],["learning","Learning","i-book"],["guide","Guide","i-route"],["inclusion","Inclusion","i-scale"],["repos","Repo scan","i-git"],["knowledge","Knowledge","i-graph"],["documents","Documents","i-doc"],["about","About","i-info"]];
+const VIEWS=[["overview","Overview","i-home"],["languages","Languages","i-code"],["layers","Beyond code","i-chip"],["systems","Systems and services","i-server"],["skills","Skills and talent","i-people"],["analytics","Analytics","i-grid"],["migration","Migration","i-route"],["learning","Learning","i-book"],["guide","Guide","i-route"],["inclusion","Inclusion","i-scale"],["repos","Repo scan","i-git"],["knowledge","Knowledge","i-graph"],["documents","Documents","i-doc"],["about","About","i-info"]];
 const gnav=$("#gnav");
 gnav.innerHTML=VIEWS.map(([k,l,ic])=>`<a href="#${k}" data-v="${k}">${icon(ic)}${esc(l)}</a>`).join("")+`<details class="more" id="more" hidden><summary aria-label="More sections">More ${icon("i-chev")}</summary><div class="more-menu" id="moreMenu"></div></details>`;
 function fitNav(){const links=$$("a[data-v]",gnav),more=$("#more"),menu=$("#moreMenu");links.forEach(a=>gnav.insertBefore(a,more));more.hidden=true;
@@ -1728,7 +1798,7 @@ function renderPlan(){const fd=new FormData($("#planForm"));const a={};let n=0;P
  const band=score>=11?["High","p-crit"]:score>=6?["Medium","p-warn"]:["Low","p-ok"];
  const acts=planActions(a);
  $("#planOut").innerHTML=`<h4>Your indicative result</h4><p class="band"><span class="pill ${band[1]}" style="font-size:1rem">${band[0]}</span> <span class="num" style="font-size:1rem;color:var(--ink-2)">${score} of ${max} points</span></p><p class="hint">High is 11 or more points, Medium 6 to 10, Low 5 or fewer. ${evid("analysis")}</p><h4>Starting plan</h4><ol style="margin:0;padding-left:1.2rem">${acts.map(([t,j])=>`<li>${esc(t)} <span class="hint">(${jumpLink(j,"read more")})</span></li>`).join("")}</ol><div class="toolbar"><button class="btn" type="button" id="planCopy">Copy plan</button></div>`;
- $("#planCopy").onclick=async()=>{const txt=`Indicative legacy readiness: ${band[0]} (${score}/${max})\n`+acts.map((x,i)=>`${i+1}. ${x[0]}`).join("\n")+"\nSource: Legacy Technology Observatory, edition LTO-3.0-20261124";try{await navigator.clipboard.writeText(txt);$("#planCopy").textContent="Copied";announce("Plan copied")}catch(e){$("#planCopy").textContent="Copy failed: select the plan text instead"}}}
+ $("#planCopy").onclick=async()=>{const txt=`Indicative legacy readiness: ${band[0]} (${score}/${max})\n`+acts.map((x,i)=>`${i+1}. ${x[0]}`).join("\n")+"\nSource: Legacy Technology Observatory, edition LTO-3.1-20261124";try{await navigator.clipboard.writeText(txt);$("#planCopy").textContent="Copied";announce("Plan copied")}catch(e){$("#planCopy").textContent="Copy failed: select the plan text instead"}}}
 counts["gu-planner"]=PQ.length;
 $("#planForm").addEventListener("change",renderPlan);$("#planForm").addEventListener("reset",()=>setTimeout(renderPlan,0));renderPlan();
 
@@ -1787,18 +1857,20 @@ function runChecksOn(d){const known=id=>!!d.SRC[id];const R={};
  R.C14=d.views.every(v=>{let prev=1,ok=true;$$("h1,h2,h3,h4",v).filter(h=>!h.closest(".overlay")).forEach(h=>{const l=+h.tagName[1];if(l>prev+1)ok=false;prev=l});return ok});
  R.C15=d.tables.every(t=>parseFloat(getComputedStyle(t).minWidth)>=640||t.closest(".dialog"));
  R.C16=d.scrollW<=d.viewW+1;
+ R.C19=(d.HEATS||[]).length>0&&(d.HEATS||[]).every(t=>t.querySelector("caption")&&[...t.querySelectorAll("td.hc")].every(c=>c.textContent.trim().length>0))&&[...(d.REP||[]),...(d.PAY||[])].every(x=>x.s.length&&x.s.every(known))&&d.LANGSYS===true;
+ R.C20=(d.ORGSI||[]).length>0&&(d.ORGSI||[]).every(o=>/^https:\/\//.test(o.u)&&o.b&&o.d&&o.n);
  R.C17=(d.LAYERS||[]).length>0&&(d.LAYERS||[]).every(x=>x.s.length&&x.s.every(known)&&x.layer&&x.date)&&(d.COSTS||[]).length>0&&(d.COSTS||[]).every(x=>x.s.length&&x.s.every(known)&&x.type&&x.v);
  R.C18=(d.XLINKS||[]).length>0&&(d.XLINKS||[]).every(u=>/^https:\/\/cyberdudeuk\.github\.io\/github-repos-asset-catalogue\/#(org-[a-z0-9-]+|legacy|reuse|practice|catalogue)$/.test(u));
  R.C2=R.C2&&[...(d.CASES||[]),...(d.SCEN||[]),...(d.THEMES||[])].every(x=>(x.s||[]).every(known));
  return R}
-const CHECK_TITLES={C1:"Every system and wider-sector record cites a known source",C2:"Every citation points to a listed source",C3:"Every source link is https or an in-page anchor",C4:"Every unsourced language record is labelled Unconfirmed or Analysis",C5:"No email addresses appear in the content",C6:"Retired organisation names do not appear",C7:"Every table row has as many cells as its header",C8:"Every button, link and form field has an accessible name",C9:"Text colours meet 4.5:1 contrast in light and dark themes",C10:"Every chart and diagram has a text title",C11:"Every page opens with a plain-English summary",C12:"Knowledge graph node types use distinct colours",C13:"Every requirement traces to a user need and to a check, unless planned",C14:"Headings do not skip levels",C15:"Every table keeps a minimum width so it scrolls instead of squeezing on phones",C16:"Nothing makes the page scroll sideways at the current width",C17:"Every record beyond code and every cost figure cites a known source and says what it measures",C18:"Every link to the GitHub Repos Asset Catalogue uses a key the catalogue publishes"};
+const CHECK_TITLES={C1:"Every system and wider-sector record cites a known source",C2:"Every citation points to a listed source",C3:"Every source link is https or an in-page anchor",C4:"Every unsourced language record is labelled Unconfirmed or Analysis",C5:"No email addresses appear in the content",C6:"Retired organisation names do not appear",C7:"Every table row has as many cells as its header",C8:"Every button, link and form field has an accessible name",C9:"Text colours meet 4.5:1 contrast in light and dark themes",C10:"Every chart and diagram has a text title",C11:"Every page opens with a plain-English summary",C12:"Knowledge graph node types use distinct colours",C13:"Every requirement traces to a user need and to a check, unless planned",C14:"Headings do not skip levels",C15:"Every table keeps a minimum width so it scrolls instead of squeezing on phones",C16:"Nothing makes the page scroll sideways at the current width",C17:"Every record beyond code and every cost figure cites a known source and says what it measures",C18:"Every link to the GitHub Repos Asset Catalogue uses a key the catalogue publishes",C19:"Every heatmap has a caption and a number in every cell, every demographic and pay figure cites a known source, and language-to-system matching uses whole words",C20:"Every organisation listed has a secure link, a barrier and a description"};
 function runAllChecks(){
  normaliseHeadings();
  const graphColours=["var(--accent)","var(--crit)","var(--steel)","var(--ok)","var(--ink-3)","var(--violet)"];
- const live={SRC,SYS,LOCAL,FINDINGS,TILES,LANGS,REQS,NEEDS,text:$("#main").textContent+document.querySelector("footer").textContent,tables:$$("#main table"),controls:$$("button,a[href],input,select,textarea").filter(e=>!e.closest("[aria-hidden=true]")),pairs:tokenPairs(),svgs:$$("main svg:not(.icon), footer svg:not(.icon)"),views:$$(".view"),graphColours,scrollW:document.documentElement.scrollWidth,viewW:document.documentElement.clientWidth,CASES,SCEN:SCENARIOS,THEMES:THEMES2,LAYERS,COSTS,XLINKS:catLinks()};
+ const live={SRC,SYS,LOCAL,FINDINGS,TILES,LANGS,REQS,NEEDS,text:$("#main").textContent+document.querySelector("footer").textContent,tables:$$("#main table"),controls:$$("button,a[href],input,select,textarea").filter(e=>!e.closest("[aria-hidden=true]")),pairs:tokenPairs(),svgs:$$("main svg:not(.icon), footer svg:not(.icon)"),views:$$(".view"),graphColours,scrollW:document.documentElement.scrollWidth,viewW:document.documentElement.clientWidth,CASES,SCEN:SCENARIOS,THEMES:THEMES2,LAYERS,COSTS,XLINKS:catLinks(),HEATS:$$("table.heat"),REP,PAY,ORGSI:ORGS_INC,LANGSYS:LANGSYS_OK()};
  const badTable=document.createElement("table");badTable.innerHTML="<thead><tr><th>a</th><th>b</th></tr></thead><tbody><tr><td>only one</td></tr></tbody>";
  const badBtn=document.createElement("button");const badSvg=document.createElementNS("http://www.w3.org/2000/svg","svg");const badView=document.createElement("div");badView.innerHTML="<h2>x</h2><h4>skip</h4>";
- const bad={SRC:{S1:["x","http://insecure"]},SYS:[{s:["S999"]}],LOCAL:[{s:[]}],FINDINGS:[{s:["S998"]}],TILES:[],LANGS:[{s:[],ev:"sourced"}],REQS:[["R0","x",[],"x",[],[],"Done"]],NEEDS:[],text:"write to someone@example.gov.uk at the Office of the Chief Data Officer",tables:[badTable],controls:[badBtn],pairs:[["bad","#777777","#888888"]],svgs:[badSvg],views:[badView],graphColours:["var(--accent)","var(--accent)"],scrollW:2000,viewW:400,CASES:[{s:["S997"]}],SCEN:[],THEMES:[],LAYERS:[{s:["S996"],layer:"",date:""}],COSTS:[{s:[],type:"",v:""}],XLINKS:["http://example.com/#org-x"]};
+ const bad={SRC:{S1:["x","http://insecure"]},SYS:[{s:["S999"]}],LOCAL:[{s:[]}],FINDINGS:[{s:["S998"]}],TILES:[],LANGS:[{s:[],ev:"sourced"}],REQS:[["R0","x",[],"x",[],[],"Done"]],NEEDS:[],text:"write to someone@example.gov.uk at the Office of the Chief Data Officer",tables:[badTable],controls:[badBtn],pairs:[["bad","#777777","#888888"]],svgs:[badSvg],views:[badView],graphColours:["var(--accent)","var(--accent)"],scrollW:2000,viewW:400,CASES:[{s:["S997"]}],SCEN:[],THEMES:[],LAYERS:[{s:["S996"],layer:"",date:""}],COSTS:[{s:[],type:"",v:""}],HEATS:[(()=>{const t=document.createElement("table");t.innerHTML="<tbody><tr><td class=hc></td></tr></tbody>";return t})()],REP:[{s:["S995"]}],PAY:[],LANGSYS:false,ORGSI:[{u:"http://x",b:"",d:"",n:"x"}],XLINKS:["http://example.com/#org-x"]};
  document.body.appendChild(badTable);badTable.style.cssText="position:absolute;left:-9999px;min-width:0";
  const res=runChecksOn(live),neg=runChecksOn(bad);badTable.remove();CHECK_RES=res;
  $("#checks").innerHTML=Object.keys(CHECK_TITLES).map(k=>`<li>${res[k]?`<span class="pill p-ok">Pass</span>`:`<span class="pill p-crit">Fail</span>`}<span><span class="mono">${k}</span> ${esc(CHECK_TITLES[k])} <span class="sub" style="color:var(--ink-3);font-size:.8rem">· negative test ${neg[k]?"did not fail, so this check needs fixing":"failed as expected"}</span></span></li>`).join("");
@@ -1887,9 +1959,114 @@ COSTS.forEach(c=>INDEX.push({type:"Cost",title:c.v+(c.u?" "+c.u:"")+": "+(COST_T
 ALL.beyondCode=LAYERS;ALL.costs=COSTS;
 {const cur=(location.hash||"#overview").slice(1);if(VIEWS.find(v=>v[0]===cur))drawer(cur)}
 
+/* ============ V5 (3.1): ANALYTICS, HEATMAPS, DEMOGRAPHICS, PAY GAPS, ORGANISATIONS ============ */
+/* Civil Service Statistics 2025, in post, Digital and Data profession and all professions (sum of published cells; suppressed cells excluded) */
+const CSS_AGE={bands:["16-19","20-29","30-39","40-49","50-59","60-64","65+"],dd:[45,3930,7560,7710,6770,1585,470],all:[1160,88025,132380,127130,136565,48055,16315],ddPay:[29530,38430,45760,51020,50750,46630,44080]};
+const CSS_ETH={groups:["Asian","Black","Mixed","Other ethnicity","White"],dd:[2525,1195,545,185,17960],all:[42990,23325,11480,3480,371385],ddPay:[45990,44680,46730,47660,46490],ddUndeclared:1330+4325,allUndeclared:20760+76185};
+const CSS_SEX={dd:{Female:9855,Male:18210},all:{Female:300350,Male:249280},ddPay:{Female:45860,Male:46490}};
+const pct=(a,b)=>b?a/b*100:null, f1=x=>x==null?"":(Math.round(x*10)/10).toFixed(1);
+const sum=a=>a.reduce((x,y)=>x+y,0);
+function medianBand(counts,bands){const t=sum(counts);let c=0;for(let i=0;i<counts.length;i++){c+=counts[i];if(c>=t/2)return bands[i]}return ""}
+const share=(arr,idx)=>pct(idx.reduce((s,i)=>s+arr[i],0),sum(arr));
+/* Representation: each row a group, each cell a share (%) with its benchmark and source */
+const REP=(()=>{const ddDecl=sum(CSS_ETH.dd),allDecl=sum(CSS_ETH.all),ddT=CSS_SEX.dd.Female+CSS_SEX.dd.Male,allT=CSS_SEX.all.Female+CSS_SEX.all.Male;
+ return [
+  {g:"Women",it:22,wf:49,dd:pct(CSS_SEX.dd.Female,ddT),cs:pct(CSS_SEX.all.Female,allT),s:["S94","S101"]},
+  {g:"Ethnic minority groups (all)",it:21,wf:15,dd:100-pct(CSS_ETH.dd[4],ddDecl),cs:100-pct(CSS_ETH.all[4],allDecl),s:["S95","S100"]},
+  {g:"Asian",it:null,wf:null,dd:pct(CSS_ETH.dd[0],ddDecl),cs:pct(CSS_ETH.all[0],allDecl),s:["S100"]},
+  {g:"Black",it:null,wf:null,dd:pct(CSS_ETH.dd[1],ddDecl),cs:pct(CSS_ETH.all[1],allDecl),s:["S100"]},
+  {g:"Mixed",it:null,wf:null,dd:pct(CSS_ETH.dd[2],ddDecl),cs:pct(CSS_ETH.all[2],allDecl),s:["S100"]},
+  {g:"Black women",it:0.7,wf:1.8,dd:null,cs:null,s:["S98"]},
+  {g:"Disabled people",it:14,wf:17,dd:null,cs:null,s:["S97"]},
+  {g:"Aged 50 and over",it:22,wf:30,dd:share(CSS_AGE.dd,[4,5,6]),cs:share(CSS_AGE.all,[4,5,6]),s:["S96","S99"]}
+ ]})();
+/* Pay gaps: positive = the group earns less than the comparison group */
+const PAY=[
+ {g:"Women",cmp:"men",it:10,itNote:"Full-time median hourly pay, 2025",dd:(CSS_SEX.ddPay.Male-CSS_SEX.ddPay.Female)/CSS_SEX.ddPay.Male*100,s:["S94","S101"]},
+ {g:"Ethnic minority groups (all)",cmp:"white staff",it:4,itNote:"Calculated from BCS median hourly pay of £23 against £24 in 2023; both are rounded, so the true gap may differ",dd:null,s:["S95"]},
+ {g:"Asian",cmp:"white staff",it:null,dd:(CSS_ETH.ddPay[4]-CSS_ETH.ddPay[0])/CSS_ETH.ddPay[4]*100,s:["S100"]},
+ {g:"Black",cmp:"white staff",it:null,dd:(CSS_ETH.ddPay[4]-CSS_ETH.ddPay[1])/CSS_ETH.ddPay[4]*100,s:["S100"]},
+ {g:"Mixed",cmp:"white staff",it:null,dd:(CSS_ETH.ddPay[4]-CSS_ETH.ddPay[2])/CSS_ETH.ddPay[4]*100,s:["S100"]},
+ {g:"Other ethnic group",cmp:"white staff",it:null,dd:(CSS_ETH.ddPay[4]-CSS_ETH.ddPay[3])/CSS_ETH.ddPay[4]*100,s:["S100"]},
+ {g:"Disabled people",cmp:"non-disabled staff",it:11,itNote:"£21 against £24 an hour, 2023 (BCS does not say whether this is a median)",dd:null,s:["S97"]},
+ {g:"Aged 50 and over",cmp:"all IT specialists",it:-17,itNote:"Median hourly pay £28, 17% above IT specialists overall, 2023",dd:null,s:["S96"]}
+];
+const ORGS_INC=[
+ {n:"Coding Black Females",b:"Ethnicity and gender",d:"A community for Black women in technology. With BCS it published the 2022 report on Black women missing from the IT industry.",u:"https://codingblackfemales.com",s:["S98"]},
+ {n:"UKBlackTech",b:"Ethnicity",d:"Works to make UK technology more ethnically diverse, with a toolkit for employers.",u:"https://ukblacktech.com"},
+ {n:"Code First Girls",b:"Gender",d:"Free coding courses and routes into technology jobs for women and non-binary people.",u:"https://www.codefirstgirls.com"},
+ {n:"BCSWomen",b:"Gender",d:"The BCS specialist group supporting women working in IT.",u:"https://www.bcs.org/membership-and-registrations/member-communities/bcswomen-specialist-group/"},
+ {n:"Women in Data",b:"Gender",d:"A community for women working in data careers.",u:"https://www.womenindata.co.uk"},
+ {n:"Code Your Future",b:"Refugees and people facing barriers",d:"Free software development training for refugees and people on low incomes.",u:"https://codeyourfuture.io"},
+ {n:"Ada, the National College for Digital Skills",b:"Socio-economic background",d:"A college offering digital skills courses and apprenticeships.",u:"https://ada.ac.uk"},
+ {n:"Neurodiversity in Business",b:"Neurodivergence",d:"An industry forum on including neurodivergent people at work.",u:"https://www.neurodiversityinbusiness.org"},
+ {n:"Disability Confident",b:"Disability",d:"The government scheme that helps employers recruit and keep disabled people.",u:"https://www.gov.uk/government/collections/disability-confident-campaign"},
+ {n:"Age-friendly Employer Pledge",b:"Age",d:"The Centre for Ageing Better's pledge for employers to support workers aged 50 and over. DWP has signed it.",u:"https://ageing-better.org.uk/age-friendly-employer-pledge",s:["S68"]},
+ {n:"Tech Talent Charter",b:"All groups",d:"An employer-led charter on diversity in technology, with an annual Diversity in Tech report.",u:"https://www.techtalentcharter.co.uk"}
+];
+let orgBarrier=store.get("lto-orgb")||"all";
+
+/* One heatmap renderer for every grid: an accessible table whose cells carry their value as text and a shade */
+/* Whole-word match of each language's keywords against a system's technology and platform (defect D13: a substring match counted "platform" as PL/SQL) */
+const LANG_KEYS={cobol:["COBOL"],fortran:["Fortran"],jcl:["JCL"],vme:["VME"],abap:["ABAP"],natural:["Natural","Adabas"],plsql:["PL/SQL"],perl:["Perl"],vb:["Visual Basic","VBA","VB6"],java:["Java"],scala:["Scala"],ruby:["Ruby"],python:["Python"],js:["JavaScript"],ts:["TypeScript"],csharp:["C#"],go:["Go"],kotlin:["Kotlin"],hcl:["HCL","Terraform"]};
+function langSys(l,systems){const ks=LANG_KEYS[l.id]||[l.n];const res=ks.map(k=>new RegExp("(^|[^A-Za-z/])"+k.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"(?![A-Za-z#/])"));return systems.filter(x=>res.some(r=>r.test((x.tech||"")+" "+(x.plat||"")))).length}
+const LANGSYS_OK=()=>langSys({id:"plsql"},[{tech:"Mainframe",plat:"to replace the platform"}])===0&&langSys({id:"java"},[{tech:"JavaScript",plat:""}])===0&&langSys({id:"cobol"},[{tech:"COBOL",plat:""}])===1;
+function heatCell(v,{max=100,kind="seq",txt,title}={}){
+ if(v==null||Number.isNaN(v))return `<td class="hc hc-gap" title="No published figure"><span>No data</span></td>`;
+ const a=Math.min(1,Math.abs(v)/max),pctMix=Math.round(8+a*40);
+ const col=kind==="div"?(v>0?"var(--crit)":"var(--ok)"):kind==="risk"?(v>=3?"var(--crit)":v===2?"var(--warn)":"var(--ok)"):"var(--steel)";
+ return `<td class="hc num" style="background:color-mix(in srgb, ${col} ${kind==="risk"?24+v*8:pctMix}%, var(--surface))"${title?` title="${esc(title)}"`:""}>${txt!=null?txt:esc(f1(v))}</td>`}
+function heat(id,caption,cols,rows,legend){$("#"+id).innerHTML=`<div class="tablewrap"><table class="heat"><caption class="sr">${esc(caption)}</caption><thead><tr><th scope="col">${esc(cols[0])}</th>${cols.slice(1).map(c=>`<th scope="col">${esc(c)}</th>`).join("")}</tr></thead><tbody>${rows.join("")}</tbody></table></div><p class="heat-legend">${legend}</p>`}
+
+function renderAnalytics(){
+ /* Volumes */
+ const ddT=CSS_SEX.dd.Female+CSS_SEX.dd.Male;
+ const V=[[Object.keys(SRC).length,"public sources cited across the site"],[LANGS.length,"languages and platforms profiled"],[SYS.length+LOCAL.length,"named systems across the UK"],[LAYERS.length,"technologies beyond code with key dates"],[COSTS.length,"published figures on what legacy costs"],[sum(REPO_COUNTS.map(r=>r[1])).toLocaleString("en-GB"),"public repositories counted across "+ORGS.length+" government GitHub organisations"],[ddT.toLocaleString("en-GB"),"civil servants in the Digital and Data profession in 2025"],[ORGS_INC.length,"organisations working to remove barriers, listed below"]];
+ $("#anVolumes").innerHTML=V.map(([v,l])=>`<div class="tile"><div class="big num">${esc(v)}</div><p>${esc(l)}</p></div>`).join("");
+ /* Representation */
+ heat("anRep","Share of each group, in per cent, in UK IT jobs, the UK workforce, the civil service Digital and Data profession and the whole civil service",["Group","UK IT specialists %","UK workforce %","Civil service digital and data %","Whole civil service %","Ratio in IT","Sources"],
+  REP.map(r=>{const ratio=r.it!=null&&r.wf?r.it/r.wf:(r.dd!=null&&r.cs?r.dd/r.cs:null);return `<tr><th scope="row">${esc(r.g)}</th>${heatCell(r.it,{max:50})}${heatCell(r.wf,{max:50})}${heatCell(r.dd,{max:50})}${heatCell(r.cs,{max:50})}${ratio==null?heatCell(null):`<td class="hc num" style="background:color-mix(in srgb, ${ratio<0.9?"var(--crit)":ratio>1.1?"var(--ok)":"var(--steel)"} ${Math.round(10+Math.min(1,Math.abs(1-ratio))*38)}%, var(--surface))">${ratio.toFixed(2)}×</td>`}<td>${cites(r.s)}</td></tr>`}),
+  `Darker blue means a larger share. In <strong>Ratio in IT</strong>, below 1 (red) means the group is under-represented in IT against its share of all workers; above 1 (green) means over-represented. The ratio uses UK IT against the UK workforce, or civil service digital and data against the whole civil service when only those are published. Ethnicity shares in the civil service are of staff who declared an ethnicity. ${evid("analysis")}`);
+ /* Age */
+ heat("anAge","Age profile in per cent and median salary by age band, civil service Digital and Data profession and whole civil service, 2025",["Measure",...CSS_AGE.bands,"Median age band"],
+  [`<tr><th scope="row">Digital and data, % of staff</th>${CSS_AGE.dd.map(c=>heatCell(pct(c,sum(CSS_AGE.dd)),{max:30})).join("")}<td><strong>${medianBand(CSS_AGE.dd,CSS_AGE.bands)}</strong></td></tr>`,
+   `<tr><th scope="row">Whole civil service, % of staff</th>${CSS_AGE.all.map(c=>heatCell(pct(c,sum(CSS_AGE.all)),{max:30})).join("")}<td><strong>${medianBand(CSS_AGE.all,CSS_AGE.bands)}</strong></td></tr>`,
+   `<tr><th scope="row">Digital and data, median salary</th>${CSS_AGE.ddPay.map(p=>heatCell(p/1000,{max:60,txt:"£"+p.toLocaleString("en-GB")})).join("")}<td>${cites(["S99"])}</td></tr>`],
+  `Darker means a larger share or higher pay. The civil service publishes age in bands, not single years, so the median is shown as the band that holds the middle person. Among UK IT specialists, 22% are aged 50 or over, from 14% of programmers and developers to 39% of IT directors ${cites(["S96"])}. ${evid("analysis")}`);
+ /* Pay gaps */
+ heat("anPay","Pay gap in per cent for each group against its comparison group, UK IT specialists and civil service Digital and Data profession",["Group","Compared with","UK IT specialists, gap %","Civil service digital and data, gap %","Sources"],
+  PAY.map(p=>`<tr><th scope="row">${esc(p.g)}</th><td>${esc(p.cmp)}</td>${heatCell(p.it,{max:20,kind:"div",title:p.itNote})}${heatCell(p.dd,{max:20,kind:"div",title:"Difference in median salary, not adjusted for grade"})}<td>${cites(p.s)}</td></tr>`),
+  `A positive number (red) means the group is paid less than the comparison group; a negative number (green) means more. UK IT figures are BCS's hourly pay figures, some rounded to the nearest pound. Civil service figures compare median salaries by group, which we calculated; they are not adjusted for grade, so they mix pay gaps with differences in seniority. Hover over a cell for detail. ${evid("analysis")}`);
+ /* Per-language evidence map */
+ const sysN=l=>langSys(l,SYS);
+ heat("anLang","What is published for each language: talent pool rating, named systems, public repositories, and whether age, gender, ethnicity or pay data exists",["Language","Talent pool (1 scarce to 3 ample)","Named systems on this site","Median age","Gender","Ethnicity","Pay"],
+  LANGS.map(l=>`<tr><th scope="row"><a href="#languages" data-jump="lang-${esc(l.id)}">${esc(l.n)}</a></th>${heatCell(l.tp,{max:3,kind:"risk",txt:["","1 scarce","2 limited","3 ample"][l.tp]}).replace(/var\(--crit\)|var\(--ok\)/,m=>m==="var(--crit)"?"var(--ok)":"var(--crit)")}${heatCell(sysN(l),{max:4,txt:String(sysN(l))})}${heatCell(null)}${heatCell(null)}${heatCell(null)}${heatCell(null)}</tr>`),
+  `No public source gives age, gender, ethnicity or pay for the people who work in each programming language in UK public services, so those columns are a visible gap rather than a guess. A legacy register that recorded language and the skills behind each system would close it; the Learning page sets out that option.`);
+ /* Risk heatmap */
+ heat("anRisk","Risk scores from 1 (low) to 3 (high) for each legacy language or platform against four factors",["Language or platform","Service criticality","Skills scarcity","Visibility gap","Plan uncertainty","Total"],
+  RISK.map(r=>`<tr><th scope="row">${esc(r[0])}</th>${r.slice(1).map(v=>heatCell(v,{kind:"risk",txt:["","1 low","2 medium","3 high"][v]})).join("")}${heatCell(sum(r.slice(1)),{max:12,txt:String(sum(r.slice(1)))})}</tr>`),
+  `Red is high, amber medium, green low. These are our judgements from the cited evidence, explained on the Overview's risk matrix. ${evid("analysis")}`);
+ /* Layers by period */
+ const per=[["Passed or under way",d=>d<"2026-12"],["2027",d=>d>="2027"&&d<"2028"],["2028 to 2035",d=>d>="2028"&&d<"2036"],["No fixed date",d=>d>="2098"]];
+ heat("anDates","Number of technologies beyond code whose key date falls in each period, by layer",["Layer",...per.map(p=>p[0])],
+  STACK.slice(1).map(([n])=>{const ls=LAYERS.filter(l=>l.layer===n);return `<tr><th scope="row">${esc(n)}</th>${per.map(([,f])=>{const m=ls.filter(l=>f(l.dk));return heatCell(m.length,{max:3,txt:m.length?`${m.length}: ${m.map(x=>esc(x.n)).join(", ")}`:"None"})}).join("")}</tr>`}),
+  `Darker means more technologies. Dates come from the Beyond code register, where each one is sourced.`);
+ /* Organisations */
+ const bars=["all",...new Set(ORGS_INC.map(o=>o.b))];
+ $("#orgFilters").innerHTML=bars.map(b=>`<button class="chip" type="button" data-ob="${esc(b)}" aria-pressed="${b===orgBarrier}">${esc(b==="all"?"All barriers":b)}</button>`).join("");
+ $("#orgList").innerHTML=ORGS_INC.filter(o=>orgBarrier==="all"||o.b===orgBarrier).map(o=>`<div class="panel"><p class="eyebrow">${esc(o.b)}</p><h4><a href="${esc(o.u)}" target="_blank" rel="noopener">${esc(o.n)}<span class="sr"> (opens in a new tab)</span></a></h4><p>${esc(o.d)}</p>${o.s?`<div class="chips">${cites(o.s)}</div>`:""}</div>`).join("")}
+$("#orgFilters").addEventListener("click",e=>{const b=e.target.closest("[data-ob]");if(!b)return;orgBarrier=b.dataset.ob;store.set("lto-orgb",orgBarrier);renderAnalytics();normaliseHeadings();announce(orgBarrier==="all"?"Showing all organisations":"Filtered to "+orgBarrier)});
+renderAnalytics();
+Object.assign(counts,{"an-rep":REP.length,"an-pay":PAY.length,"an-lang":LANGS.length,"an-orgs":ORGS_INC.length});
+REP.forEach(r=>INDEX.push({type:"Workforce analytics",title:r.g+": representation in tech",text:`UK IT ${r.it??"no data"}% against workforce ${r.wf??"no data"}%; civil service digital and data ${f1(r.dd)||"no data"}%`,view:"analytics",jump:"an-rep",s:r.s}));
+PAY.forEach(p=>INDEX.push({type:"Pay gap",title:p.g+" compared with "+p.cmp,text:`UK IT ${p.it??"no data"}%; civil service digital and data ${f1(p.dd)||"no data"}% pay gap`,view:"analytics",jump:"an-pay",s:p.s}));
+ORGS_INC.forEach(o=>INDEX.push({type:"Organisation",title:o.n,text:o.b+" "+o.d,view:"analytics",jump:"an-orgs",s:o.s||[]}));
+ALL.representation=REP;ALL.payGaps=PAY;ALL.organisations=ORGS_INC;ALL.civilServiceDigitalData={age:CSS_AGE,ethnicity:CSS_ETH,sex:CSS_SEX};
+{const cur=(location.hash||"#overview").slice(1);if(VIEWS.find(v=>v[0]===cur))drawer(cur)}
+
 /* ============ COLOPHON ============ */
-try{if(window.QRCode){new QRCode($("#qr"),{text:"Legacy Technology Observatory | edition LTO-3.0-20261124 | evidence to 24 Nov 2026",width:84,height:84,colorDark:"#000000",colorLight:"#ffffff"})}else{$("#qr").textContent="QR unavailable"}}catch(e){}
-try{if(window.JsBarcode){JsBarcode("#bc","LTO-3.0-20261124",{format:"CODE128",height:40,fontSize:11,margin:6,background:"#ffffff",lineColor:"#000000"})}}catch(e){}
+try{if(window.QRCode){new QRCode($("#qr"),{text:"Legacy Technology Observatory | edition LTO-3.1-20261124 | evidence to 24 Nov 2026",width:84,height:84,colorDark:"#000000",colorLight:"#ffffff"})}else{$("#qr").textContent="QR unavailable"}}catch(e){}
+try{if(window.JsBarcode){JsBarcode("#bc","LTO-3.1-20261124",{format:"CODE128",height:40,fontSize:11,margin:6,background:"#ffffff",lineColor:"#000000"})}}catch(e){}
 
 try{autoTips()}catch(e){}
 try{runAllChecks()}catch(e){$("#checksSummary").textContent="Self-checks could not run: "+e.message}

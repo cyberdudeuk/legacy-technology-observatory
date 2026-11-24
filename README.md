@@ -19,6 +19,7 @@ Every figure links to a public source. Judgements are labelled *Analysis*, model
 | Languages | 19 languages and platforms, from FORTRAN (1957) to TypeScript (2012): origin, purpose, talent pool, debt link, outlook |
 | Beyond code | The whole legacy stack: networks (landlines, 2G/3G, PSN, Airwave), devices, medical and operational technology, practices and encryption, with the dates that matter |
 | Systems and services | Named legacy systems across central government, devolved administrations, local government, the NHS and suppliers |
+| Analytics | Heatmaps of who works in technology (gender, ethnicity, disability, age), age profile, pay gaps, what is known per language, risk and key dates, plus organisations working to remove barriers |
 | Skills and talent | Talent pool evidence, the link to technical debt, an age-inclusive approach, and skills needed by migration route |
 | Migration | The 6 Rs, a step-by-step process, AI code translation evidence, decommissioning dates and outlook |
 | Learning | What exists, gaps and options for training and keeping skills |

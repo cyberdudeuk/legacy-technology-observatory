@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.1.0 — 24 November 2026
+- New **Analytics** section: volumes at a glance and six heatmaps, each also an accessible table with a number in every cell.
+- **Who works in technology**: representation of women, ethnic minority groups, Black women, disabled people and people aged 50 and over in UK IT jobs (BCS) and the civil service Digital and Data profession (Civil Service Statistics 2025), with a representation ratio.
+- **Age profile and pay by age**: digital and data staff against the whole civil service; median age band 40 to 49 for both.
+- **Pay gaps** by gender, ethnicity, disability and age, with their limits stated (civil service gaps are not adjusted for grade).
+- **What is known for each language**: workforce demographics per programming language are shown as a visible data gap; no public source has them.
+- **Organisations working to remove barriers**, filterable by barrier, including Coding Black Females, UKBlackTech, Code First Girls and Code Your Future.
+- Defect D13 fixed: per-language system counts used a substring match ("platform" counted as PL/SQL). Check C19 now proves whole-word matching. New check C20 for organisation links.
+
 ## 3.0.0 — 24 November 2026
 - Renamed the Legacy Code Observatory to the **Legacy Technology Observatory**: the scope now covers the whole legacy stack, not only code.
 - New **Beyond code** section: the six-layer legacy stack, a register of 12 technologies (analogue landlines, 2G and 3G, PSN, Airwave, unsupported operating systems, medical technology, operational technology, NHS fax and pagers, pre-quantum encryption, mainframes, data centres) with the skills to replace each, and a table of the dates that matter.

@@ -24,7 +24,7 @@ from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
 SHOTS = ROOT / "qa-shots"
-VIEWS = ["overview", "guide", "languages", "layers", "systems", "skills", "migration", "learning",
+VIEWS = ["overview", "guide", "languages", "layers", "systems", "skills", "analytics", "migration", "learning",
          "inclusion", "repos", "knowledge", "documents", "about"]
 SIZES = [(1366, 900, "desktop"), (400, 860, "phone")]
 

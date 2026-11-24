@@ -1,7 +1,7 @@
 {
  "portal": "Legacy Technology Observatory",
  "id": "lto",
- "version": "3.0",
+ "version": "3.1",
  "as_of": "2026-11-24",
  "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/",
  "status": "Evidence base, prototype",
@@ -271,6 +271,10 @@
    {
     "id": "skills",
     "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#skills"
+   },
+   {
+    "id": "analytics",
+    "url": "https://cyberdudeuk.github.io/legacy-technology-observatory/#analytics"
    },
    {
     "id": "migration",

@@ -15,6 +15,7 @@ NAMES = {"sources": "SRC", "tiles": "TILES", "findings": "FINDINGS", "languages"
          "devolved_and_local": "LOCAL", "suppliers": "SUPPLIERS", "wider": "WIDER", "routes": "ROUTES", "steps": "STEPS",
          "decommissioning": "DECOM", "user_needs": "NEEDS", "requirements": "REQS", "defects": "DEFECTS",
          "glossary": "GLOSSARY", "beyond_code": "LAYERS", "costs": "COSTS",
+         "representation": "REP", "pay_gaps": "PAY", "organisations_removing_barriers": "ORGS_INC",
          "case_studies": "CASES", "scenarios": "SCENARIOS", "themes": "THEMES2", "personas": "PERSONAS"}
 
 
@@ -47,7 +48,7 @@ def main():
             "languages": [{"id": l["id"], "name": l["n"], "url": f"{SITE}#language={l['id']}"} for l in got["languages"]],
             "layers": [{"id": l["id"], "name": l["n"], "layer": l["layer"], "url": f"{SITE}#layer={l['id']}"} for l in got["beyond_code"]],
             "organisations": [{"id": got["slugs"][o], "github": o, "url": f"{CAT}#org-{got['slugs'][o]}"} for o in got["orgs"]],
-            "views": [{"id": v, "url": f"{SITE}#{v}"} for v in ["overview", "languages", "layers", "systems", "skills", "migration", "learning", "repos", "knowledge"]],
+            "views": [{"id": v, "url": f"{SITE}#{v}"} for v in ["overview", "languages", "layers", "systems", "skills", "analytics", "migration", "learning", "repos", "knowledge"]],
         },
         "related": [{"id": "cat", "name": "GitHub Repos Asset Catalogue", "url": CAT, "manifest": CAT + "data/xref.json"}],
     }
