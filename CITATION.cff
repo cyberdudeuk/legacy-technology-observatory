@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "Code is MIT; content and data are CC BY 4.0. If you use the Legacy Technology Observatory in research or a publication, please cite it as below."
 title: "Legacy Technology Observatory"
-abstract: "An evidence portal on the old technology behind UK public services, from programming languages and mainframes to networks, devices, operational technology and encryption: where it runs, what it costs, who can maintain them, how they drive technical debt, how the public sector is moving off them, and the equality and skills implications."
+abstract: "An evidence portal on the old technology behind UK public services, from programming languages and mainframes to networks, devices, operational technology and encryption: where it runs, what it costs, who can maintain it, how it drives technical debt, how the public sector is moving off it, and what that means for skills and equality."
 type: software
 authors:
   - given-names: Emanuel
