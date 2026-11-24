@@ -2614,7 +2614,8 @@
     "C18",
     "C19",
     "C20",
-    "C21"
+    "C21",
+    "C22"
    ],
    [],
    "Done"
@@ -2935,14 +2936,16 @@
   ],
   [
    "R26",
-   "Links to the public sector tech hub and app store once it is published",
+   "Links to the Public Sector Tech Hub and its app store",
    [
     "N10"
    ],
    "re-reuse",
+   [
+    "C22"
+   ],
    [],
-   [],
-   "Planned"
+   "Done"
   ]
  ],
  "defects": [
