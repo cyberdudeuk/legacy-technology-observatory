@@ -1,5 +1,7 @@
 # Legacy Technology Observatory
 
+[![gds-dtx readiness: ready with exceptions, 10 of 10 GDS Way MUST checks met](docs/conformance/badge.svg)](docs/conformance/report.md)
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24500735.svg)](https://doi.org/10.5281/zenodo.24500735)
 
 *Formerly the Legacy Code Observatory (renamed in 3.0 when it widened beyond code).*
